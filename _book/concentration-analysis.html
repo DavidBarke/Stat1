@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>C Concentration Analysis | Statistics 1 for Economics</title>
+<meta name="author" content="David Barkemeyer">
+<!-- CSS --><link rel="stylesheet" href="style.css">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.2"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.5.3/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.5.3/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.1.9000/tabs.js"></script><script src="libs/bs3compat-0.2.1.9000/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js"></script>
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Statistics 1 for Economics</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li class="book-part">Appendix</li>
+<li><a class="" href="frequencies.html"><span class="header-section-number">A</span> Frequencies</a></li>
+<li><a class="" href="empirical-parameters.html"><span class="header-section-number">B</span> Empirical Parameters</a></li>
+<li><a class="active" href="concentration-analysis.html"><span class="header-section-number">C</span> Concentration Analysis</a></li>
+<li><a class="" href="multivariate-analysis.html"><span class="header-section-number">D</span> Multivariate Analysis</a></li>
+<li><a class="" href="correlation-analysis.html"><span class="header-section-number">E</span> Correlation Analysis</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/DavidBarke/Stat1">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="concentration-analysis" class="section level1">
+<h1>
+<span class="header-section-number">C</span> Concentration Analysis<a class="anchor" aria-label="anchor" href="#concentration-analysis"><i class="fas fa-link"></i></a>
+</h1>
+<div id="prerequisites-3" class="section level2 unnumbered">
+<h2>Prerequisites<a class="anchor" aria-label="anchor" href="#prerequisites-3"><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb74"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://yihui.org/knitr/">knitr</a></span><span class="op">)</span>
+
+<span class="co"># Set ggplot2 theme</span>
+<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme_get.html">theme_set</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+</div>
+<div id="exercise-c1" class="section level2">
+<h2>
+<span class="header-section-number">C.1</span> Exercise C1<a class="anchor" aria-label="anchor" href="#exercise-c1"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="exercise-c2" class="section level2">
+<h2>
+<span class="header-section-number">C.2</span> Exercise C2<a class="anchor" aria-label="anchor" href="#exercise-c2"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="exercise-c3" class="section level2">
+<h2>
+<span class="header-section-number">C.3</span> Exercise C3<a class="anchor" aria-label="anchor" href="#exercise-c3"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="exercise-c4" class="section level2">
+<h2>
+<span class="header-section-number">C.4</span> Exercise C4<a class="anchor" aria-label="anchor" href="#exercise-c4"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="exercise-c5" class="section level2">
+<h2>
+<span class="header-section-number">C.5</span> Exercise C5<a class="anchor" aria-label="anchor" href="#exercise-c5"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="exercise-c6" class="section level2">
+<h2>
+<span class="header-section-number">C.6</span> Exercise C6<a class="anchor" aria-label="anchor" href="#exercise-c6"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="exercise-c7" class="section level2">
+<h2>
+<span class="header-section-number">C.7</span> Exercise C7<a class="anchor" aria-label="anchor" href="#exercise-c7"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="exercise-c8" class="section level2">
+<h2>
+<span class="header-section-number">C.8</span> Exercise C8<a class="anchor" aria-label="anchor" href="#exercise-c8"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="exercise-c9" class="section level2">
+<h2>
+<span class="header-section-number">C.9</span> Exercise C9<a class="anchor" aria-label="anchor" href="#exercise-c9"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="exercise-c10" class="section level2">
+<h2>
+<span class="header-section-number">C.10</span> Exercise C10<a class="anchor" aria-label="anchor" href="#exercise-c10"><i class="fas fa-link"></i></a>
+</h2>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="empirical-parameters.html"><span class="header-section-number">B</span> Empirical Parameters</a></div>
+<div class="next"><a href="multivariate-analysis.html"><span class="header-section-number">D</span> Multivariate Analysis</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#concentration-analysis"><span class="header-section-number">C</span> Concentration Analysis</a></li>
+<li><a class="nav-link" href="#prerequisites-3">Prerequisites</a></li>
+<li><a class="nav-link" href="#exercise-c1"><span class="header-section-number">C.1</span> Exercise C1</a></li>
+<li><a class="nav-link" href="#exercise-c2"><span class="header-section-number">C.2</span> Exercise C2</a></li>
+<li><a class="nav-link" href="#exercise-c3"><span class="header-section-number">C.3</span> Exercise C3</a></li>
+<li><a class="nav-link" href="#exercise-c4"><span class="header-section-number">C.4</span> Exercise C4</a></li>
+<li><a class="nav-link" href="#exercise-c5"><span class="header-section-number">C.5</span> Exercise C5</a></li>
+<li><a class="nav-link" href="#exercise-c6"><span class="header-section-number">C.6</span> Exercise C6</a></li>
+<li><a class="nav-link" href="#exercise-c7"><span class="header-section-number">C.7</span> Exercise C7</a></li>
+<li><a class="nav-link" href="#exercise-c8"><span class="header-section-number">C.8</span> Exercise C8</a></li>
+<li><a class="nav-link" href="#exercise-c9"><span class="header-section-number">C.9</span> Exercise C9</a></li>
+<li><a class="nav-link" href="#exercise-c10"><span class="header-section-number">C.10</span> Exercise C10</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/DavidBarke/Stat1/blob/master/03_C_Concentration_Analysis.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/DavidBarke/Stat1/edit/master/03_C_Concentration_Analysis.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Statistics 1 for Economics</strong>" was written by David Barkemeyer. </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+</html>

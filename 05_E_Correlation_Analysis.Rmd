@@ -1,0 +1,64 @@
+# Correlation Analysis
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, error = FALSE)
+```
+
+## Prerequisites {-}
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(knitr)
+
+# Set ggplot2 theme
+theme_set(theme_bw())
+```
+
+## Exercise E1
+
+### Part A
+
+### Part B
+
+### Part C
+
+### Part D
+
+## Exercise E2
+
+## Exercise E3
+
+### Part A
+
+### Part B
+
+## Exercise E4
+
+### Part A
+
+### Part B
+
+## Exercise E5
+
+A psychologist investigates different work groups in a company to see if there is a connection between the attractiveness of a work group (cohesion and well-being of its members) and the variance of its work performance.
+
+Group attractiveness was measured using an ordinal scale from 1 = very high to 6 = very low. The variance in performance refers to the number of products completed by a work group on different days. The study produced the following result: 
+
+```{r, echo=FALSE}
+group <- LETTERS[1:7]
+attractiveness <- c(1:2, 2:6)
+variance <- c(32, 20, 40, 32, 64, 68, 60)
+tbl <- tibble(group = group, attractiveness = attractiveness, variance = variance)
+names(tbl) <- c("Work Group", "Attractiveness", "Variance in Performance")
+
+kable(tbl)
+```
+
+### What is the statistical feature in this study?
+
+### Calculate a suitable correlation coefficient.
+
+### Interpret the calculated sign of this coefficient.
+
+### Does the calculated value of this coefficient provide information about a cause-and-effect relationship between the two characteristics examined?
