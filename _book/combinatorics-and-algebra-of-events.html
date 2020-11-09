@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>F Combinatorics and Algebra of Events | Statistics 1 for Economics</title>
+<meta name="author" content="David Barkemeyer">
+<!-- CSS --><link rel="stylesheet" href="style.css">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.2"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.5.3/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.5.3/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.1.9000/tabs.js"></script><script src="libs/bs3compat-0.2.1.9000/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js"></script>
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Statistics 1 for Economics</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li class="book-part">Appendix</li>
+<li><a class="" href="frequencies.html"><span class="header-section-number">A</span> Frequencies</a></li>
+<li><a class="" href="empirical-parameters.html"><span class="header-section-number">B</span> Empirical Parameters</a></li>
+<li><a class="" href="concentration-analysis.html"><span class="header-section-number">C</span> Concentration Analysis</a></li>
+<li><a class="" href="multivariate-analysis.html"><span class="header-section-number">D</span> Multivariate Analysis</a></li>
+<li><a class="" href="correlation-analysis.html"><span class="header-section-number">E</span> Correlation Analysis</a></li>
+<li><a class="active" href="combinatorics-and-algebra-of-events.html"><span class="header-section-number">F</span> Combinatorics and Algebra of Events</a></li>
+<li><a class="" href="discrete-random-variables-and-distributions.html"><span class="header-section-number">G</span> Discrete Random Variables and Distributions</a></li>
+<li><a class="" href="continuous-random-variables-and-distributions.html"><span class="header-section-number">H</span> Continuous Random Variables and Distributions</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/DavidBarke/Stat1">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="combinatorics-and-algebra-of-events" class="section level1">
+<h1>
+<span class="header-section-number">F</span> Combinatorics and Algebra of Events<a class="anchor" aria-label="anchor" href="#combinatorics-and-algebra-of-events"><i class="fas fa-link"></i></a>
+</h1>
+<div id="prerequisites-6" class="section level2 unnumbered">
+<h2>Prerequisites<a class="anchor" aria-label="anchor" href="#prerequisites-6"><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb78"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://yihui.org/knitr/">knitr</a></span><span class="op">)</span>
+
+<span class="co"># Set ggplot2 theme</span>
+<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme_get.html">theme_set</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+</div>
+<div id="exercise-f1" class="section level2">
+<h2>
+<span class="header-section-number">F.1</span> Exercise F1<a class="anchor" aria-label="anchor" href="#exercise-f1"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="exercise-f2" class="section level2">
+<h2>
+<span class="header-section-number">F.2</span> Exercise F2<a class="anchor" aria-label="anchor" href="#exercise-f2"><i class="fas fa-link"></i></a>
+</h2>
+<div id="part-a-9" class="section level3">
+<h3>
+<span class="header-section-number">F.2.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-9"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="part-b-9" class="section level3">
+<h3>
+<span class="header-section-number">F.2.2</span> Part B<a class="anchor" aria-label="anchor" href="#part-b-9"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="exercise-f3" class="section level2">
+<h2>
+<span class="header-section-number">F.3</span> Exercise F3<a class="anchor" aria-label="anchor" href="#exercise-f3"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="exercise-f4" class="section level2">
+<h2>
+<span class="header-section-number">F.4</span> Exercise F4<a class="anchor" aria-label="anchor" href="#exercise-f4"><i class="fas fa-link"></i></a>
+</h2>
+<div id="part-a-10" class="section level3">
+<h3>
+<span class="header-section-number">F.4.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-10"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="part-b-10" class="section level3">
+<h3>
+<span class="header-section-number">F.4.2</span> Part B<a class="anchor" aria-label="anchor" href="#part-b-10"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="part-c-2" class="section level3">
+<h3>
+<span class="header-section-number">F.4.3</span> Part C<a class="anchor" aria-label="anchor" href="#part-c-2"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="exercise-f5" class="section level2">
+<h2>
+<span class="header-section-number">F.5</span> Exercise F5<a class="anchor" aria-label="anchor" href="#exercise-f5"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="exercise-f6" class="section level2">
+<h2>
+<span class="header-section-number">F.6</span> Exercise F6<a class="anchor" aria-label="anchor" href="#exercise-f6"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="exercise-f7" class="section level2">
+<h2>
+<span class="header-section-number">F.7</span> Exercise F7<a class="anchor" aria-label="anchor" href="#exercise-f7"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="exercise-f8" class="section level2">
+<h2>
+<span class="header-section-number">F.8</span> Exercise F8<a class="anchor" aria-label="anchor" href="#exercise-f8"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="exercise-f9" class="section level2">
+<h2>
+<span class="header-section-number">F.9</span> Exercise F9<a class="anchor" aria-label="anchor" href="#exercise-f9"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="exercise-f10" class="section level2">
+<h2>
+<span class="header-section-number">F.10</span> Exercise F10<a class="anchor" aria-label="anchor" href="#exercise-f10"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="exercise-f11" class="section level2">
+<h2>
+<span class="header-section-number">F.11</span> Exercise F11<a class="anchor" aria-label="anchor" href="#exercise-f11"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="exercise-f12" class="section level2">
+<h2>
+<span class="header-section-number">F.12</span> Exercise F12<a class="anchor" aria-label="anchor" href="#exercise-f12"><i class="fas fa-link"></i></a>
+</h2>
+<div id="part-a-11" class="section level3">
+<h3>
+<span class="header-section-number">F.12.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-11"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="part-b-11" class="section level3">
+<h3>
+<span class="header-section-number">F.12.2</span> Part B<a class="anchor" aria-label="anchor" href="#part-b-11"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="exercise-f13" class="section level2">
+<h2>
+<span class="header-section-number">F.13</span> Exercise F13<a class="anchor" aria-label="anchor" href="#exercise-f13"><i class="fas fa-link"></i></a>
+</h2>
+<div id="part-a-12" class="section level3">
+<h3>
+<span class="header-section-number">F.13.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-12"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="part-b-12" class="section level3">
+<h3>
+<span class="header-section-number">F.13.2</span> Part B<a class="anchor" aria-label="anchor" href="#part-b-12"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="part-c-3" class="section level3">
+<h3>
+<span class="header-section-number">F.13.3</span> Part C<a class="anchor" aria-label="anchor" href="#part-c-3"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="exercise-f14" class="section level2">
+<h2>
+<span class="header-section-number">F.14</span> Exercise F14<a class="anchor" aria-label="anchor" href="#exercise-f14"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="exercise-f15" class="section level2">
+<h2>
+<span class="header-section-number">F.15</span> Exercise F15<a class="anchor" aria-label="anchor" href="#exercise-f15"><i class="fas fa-link"></i></a>
+</h2>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="correlation-analysis.html"><span class="header-section-number">E</span> Correlation Analysis</a></div>
+<div class="next"><a href="discrete-random-variables-and-distributions.html"><span class="header-section-number">G</span> Discrete Random Variables and Distributions</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#combinatorics-and-algebra-of-events"><span class="header-section-number">F</span> Combinatorics and Algebra of Events</a></li>
+<li><a class="nav-link" href="#prerequisites-6">Prerequisites</a></li>
+<li><a class="nav-link" href="#exercise-f1"><span class="header-section-number">F.1</span> Exercise F1</a></li>
+<li>
+<a class="nav-link" href="#exercise-f2"><span class="header-section-number">F.2</span> Exercise F2</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#part-a-9"><span class="header-section-number">F.2.1</span> Part A</a></li>
+<li><a class="nav-link" href="#part-b-9"><span class="header-section-number">F.2.2</span> Part B</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#exercise-f3"><span class="header-section-number">F.3</span> Exercise F3</a></li>
+<li>
+<a class="nav-link" href="#exercise-f4"><span class="header-section-number">F.4</span> Exercise F4</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#part-a-10"><span class="header-section-number">F.4.1</span> Part A</a></li>
+<li><a class="nav-link" href="#part-b-10"><span class="header-section-number">F.4.2</span> Part B</a></li>
+<li><a class="nav-link" href="#part-c-2"><span class="header-section-number">F.4.3</span> Part C</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#exercise-f5"><span class="header-section-number">F.5</span> Exercise F5</a></li>
+<li><a class="nav-link" href="#exercise-f6"><span class="header-section-number">F.6</span> Exercise F6</a></li>
+<li><a class="nav-link" href="#exercise-f7"><span class="header-section-number">F.7</span> Exercise F7</a></li>
+<li><a class="nav-link" href="#exercise-f8"><span class="header-section-number">F.8</span> Exercise F8</a></li>
+<li><a class="nav-link" href="#exercise-f9"><span class="header-section-number">F.9</span> Exercise F9</a></li>
+<li><a class="nav-link" href="#exercise-f10"><span class="header-section-number">F.10</span> Exercise F10</a></li>
+<li><a class="nav-link" href="#exercise-f11"><span class="header-section-number">F.11</span> Exercise F11</a></li>
+<li>
+<a class="nav-link" href="#exercise-f12"><span class="header-section-number">F.12</span> Exercise F12</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#part-a-11"><span class="header-section-number">F.12.1</span> Part A</a></li>
+<li><a class="nav-link" href="#part-b-11"><span class="header-section-number">F.12.2</span> Part B</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#exercise-f13"><span class="header-section-number">F.13</span> Exercise F13</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#part-a-12"><span class="header-section-number">F.13.1</span> Part A</a></li>
+<li><a class="nav-link" href="#part-b-12"><span class="header-section-number">F.13.2</span> Part B</a></li>
+<li><a class="nav-link" href="#part-c-3"><span class="header-section-number">F.13.3</span> Part C</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#exercise-f14"><span class="header-section-number">F.14</span> Exercise F14</a></li>
+<li><a class="nav-link" href="#exercise-f15"><span class="header-section-number">F.15</span> Exercise F15</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/DavidBarke/Stat1/blob/master/06_F_Combinatorics_and_Algebra_of_Events.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/DavidBarke/Stat1/edit/master/06_F_Combinatorics_and_Algebra_of_Events.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Statistics 1 for Economics</strong>" was written by David Barkemeyer. </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+</html>

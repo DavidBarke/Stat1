@@ -14,7 +14,7 @@ library(knitr)
 theme_set(theme_bw())
 ```
 
-## Model Exercise B0 - Geometric mean
+## Model Exercise B0 - Geometric mean {-}
 
 Statistix would like to invest its savings of 1,000 EUR in a project. This project has a duration of five years and has the following annual interest rates:
 

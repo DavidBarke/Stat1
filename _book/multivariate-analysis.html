@@ -39,6 +39,9 @@
 <li><a class="" href="concentration-analysis.html"><span class="header-section-number">C</span> Concentration Analysis</a></li>
 <li><a class="active" href="multivariate-analysis.html"><span class="header-section-number">D</span> Multivariate Analysis</a></li>
 <li><a class="" href="correlation-analysis.html"><span class="header-section-number">E</span> Correlation Analysis</a></li>
+<li><a class="" href="combinatorics-and-algebra-of-events.html"><span class="header-section-number">F</span> Combinatorics and Algebra of Events</a></li>
+<li><a class="" href="discrete-random-variables-and-distributions.html"><span class="header-section-number">G</span> Discrete Random Variables and Distributions</a></li>
+<li><a class="" href="continuous-random-variables-and-distributions.html"><span class="header-section-number">H</span> Continuous Random Variables and Distributions</a></li>
 </ul>
 
         <div class="book-extra">
@@ -202,11 +205,96 @@
 <h3>
 <span class="header-section-number">D.5.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-3"><i class="fas fa-link"></i></a>
 </h3>
+<p>After intensive research work, the Birnwiese Fruit Growersâ€™ Association would like to bring two new apple varieties GrÃ¼ner Bitterer (G) and Kleiner Saurer (K) to the market. To test their market chances, the association will supply the new varieties together with the two already established varieties Edler Gelber (E) and Rotbaeckchen (R) to three canteen kitchens (a school kitchen S, a mensa M and a company canteen C) in a total quantity of all apple varieties of 200 kg.</p>
+<ol style="list-style-type: decimal">
+<li>S receives 10 kg from variety (R).</li>
+<li>From (E) a total of 70 kg is delivered.</li>
+<li>A total of 30 kg is delivered by (G).</li>
+<li>The delivered quantities of S and M together make up the delivered quantity of C.</li>
+<li>The quantity delivered from (R) to M makes up 10% of the total quantity delivered to C.</li>
+<li>From (E) twice as much is delivered to S as from (E) to M.</li>
+<li>C receives four times as much from (E) as M receives from (E).</li>
+<li>In total, twice as much is delivered to M as from (E) to S.</li>
+<li>From (G) four times as much is delivered to S as is delivered from (G) to M and C respectively.</li>
+<li>From (G) half as much is delivered to S as from (R) to C.</li>
+</ol>
+<div id="what-are-the-names-of-the-statistical-features-examined-here-and-how-are-they-scaled" class="section level4">
+<h4>
+<span class="header-section-number">D.5.1.1</span> What are the names of the statistical features examined here and how are they scaled?<a class="anchor" aria-label="anchor" href="#what-are-the-names-of-the-statistical-features-examined-here-and-how-are-they-scaled"><i class="fas fa-link"></i></a>
+</h4>
+</div>
+<div id="display-the-common-frequency-distribution-of-these-two-characteristics-in-tabular-form." class="section level4">
+<h4>
+<span class="header-section-number">D.5.1.2</span> Display the common frequency distribution of these two characteristics in tabular form.<a class="anchor" aria-label="anchor" href="#display-the-common-frequency-distribution-of-these-two-characteristics-in-tabular-form."><i class="fas fa-link"></i></a>
+</h4>
+</div>
+<div id="are-the-two-characteristics-independent-of-each-other-in-terms-of-the-data-available-justify-your-answer-by-means-of-a-formal-calculation." class="section level4">
+<h4>
+<span class="header-section-number">D.5.1.3</span> Are the two characteristics independent of each other in terms of the data available? Justify your answer by means of a formal calculation.<a class="anchor" aria-label="anchor" href="#are-the-two-characteristics-independent-of-each-other-in-terms-of-the-data-available-justify-your-answer-by-means-of-a-formal-calculation."><i class="fas fa-link"></i></a>
+</h4>
+</div>
+<div id="which-of-the-three-canteen-kitchens-gets-the-smallest-share-of-new-apple-varieties-in-relation-to-the-total-quantity-of-apples-delivered-to-them-justify-your-answer-with-the-help-of-a-formal-calculation." class="section level4">
+<h4>
+<span class="header-section-number">D.5.1.4</span> Which of the three canteen kitchens gets the smallest share of new apple varieties in relation to the total quantity of apples delivered to them? Justify your answer with the help of a formal calculation.<a class="anchor" aria-label="anchor" href="#which-of-the-three-canteen-kitchens-gets-the-smallest-share-of-new-apple-varieties-in-relation-to-the-total-quantity-of-apples-delivered-to-them-justify-your-answer-with-the-help-of-a-formal-calculation."><i class="fas fa-link"></i></a>
+</h4>
+</div>
 </div>
 <div id="part-b-3" class="section level3">
 <h3>
 <span class="header-section-number">D.5.2</span> Part B<a class="anchor" aria-label="anchor" href="#part-b-3"><i class="fas fa-link"></i></a>
 </h3>
+<p>According to the fruit growersâ€™ association, hardly any maggots should be present in the two new apple varieties. The canteen chef distrusts these promises and examines half of the apples of the new varieties delivered to him for maggots (<span class="math inline">\(6\)</span> apples <span class="math inline">\(\approx\)</span> 1 kg). He receives the following result:</p>
+<div class="sourceCode" id="cb76"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">maggots</span> <span class="op">&lt;-</span> <span class="fl">0</span><span class="op">:</span><span class="fl">3</span>
+<span class="va">rel_frequency</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.2</span>, <span class="fl">0.4</span>, <span class="fl">0.3</span>, <span class="fl">0.1</span><span class="op">)</span>
+<span class="va">tbl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>maggots <span class="op">=</span> <span class="va">maggots</span>, rel_frequency <span class="op">=</span> <span class="va">rel_frequency</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">tbl</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Number of maggots per apple"</span>, <span class="st">"Relative frequency"</span><span class="op">)</span>
+
+<span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="va">tbl</span><span class="op">)</span></code></pre></div>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="right">Number of maggots per apple</th>
+<th align="right">Relative frequency</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="right">0</td>
+<td align="right">0.2</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">0.4</td>
+</tr>
+<tr class="odd">
+<td align="right">2</td>
+<td align="right">0.3</td>
+</tr>
+<tr class="even">
+<td align="right">3</td>
+<td align="right">0.1</td>
+</tr>
+</tbody>
+</table></div>
+<div id="what-is-the-name-of-the-statistical-feature-examined-here-and-how-is-it-scaled-1" class="section level4">
+<h4>
+<span class="header-section-number">D.5.2.1</span> What is the name of the statistical feature examined here and how is it scaled?<a class="anchor" aria-label="anchor" href="#what-is-the-name-of-the-statistical-feature-examined-here-and-how-is-it-scaled-1"><i class="fas fa-link"></i></a>
+</h4>
+</div>
+<div id="determine-the-absolute-frequencies-as-well-as-the-absolute-and-relative-cumulative-frequencies-of-the-statistical-feature-in-a-table." class="section level4">
+<h4>
+<span class="header-section-number">D.5.2.2</span> Determine the absolute frequencies as well as the absolute and relative cumulative frequencies of the statistical feature in a table.<a class="anchor" aria-label="anchor" href="#determine-the-absolute-frequencies-as-well-as-the-absolute-and-relative-cumulative-frequencies-of-the-statistical-feature-in-a-table."><i class="fas fa-link"></i></a>
+</h4>
+</div>
+<div id="display-the-relative-distribution-function." class="section level4">
+<h4>
+<span class="header-section-number">D.5.2.3</span> Display the relative distribution function.<a class="anchor" aria-label="anchor" href="#display-the-relative-distribution-function."><i class="fas fa-link"></i></a>
+</h4>
+</div>
+<div id="determine-graphically-the-values-of-a-so-called-5-number-summary-and-draw-the-corresponding-box-plot." class="section level4">
+<h4>
+<span class="header-section-number">D.5.2.4</span> Determine <strong>graphically</strong> the values of a so-called <em>5 number summary</em> and draw the corresponding box-plot.<a class="anchor" aria-label="anchor" href="#determine-graphically-the-values-of-a-so-called-5-number-summary-and-draw-the-corresponding-box-plot."><i class="fas fa-link"></i></a>
+</h4>
+</div>
 </div>
 </div>
 <div id="exercise-d6" class="section level2">
@@ -217,6 +305,38 @@
 <h3>
 <span class="header-section-number">D.6.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-4"><i class="fas fa-link"></i></a>
 </h3>
+<p>The standard of cleanliness in youth hostels often leaves a lot to be desired. A group of statistics students would therefore like to conduct a study in four different regions (A, B, C and D) of the country to get an idea of the standard of cleanliness (good, moderate, poor) of some of the youth hostels located there. A total of 40 youth hostels were inspected with the following results:</p>
+<ol style="list-style-type: decimal">
+<li>In region D there are 2 hostels of moderate standard.</li>
+<li>A total of 14 hostels in Region C and 6 hostels in Region A were checked.</li>
+<li>In 12 hostels checked, the standard is moderate.</li>
+<li>In Region C, 8 hostels have a good standard.</li>
+<li>In Region C, there are twice as many hostels with a moderate standard as those with a poor standard.</li>
+<li>The hostels in Region C with a poor standard make up 10% of the hostels with a good standard of all regions.</li>
+<li>In Region A, there are four times as many hostels of moderate standard as there are hostels of good or bad standard in each region.</li>
+<li>The number of moderate-standard hostels in Region A is half the number of good-standard hostels in Region D.</li>
+<li>There are four times as many hostels of moderate standard in all regions together as there are hostels of poor standard in Region B.</li>
+</ol>
+<div id="what-are-the-names-of-the-statistical-features-examined-here-and-how-are-they-scaled-1" class="section level4">
+<h4>
+<span class="header-section-number">D.6.1.1</span> What are the names of the statistical features examined here and how are they scaled?<a class="anchor" aria-label="anchor" href="#what-are-the-names-of-the-statistical-features-examined-here-and-how-are-they-scaled-1"><i class="fas fa-link"></i></a>
+</h4>
+</div>
+<div id="display-the-common-frequency-distribution-of-these-two-characteristics-in-tabular-form.-1" class="section level4">
+<h4>
+<span class="header-section-number">D.6.1.2</span> Display the common frequency distribution of these two characteristics in tabular form.<a class="anchor" aria-label="anchor" href="#display-the-common-frequency-distribution-of-these-two-characteristics-in-tabular-form.-1"><i class="fas fa-link"></i></a>
+</h4>
+</div>
+<div id="are-the-two-characteristics-independent-of-each-other-in-terms-of-the-data-available-justify-your-answer-by-means-of-a-formal-calculation.-1" class="section level4">
+<h4>
+<span class="header-section-number">D.6.1.3</span> Are the two characteristics independent of each other in terms of the data available? Justify your answer by means of a formal calculation.<a class="anchor" aria-label="anchor" href="#are-the-two-characteristics-independent-of-each-other-in-terms-of-the-data-available-justify-your-answer-by-means-of-a-formal-calculation.-1"><i class="fas fa-link"></i></a>
+</h4>
+</div>
+<div id="in-which-region-is-the-cleanliness-of-hostels-with-at-least-moderate-standard-greatest-justify-your-answer-by-means-of-a-formal-calculation." class="section level4">
+<h4>
+<span class="header-section-number">D.6.1.4</span> In which region is the cleanliness (of hostels with at least moderate standard) greatest? Justify your answer by means of a formal calculation.<a class="anchor" aria-label="anchor" href="#in-which-region-is-the-cleanliness-of-hostels-with-at-least-moderate-standard-greatest-justify-your-answer-by-means-of-a-formal-calculation."><i class="fas fa-link"></i></a>
+</h4>
+</div>
 </div>
 <div id="part-b-4" class="section level3">
 <h3>
