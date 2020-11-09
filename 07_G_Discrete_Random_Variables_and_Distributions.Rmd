@@ -1,0 +1,16 @@
+# Discrete Random Variables and Distributions
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, error = FALSE)
+```
+
+## Prerequisites {-}
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(knitr)
+
+# Set ggplot2 theme
+theme_set(theme_bw())
+```
