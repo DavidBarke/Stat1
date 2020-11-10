@@ -17,13 +17,49 @@ theme_set(theme_bw())
 
 ## Exercise F1
 
+Three doctors work in the emergency room of a hospital: N, O and P. Since the division of weekend services (Saturday and Sunday) is very difficult, the three doctors decide to conduct a random experiment to determine the division. Three slips of paper with the first letters of their names (N, O and P) are placed in an urn. Two pieces of paper are then drawn at random from the urn to make the division.
+
+Specify the possible outputs (2-tuples) of this random experiment, if
+
+### with the allocation you want to determine on which day a doctor is on duty (first element of the 2-tuple stands for Saturday), and it should be possible for a doctor to be on duty (i.e. double duty) on both days.
+
+### double duty is possible, but it should not be determined on which day a doctor is on duty.
+
+### double duty is not possible, but it should be determined on which day a doctor is on duty.
+
+### double duty is not possible and it should not be determined on which day a doctor is on duty.
+
 ## Exercise F2
 
 ### Part A
 
+At the beginning of the semester, a group of students would like to offer a 5-day orientation tour of the university for first-year students. There are 5 volunteer members available.
+
+#### How many different ways are there to give each member a weekday (Monday to Friday)?
+
+Since Klaus has fallen ill, Karl will lead a tour twice.
+
+#### How many different options are there for scheduling the tours by name?
+
+Karl suddenly insists that he does not want to lead a tour on two consecutive days.
+
+#### How many different options are there for scheduling the tours by name now?
+
 ### Part B
 
-## Exercise F3
+In two urns there are 6 different colored balls in each of the two urns, whereby the color composition of the balls in both urns is the same. Two balls are drawn at random from each urn without putting them back.
+
+How many possibilities are there,
+
+#### to draw a total of 2 balls from both urns?
+
+#### to get two pairs of balls of the same color?
+
+#### to get four different colored balls?
+
+#### to get exactly one pair of balls of the same color?
+
+## Multiple Choice
 
 ## Exercise F4
 
