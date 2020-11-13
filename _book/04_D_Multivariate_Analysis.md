@@ -168,6 +168,18 @@ The standard of cleanliness in youth hostels often leaves a lot to be desired. A
 
 ### Part B
 
+After the results of this study were announced, all the managers of those hostels that were certified as having poor standards of cleanliness unanimously assured that a thorough remedy of the deficiencies complained about would be provided as soon as possible. After some time, 20 rooms in each of the affected hostels were checked again for their standard of cleanliness:
+
+
+
+#### What is the name of the statistical feature under investigation here and how is it scaled?
+
+#### Determine the absolute frequencies as well as the absolute and relative cumulated frequencies of the statistical feature in a table.
+
+#### Display the (relative) distribution function graphically.
+
+#### Calculate and graphically determine the values of a so-called 5-number summary and draw the corresponding box plot.
+
 ## Exercise D7
 
 ### Part A

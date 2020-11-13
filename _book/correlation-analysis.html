@@ -68,31 +68,159 @@
 <h2>
 <span class="header-section-number">E.1</span> Exercise E1<a class="anchor" aria-label="anchor" href="#exercise-e1"><i class="fas fa-link"></i></a>
 </h2>
+<p>A group of science students wrote an exam in math and an exam in physics. From 10 randomly selected students the results (in points) are summarized in the following table:</p>
+<div class="sourceCode" id="cb78"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">student</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>
+<span class="va">maths</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">14</span>, <span class="fl">8</span>, <span class="fl">10</span>, <span class="fl">20</span>, <span class="fl">12</span>, <span class="fl">8</span>, <span class="fl">12</span>, <span class="fl">20</span>, <span class="fl">16</span>, <span class="fl">20</span><span class="op">)</span>
+<span class="va">physics</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">12</span>, <span class="fl">12</span>, <span class="fl">8</span>, <span class="fl">12</span>, <span class="fl">10</span>, <span class="fl">10</span>, <span class="fl">12</span>, <span class="fl">16</span>, <span class="fl">8</span><span class="op">)</span>
+<span class="va">tbl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>student <span class="op">=</span> <span class="va">student</span>, maths <span class="op">=</span> <span class="va">maths</span>, physics <span class="op">=</span> <span class="va">physics</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">tbl</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Student"</span>, <span class="st">"Maths"</span>, <span class="st">"Physics"</span><span class="op">)</span>
+
+<span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="va">tbl</span><span class="op">)</span></code></pre></div>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="right">Student</th>
+<th align="right">Maths</th>
+<th align="right">Physics</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">14</td>
+<td align="right">10</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">8</td>
+<td align="right">12</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">10</td>
+<td align="right">12</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">20</td>
+<td align="right">8</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="right">12</td>
+<td align="right">12</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="right">8</td>
+<td align="right">10</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="right">12</td>
+<td align="right">10</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="right">20</td>
+<td align="right">12</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="right">16</td>
+<td align="right">16</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="right">20</td>
+<td align="right">8</td>
+</tr>
+</tbody>
+</table></div>
 <div id="part-a-6" class="section level3">
 <h3>
 <span class="header-section-number">E.1.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-6"><i class="fas fa-link"></i></a>
 </h3>
+<div id="calculate-the-correlation-coefficient-according-to-bravais-pearson." class="section level4">
+<h4>
+<span class="header-section-number">E.1.1.1</span> Calculate the correlation coefficient according to Bravais-Pearson.<a class="anchor" aria-label="anchor" href="#calculate-the-correlation-coefficient-according-to-bravais-pearson."><i class="fas fa-link"></i></a>
+</h4>
+</div>
 </div>
 <div id="part-b-6" class="section level3">
 <h3>
 <span class="header-section-number">E.1.2</span> Part B<a class="anchor" aria-label="anchor" href="#part-b-6"><i class="fas fa-link"></i></a>
 </h3>
+<div id="calculate-the-corrected-rank-correlation-coefficient-according-to-kendall." class="section level4">
+<h4>
+<span class="header-section-number">E.1.2.1</span> Calculate the (corrected) rank correlation coefficient according to Kendall.<a class="anchor" aria-label="anchor" href="#calculate-the-corrected-rank-correlation-coefficient-according-to-kendall."><i class="fas fa-link"></i></a>
+</h4>
+</div>
 </div>
 <div id="part-c-1" class="section level3">
 <h3>
 <span class="header-section-number">E.1.3</span> Part C<a class="anchor" aria-label="anchor" href="#part-c-1"><i class="fas fa-link"></i></a>
 </h3>
+<p>Each exam is considered passed if the candidate has achieved at least 12 points.</p>
+<div id="to-measure-the-correlation-between-the-exam-result-in-physics-passed-failed-and-the-exam-result-in-mathematics-passed-failed-display-the-exam-result-of-the-10-students-in-a-contingency-table." class="section level4">
+<h4>
+<span class="header-section-number">E.1.3.1</span> To measure the correlation between the exam result in physics (passed, failed) and the exam result in mathematics (passed, failed), display the exam result of the 10 students in a contingency table.<a class="anchor" aria-label="anchor" href="#to-measure-the-correlation-between-the-exam-result-in-physics-passed-failed-and-the-exam-result-in-mathematics-passed-failed-display-the-exam-result-of-the-10-students-in-a-contingency-table."><i class="fas fa-link"></i></a>
+</h4>
+</div>
+<div id="determine-the-chi2-value." class="section level4">
+<h4>
+<span class="header-section-number">E.1.3.2</span> Determine the <span class="math inline">\(\chi^2\)</span> value.<a class="anchor" aria-label="anchor" href="#determine-the-chi2-value."><i class="fas fa-link"></i></a>
+</h4>
+</div>
+<div id="determine-the-contingency-coefficient-k." class="section level4">
+<h4>
+<span class="header-section-number">E.1.3.3</span> Determine the contingency coefficient <span class="math inline">\(K\)</span>.<a class="anchor" aria-label="anchor" href="#determine-the-contingency-coefficient-k."><i class="fas fa-link"></i></a>
+</h4>
+</div>
 </div>
 <div id="part-d" class="section level3">
 <h3>
 <span class="header-section-number">E.1.4</span> Part D<a class="anchor" aria-label="anchor" href="#part-d"><i class="fas fa-link"></i></a>
 </h3>
+<div id="give-an-explanation-for-the-different-values-of-r-phi-and-k." class="section level4">
+<h4>
+<span class="header-section-number">E.1.4.1</span> Give an explanation for the different values of <span class="math inline">\(r\)</span>, <span class="math inline">\(\phi\)</span> and <span class="math inline">\(K\)</span>.<a class="anchor" aria-label="anchor" href="#give-an-explanation-for-the-different-values-of-r-phi-and-k."><i class="fas fa-link"></i></a>
+</h4>
+</div>
 </div>
 </div>
 <div id="exercise-e2" class="section level2">
 <h2>
 <span class="header-section-number">E.2</span> Exercise E2<a class="anchor" aria-label="anchor" href="#exercise-e2"><i class="fas fa-link"></i></a>
 </h2>
+<p>15 apprentices, who participate in a series of sex education lessons as part of their vocational school education, were asked to mark on a five-point scale (1: unimportant, 5: very important) the importance they felt sex education in general should have. In addition, the interviewed apprentices were asked to mark on a three-point scale (1: not at all, 3: a lot) the extent to which the sex education book used in class could contribute to a reasonable sex education. The result is recorded in the following frequency table (rating of important from left to right, rating of book from top to bottom):</p>
+<div class="inline-table"><table class="table table-sm"><tbody>
+<tr class="odd">
+<td align="left">-</td>
+<td align="left">4</td>
+<td align="left">1</td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">5</td>
+<td align="left">1</td>
+<td align="left">-</td>
+</tr>
+<tr class="odd">
+<td align="left">2</td>
+<td align="left">-</td>
+<td align="left">1</td>
+<td align="left">-</td>
+<td align="left">1</td>
+</tr>
+</tbody></table></div>
+<div id="to-indicate-the-extent-to-which-the-two-ratings-are-correlated-calculate-the-rank-correlation-coefficient-according-to-kendall." class="section level3">
+<h3>
+<span class="header-section-number">E.2.1</span> To indicate the extent to which the two ratings are correlated, calculate the rank correlation coefficient according to Kendall.<a class="anchor" aria-label="anchor" href="#to-indicate-the-extent-to-which-the-two-ratings-are-correlated-calculate-the-rank-correlation-coefficient-according-to-kendall."><i class="fas fa-link"></i></a>
+</h3>
+</div>
 </div>
 <div id="exercise-e3" class="section level2">
 <h2>
@@ -102,26 +230,178 @@
 <h3>
 <span class="header-section-number">E.3.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-7"><i class="fas fa-link"></i></a>
 </h3>
+<p>The characteristics of written and oral grades in economics were assessed in 9 exam candidates, with only whole grades from 1.0 to 5.0 being awarded. The result of the survey is shown in the following matrix:</p>
+<div class="inline-table"><table class="table table-sm"><tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr class="even">
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">1</td>
+<td align="left">-</td>
+</tr>
+<tr class="odd">
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">1</td>
+<td align="left">-</td>
+</tr>
+</tbody></table></div>
+<div id="calculate-a-suitable-coefficient-as-a-measure-of-the-strength-of-the-relationship-between-the-two-characteristics." class="section level4">
+<h4>
+<span class="header-section-number">E.3.1.1</span> Calculate a suitable coefficient as a measure of the strength of the relationship between the two characteristics.<a class="anchor" aria-label="anchor" href="#calculate-a-suitable-coefficient-as-a-measure-of-the-strength-of-the-relationship-between-the-two-characteristics."><i class="fas fa-link"></i></a>
+</h4>
+</div>
 </div>
 <div id="part-b-7" class="section level3">
 <h3>
 <span class="header-section-number">E.3.2</span> Part B<a class="anchor" aria-label="anchor" href="#part-b-7"><i class="fas fa-link"></i></a>
 </h3>
+<p>The characteristics preparation time [in weeks] and number of exams taken were recorded for 10 exam candidates. The result of the survey is shown in the following matrix:</p>
+<div class="inline-table"><table class="table table-sm"><tbody>
+<tr class="odd">
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">1</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+<tr class="odd">
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">1</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+<tr class="odd">
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+</tbody></table></div>
+<div id="calculate-a-suitable-coefficient-as-a-measure-of-the-strength-of-the-relationship-between-the-two-characteristics.-1" class="section level4">
+<h4>
+<span class="header-section-number">E.3.2.1</span> Calculate a suitable coefficient as a measure of the strength of the relationship between the two characteristics.<a class="anchor" aria-label="anchor" href="#calculate-a-suitable-coefficient-as-a-measure-of-the-strength-of-the-relationship-between-the-two-characteristics.-1"><i class="fas fa-link"></i></a>
+</h4>
+</div>
 </div>
 </div>
 <div id="exercise-e4" class="section level2">
 <h2>
 <span class="header-section-number">E.4</span> Exercise E4<a class="anchor" aria-label="anchor" href="#exercise-e4"><i class="fas fa-link"></i></a>
 </h2>
+<p>At the University A, those responsible for Statistics I and II exams are interested in using a coefficient to estimate how strong the formal relationship between the two exam results (measured in points) is. For this purpose, 5 students are randomly selected from the total number of students who have written these exams. In the following table their compiled point values are listed:</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="right">Student</th>
+<th align="right">Statistics 1</th>
+<th align="right">Statistics 2</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">20</td>
+<td align="right">70</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">30</td>
+<td align="right">40</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">50</td>
+<td align="right">10</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">70</td>
+<td align="right">40</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="right">80</td>
+<td align="right">70</td>
+</tr>
+</tbody>
+</table></div>
 <div id="part-a-8" class="section level3">
 <h3>
 <span class="header-section-number">E.4.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-8"><i class="fas fa-link"></i></a>
 </h3>
+<div id="draw-the-data-into-a-scatterplot." class="section level4">
+<h4>
+<span class="header-section-number">E.4.1.1</span> Draw the data into a scatterplot.<a class="anchor" aria-label="anchor" href="#draw-the-data-into-a-scatterplot."><i class="fas fa-link"></i></a>
+</h4>
+</div>
+<div id="calculate-the-appropriate-coefficient-for-this-problem." class="section level4">
+<h4>
+<span class="header-section-number">E.4.1.2</span> Calculate the appropriate coefficient for this problem.<a class="anchor" aria-label="anchor" href="#calculate-the-appropriate-coefficient-for-this-problem."><i class="fas fa-link"></i></a>
+</h4>
+</div>
+<div id="interpret-the-result." class="section level4">
+<h4>
+<span class="header-section-number">E.4.1.3</span> Interpret the result.<a class="anchor" aria-label="anchor" href="#interpret-the-result."><i class="fas fa-link"></i></a>
+</h4>
+</div>
+<div id="what-does-this-coefficient-measure-and-what-does-it-not-measure." class="section level4">
+<h4>
+<span class="header-section-number">E.4.1.4</span> What does this coefficient measure and what does it not measure.<a class="anchor" aria-label="anchor" href="#what-does-this-coefficient-measure-and-what-does-it-not-measure."><i class="fas fa-link"></i></a>
+</h4>
+</div>
 </div>
 <div id="part-b-8" class="section level3">
 <h3>
 <span class="header-section-number">E.4.2</span> Part B<a class="anchor" aria-label="anchor" href="#part-b-8"><i class="fas fa-link"></i></a>
 </h3>
+<p>Assign ranks to the (cardinal) data.</p>
+<div id="calculate-the-adequate-coefficient." class="section level4">
+<h4>
+<span class="header-section-number">E.4.2.1</span> Calculate the adequate coefficient.<a class="anchor" aria-label="anchor" href="#calculate-the-adequate-coefficient."><i class="fas fa-link"></i></a>
+</h4>
+</div>
+<div id="interpret-the-result.-1" class="section level4">
+<h4>
+<span class="header-section-number">E.4.2.2</span> Interpret the result.<a class="anchor" aria-label="anchor" href="#interpret-the-result.-1"><i class="fas fa-link"></i></a>
+</h4>
+</div>
 </div>
 </div>
 <div id="exercise-e5" class="section level2">
@@ -213,7 +493,9 @@
 <li><a class="nav-link" href="#part-d"><span class="header-section-number">E.1.4</span> Part D</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#exercise-e2"><span class="header-section-number">E.2</span> Exercise E2</a></li>
+<li>
+<a class="nav-link" href="#exercise-e2"><span class="header-section-number">E.2</span> Exercise E2</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#to-indicate-the-extent-to-which-the-two-ratings-are-correlated-calculate-the-rank-correlation-coefficient-according-to-kendall."><span class="header-section-number">E.2.1</span> To indicate the extent to which the two ratings are correlated, calculate the rank correlation coefficient according to Kendall.</a></li></ul>
+</li>
 <li>
 <a class="nav-link" href="#exercise-e3"><span class="header-section-number">E.3</span> Exercise E3</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#part-a-7"><span class="header-section-number">E.3.1</span> Part A</a></li>
