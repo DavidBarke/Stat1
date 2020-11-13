@@ -150,9 +150,13 @@ Of three events $A$, $B$, $C$ occur:
 In a small town there are only the two daily newspapers $Z1$ and $Z2$. 60% of the inhabitants read $Z1$ and 80% of the inhabitants read $Z2$. Neither newspaper is read by 10% of the residents. A person is chosen at random. What is the probability that this person
 
 #### reads both newspapers?
+
 #### reads $Z1$, but not $Z2$?
+
 #### reads $Z2$ if she is not a Z1 reader?
+
 #### reads at most one newspaper?
+
 #### does not read $Z1$?
 
 ## Exercise F8
