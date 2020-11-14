@@ -14,3 +14,285 @@ library(knitr)
 # Set ggplot2 theme
 theme_set(theme_bw())
 ```
+
+## Exercise G1
+
+### The pigsty
+
+A farmer owns a pigsty with 10 compartments, in each of which 2 pigs stand. There is a suspicion that some pigs are infected with a certain, but not communicable disease, which can be detected by a blood test.
+The veterinarian suggests that a blood test be performed on each pig for a fee of 10 EUR per pig. However, the total fee of 200 EUR resulting from this proposal seems far too high for the farmer. Therefore, the farmer in turn suggests that the doctor mixes the blood taken from the animals in one compartment and analyzes this mixture for 10 EUR. Only if the results are positive should the doctor perform a single test on each pig in the compartment concerned. Whether the farmer's method is advantageous (i.e. costs less than 200 EUR) depends on the probability $\pi$ of a pig being infected with the disease.
+
+#### First of all, think intuitively for which values of $\pi$ (rather small or rather large) the method proposed by the farmer is more cost-effective.
+
+#### Now decide mathematically for which values of $\pi$ the method suggested by the farmer is cheaper than the method suggested by the doctor by comparing the expected value of the doctor's fee (if suggested by the farmer) with the fixed amount of the doctor's fee (if suggested by the doctor).
+
+Suppose you were not an economist or business economist, but a farmer and had this problem to solve. Surely you would then have made a proposal to the veterinarian that was a bit more favourable and also more advantageous to you for a higher probability of illness $\pi$ than the method suggested by the veterinarian. Modify the farmer's method described above accordingly.
+
+#### For what values of $\pi$ is your modified method now cheaper than the method suggested by the veterinarian? Justify your proposal with the help of a formal calculation.
+
+## Exercise G2
+
+### Lottery
+
+A lottery ticket seller sells ( infinitely many ) lots with the equally distributed numbers 0 to 9. 
+
+The following payment plan applies:
+
+* If the digits 0, 6 or 9 appear, nothing is paid out.
+* If an even number (except 0 or 6) appears, 4.50 EUR is paid out.
+* If an odd number appears (except 9), 3 EUR will be paid.
+
+#### Calculate the expected value of the payout amount per draw.
+
+#### With what probability does a lot buyer receive a payout of exactly 3 EUR when buying 3 lots?
+
+#### With what probability does a lot buyer receive a payout of at least 4 EUR when buying 3 lots?
+
+The lot seller has set the lot price so that his daily profit has an expected value of 450 EUR for 1,000 lots sold.
+
+#### How high is this lot price?
+
+## Exercise G3
+
+### Aircraft engine
+
+Each aircraft engine fails during a flight independently from the other engines with a probability of $\pi$. 
+
+Be
+* $X$ : "Number of functioning engines of a twin-engined aircraft.
+* $Y$ : "Number of functioning engines of a three-engined aircraft.
+* $Z$ : "Number of functioning engines of a four-engined aircraft."
+
+#### Determine the probability function of X in a table.
+
+#### Determine the probability function of Y in a table.
+
+#### Determine the probability function of Z in a table.
+
+### Part A
+
+An aircraft can stay in the air (and land safely) if at least **two-thirds** of the engines are working. Are aircraft with two, three or four engines more reliable, i.e. for which type of aircraft, the probability of a crash is lowest if for the probability of failure of an engine applies:
+
+#### $\pi = 0.7$
+
+#### $\pi = 0.2$
+
+#### $\pi = 0.01$
+
+### Part B
+
+An aircraft can stay in the air (and land safely) if at least **half** of the engines are working. Are aircraft with two, three or four engines more reliable, i.e. for which type of aircraft, the probability of a crash is lowest if for the probability of failure of an engine applies:
+
+#### $\pi = 0.7$
+
+#### $\pi = 0.2$
+
+#### $\pi = 0.01$
+
+## Exercise G4
+
+### Mini-Roulette
+
+Mini roulette is played in a casino in a small spa town. This roulette is divided into four equal sectors. The ball can only fall into one of these sectors during one pass. In each sector one of the numbers "-2", "-1", "+1" and "+2" is printed. The following rules apply:
+
+* If the ball falls into the sector "+1" or "+2", the result is fixed, you will be paid the corresponding amount in EUR by the bank and the game is over.
+* If the ball falls in the sector "-2" or "-1", the roulette is started again. The results of both passes are added together and form the result:
+  + If the result is positive, the bank will pay you this amount in EUR and the game is finished.
+  + If the result is negative, you must pay this amount to the bank in EUR and the game is finished.
+  + If the result is zero, you have neither profit nor loss and the game ends in a draw.
+
+#### Determine the probability function of the random variable $X$: "Earnings per game in EUR" in table form:
+
+#### Is this game "fair"?
+
+#### Calculate $Var(X)$.
+
+## Exercise G5
+
+### Card game
+
+A deck of 4 cards (Ace of Spades, Ace of Hearts, Queen of Clubs and Jack of Diamonds) is shuffled and dealt face down to two players, so that each player receives two cards.
+
+#### Note the 6 card dealings that a player can receive.
+
+Suppose one of the two players announces: "I have an ace".
+
+#### What is the probability that this player also holds the second ace in his hand?
+
+Suppose one of the two players announces: "I have an Ace of Spades. 
+
+#### What is the probability that this player will also hold the second ace in his hand?
+
+#### Determine the expected number of aces that a player will receive when the cards are dealt.
+
+## Exercise G6
+
+### One will win
+
+If two candidates are equal on points in the "One will win" show, the winner is determined by throwing the dice, i.e. there is a dice round in which each candidate rolls an ideal dice once. The one of them who rolls the higher number is declared the winner. If both roll the same number, another dice round takes place until the winner is determined.
+
+Determine the probability that until the decision is made
+
+1. exactly 4
+2. at least 4
+3. at most 4
+
+dice rounds are necessary.
+
+## Exercise G7
+
+### Coin toss
+
+The two statistics students Otto and Paul came up with the following random experiment:
+
+An ideal coin ("heads" or "tails") is tossed three times in a row.
+
+* Game A : You win as much EUR as the number thrown in this experiment.
+* Game B : Only the result of the first toss is taken into account.
+  + If the 1st roll shows "heads", you win 3 EUR.
+  + If the 1st roll of the dice shows "tails", you have neither a win nor a loss.
+
+Be $X$: "Winnings of game A" and $Y$: "Winnings of game B".
+
+#### Enter the probability function of the random variable X.
+
+#### Enter the probability function of the random variable Y.
+
+#### Paul chooses game A and Otto chooses game B.
+
+#### Calculate the expected value and the variance of Paul's win.
+
+#### Calculate the expected value and the variance of Otto's win.
+
+#### Which game would you choose?
+
+#### Determine the probability function of the random variable $X \cdot Y$ and calculate $E(X \cdot Y)$.
+
+#### Calculate $Cov(X, Y)$
+.
+#### Determine the probability function of the random variable $Z$ : "Joint profit of Otto and Paul"
+
+#### Calculate the expected value and the variance of the joint profit of Otto and Paul.
+
+#### Are $X$ and $Y$ stochastically independent?
+
+## Exercise G8
+
+### Environmentalists
+
+A group of environmentalists goes out to sea and collects floating barrels of poison. 
+
+Let $X$ be : "Number of barrels found on the first day in a region" with
+
+```{r, echo = FALSE}
+x <- 3:5
+P_x <- c(0.25, 0.5, 0.25)
+tbl <- tibble(x = x, P_x = P_x)
+names(tbl) <- c("x", "P(X = x)")
+
+kable(tbl)
+```
+
+#### What is the probability that environmentalists will find at least four barrels in a new region on the first day?
+
+#### On average, how many barrels will be found in a new region on the first day?
+
+#### Calculate the variance of $X$.
+
+If the environmentalists go to the same region a second day, the chances of finding barrels change. Let $Y$ be : "Number of barrels found on the second day in the same region" with the following conditional probabilities:
+
+$$P(Y = 0 | X = 3) = \frac{1}{2} \, , \quad P(Y = 0 | X = 4) = \frac{1}{2} \, , \quad P(Y = 0 | X = 5) = \frac{3}{4}$$
+$$P(Y = 1 | X = 3) = \frac{1}{4} \, , \quad P(Y = 1 | X = 4) = \frac{1}{2} \, , \quad P(Y = 1 | X = 5) = \frac{1}{4}$$
+$$P(Y = 2 | X = 3) = \frac{1}{4} \, , \quad P(Y = 2 | X = 4) = 0 \, , \quad P(Y = 2 | X = 5) = 0$$
+
+#### Determine the common probability function of $X$ and $Y$ in a table.
+
+#### Calculate the covariance of $X$ and $Y$.
+
+#### Are $X$ and $Y$ stochastically independent?
+
+The environmentalists receive a kind of "find reward" for the barrels found. An unknown donor pays them 5 EUR for each barrel found. In addition, each trip is rewarded with 10 EUR.
+
+#### Which proceeds in EUR can the environmentalists expect if they go to sea in a new region once on the first day and once on the second day?
+
+## Exercise G9
+
+### Two-dimensional random variable
+
+The two-dimensional random variable ($X, Y$) has the following distribution (probability function):
+
+```{r, echo = FALSE}
+X <- rep(1:2, times = 3)
+Y <- rep(1:3, each = 2)
+prob <- c(0.1, 0.1, 0.3, 0.1, 0.2, 0.2)
+tbl <- tibble(X = X, Y = Y, prob = prob)
+names(tbl) = c("x", "y", "P(X = x, Y = y)")
+
+kable(tbl)
+```
+
+#### Determine the expected value and the variance of $X$ and $Y$ .
+
+#### Determine the expected value and the variance and the distribution of the sum $X + Y$ .
+
+#### Determine the expected value and the variance and the distribution of the product $X \cdot Y$ .
+
+#### Determine $Cov(X, Y)$
+
+#### Interpret $Cov(X, Y)$
+
+## Exercise G10
+
+### Candles
+
+Candles of a certain type are offered in a store as single and double packs. The number of single packs sold per day ($X$) and the number of double packs sold per day ($Y$) are independent random variables with the following probability distributions:
+
+```{r, echo = FALSE}
+x <- 0:3
+P_x <- c(0.1, 0.4, 0.3, 0.2)
+tbl_x <- tibble(x = x, P_x = P_x)
+names(tbl_x) <- c("x", "P(X = x)")
+
+kable(tbl_x)
+
+y <- 0:2
+P_y <- c(0.4, 0.3, 0.3)
+tbl_y <- tibble(y = y, P_y = P_y)
+names(tbl_y) <- c("y", "P(Y = y)")
+
+kable(tbl_y)
+```
+
+#### Determine the expected value and the variance of $X$ and $Y$.
+
+Define $Z$: "Number of candles sold per day".
+
+#### Determine the expected value and the variance of $Z$.
+
+#### Determine the probability distribution of $Z$.
+
+## Exercise G11
+
+### Self-employment
+
+After the unsuccessful attempt to obtain the intermediate diploma in statistics, student Emil becomes self-employed. He wants to build a secure existence as a gambler. He is offered the following two games:
+
+* Game 1 : Two ideal dice are thrown. The product of the above numbers is paid in EUR.
+* Game 2 : Two ideal dice are thrown. The eightfold sum of the above numbers is paid in EUR.
+
+Be
+
+* $Z_1$: "Payout at game 1"
+* $Z_2$: "Payout for game 2
+* $G_1$: "Win at game 1"
+* $G_2$: "Win at game 2
+
+#### What stake in EUR does Emil have to pay in Game 1 to make this game "fair"?
+
+#### What stake in EUR does Emil have to pay in game 2 to make this game "fair"?
+
+Emil finds out that $E(Z_1^2) = 230$ and $E(Z_2^2) = 3.509$.
+
+#### What is the standard deviation of the win in game 1?
+
+#### What is the standard deviation of the win in game 2?
