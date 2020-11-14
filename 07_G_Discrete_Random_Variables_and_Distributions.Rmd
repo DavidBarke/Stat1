@@ -296,3 +296,155 @@ Emil finds out that $E(Z_1^2) = 230$ and $E(Z_2^2) = 3.509$.
 #### What is the standard deviation of the win in game 1?
 
 #### What is the standard deviation of the win in game 2?
+
+## Exercise G12
+
+### Free tokens
+
+The following game of chance is considered: An ideal dice is thrown once. The player can place **free** tokens on the events:
+
+$$A = \{1, 3, 5 \} \, , \quad B = \{5, 6\} \, , \quad C = \{ 6 \} \, .$$
+
+The following payouts apply:
+
+```{r, echo = FALSE}
+token <- LETTERS[1:3]
+payout <- c(1, 2, 6)
+tbl <- tibble(token = token, payout = payout)
+names(tbl) <- c("Token", "Payout if drawn")
+```
+
+If you bet on the wrong token you will receive a payout of 0 EUR.
+
+Let $X_A$, $X_B$ and $X_C$ be the payouts a player receives when he has bet on the corresponding marker.
+
+#### Specify the probability functions of $X_A$, $X_B$ and $X_C$ in table form and calculate the expected value and the variance respectively.
+
+#### Determine the common probability function of $(X_A, X_B)$, $(X_A, X_C)$ and $(X_B, X_C)$.
+
+#### Which of these pairs of variables are stochastically independent?
+
+#### Which of these pairs of variables are correlated?
+
+#### Explain the signs of the respective covariance by content.
+
+#### Player 1 sets 3 marks each on A, B and C. How large are the expected value and variance of the payout?
+
+#### Player 2 sets 1 marker on A, 6 markers on B and 2 markers on C. What is the expected value and variance of the payout?
+
+#### Player 3 wants to place his 9 tokens so that the expected payout is 6.50 EUR and the variance is minimal. How should he place the tokens?
+
+## Exercise G13
+
+### Bridge
+
+At a round table there are four chairs for a bridge game in which four people participate. Two women wearing skirts and two men wearing tuxedos take part in the bridge game.
+
+* Be $X$: "Number of male neighbors of a considered bridge player"
+* Be $Y$ : "Number of skirts worn by a considered bridge player
+
+#### Determine the probability function of $X$ in a table.
+
+#### Determine the probability function of $Y$ in a table.
+
+#### Determine the common probability function of $X$ and $Y$ in the table.
+
+#### Calculate $Cov(X, Y)$.
+
+## G14
+
+### End of the soccer season
+
+The soccer season is coming to an end. 1. FC Berlin still has two games to play, first a home game and finally an away game. In each game there are two points for a win, one point for a draw and no point for a defeat.
+
+The coach oracles:
+
+* In the home game we will get both points with a probability of 50% and one point with a probability of 30%.
+* In the away game victory, defeat and draw are equally probable.
+* It's actually impossible that we don't get any points at all in the two games or that both games end in a draw.
+* If we get both points in the home game, the probability that we get at least one point in the last game is 60%.
+* But if we lose the home game, there is a 40% chance that the team will pull itself together and win the away game.
+
+Be:
+
+* $X$ : "Number of points won in the home game"
+* $Y$ : "Number of points won in the away game"
+
+#### Determine the common probability function of $X$ and $Y$ in table form.
+
+#### Calculate $E(X + Y)$ and interpret this value in terms of content.
+
+## Exercise G15
+
+### Three balls
+
+In an urn there are three balls numbered 1 to 3. The following random experiment is performed: In the first draw, a ball is randomly selected and its number is determined. Before the second draw, all balls with a larger number are removed from the urn. Then the ball drawn in the first draw is put back into the urn, and a ball is again selected.
+
+Be:
+
+* $X $: "Number of the first ball drawn"
+* $Y$: "Number of the second ball drawn".
+
+#### Determine the common probability function of $X$ and $Y$ in table form.
+
+#### Calculate $Cov(X, Y)$.
+
+#### Are $X$ and $Y$ stochastically independent?
+
+Assume that the random experiment described above forms the basis for a game of chance in which the sum of the numbers on the drawn balls is paid out in EUR.
+
+#### What stake in EUR would be required for such a game to be considered "fair"?
+
+## Exercise G16
+
+### Statistics exam
+
+Three students want to be examined by a professor in statistics one after the other. The passing or failing of the examination can be considered as independent for the three students. The probability of passing the exam is 80% for the first examinee and 70% for the second examinee and 60% for the third examinee. 
+
+Be:
+
+* $X$: "Number of successful students among the first two examinees"
+* $Y$: "Number of successful students among the last two examinees"
+
+#### Determine in table form the common probability function of the random variables $X$ and $Y$.
+
+#### Are the random variables $X$ and $Y$ stochastically independent?
+
+#### Determine the probability function of the random variable $Z$: "Number of total successful students among all three candidates".
+
+## Exercise G17
+
+The owner of a fruit store has the following problems that you should solve for him: The random variable $X$ is the amount of strawberry baskets demanded daily and has the following probability distribution:
+
+```{r, echo=FALSE}
+x <- 1:3
+P_x <- c(0.3, 0.4, 0.3)
+tbl <- tibble(x = x, P_x = P_x)
+names(tbl) <- c("x", "P(X = x)")
+
+kable(tbl)
+```
+
+The owner of the fruit store receives the strawberry baskets from the fruit yard daily according to the following random principle:
+
+There are 2 white and 3 green balls in an urn. He draws 3 balls at random (and without putting them back) from this urn. If 2 of the drawn balls are green, he orders 2 strawberry baskets, in all other cases he orders 3 strawberry baskets.
+
+The quantity of strawberry baskets requested is independent of the quantity offered (=order quantity).
+
+#### Determine the probability function for the quantity $Y$ and calculate $E(Y)$ and $Var(Y)$.
+
+#### Determine the probability function of the random variable $Z = Y - X$ and interpret the possible realizations of $Z$
+
+#### Calculate $E(Z)$ and interpret this value.
+
+#### Calculate $Var(Z)$.
+
+#### Table the common probability function of $X$ and $Y$.
+
+#### Determine the covariance $Cov(X, Y)$.
+
+#### Determine the conditional probability function of $X$, if $y = 3$.
+
+If the demand cannot be satisfied, it may cost the owner 1 EUR per basket (image loss). However, if strawberry baskets cannot be sold, it may cost the owner 2 EUR per basket.
+
+#### What are the expected costs?
