@@ -183,7 +183,7 @@ Assume that the winter season accounts for 30% of the total season.
 
 ## Exercise F9
 
-### Border crossing
+### Part A
 
 At a small border crossing, two customs officers share the duty exactly halfway. When the first customs officer is on duty, he checks passports with a probability of 20% and searches cars with a probability of 10% independently of a passport check. When the second customs officer is on duty, he checks passports with a probability of 70% and searches cars with a probability of 40% independently of a passport control.
 
