@@ -1,301 +1,575 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="" xml:lang="">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>F Combinatorics and Algebra of Events | Statistics 1 for Economics</title>
-<meta name="author" content="David Barkemeyer">
-<!-- CSS --><link rel="stylesheet" href="style.css">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.2"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="libs/bootstrap-4.5.3/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.5.3/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.1.9000/tabs.js"></script><script src="libs/bs3compat-0.2.1.9000/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js"></script>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>F Combinatorics and Algebra of Events | Statistics 1 for Economics</title>
+  <meta name="description" content="F Combinatorics and Algebra of Events | Statistics 1 for Economics" />
+  <meta name="generator" content="bookdown 0.21.4 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="F Combinatorics and Algebra of Events | Statistics 1 for Economics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="F Combinatorics and Algebra of Events | Statistics 1 for Economics" />
+  
+  
+  
+
+<meta name="author" content="David Barkemeyer" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="correlation-analysis.html"/>
+<link rel="next" href="discrete-random-variables-and-distributions.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
 </head>
-<body data-spy="scroll" data-target="#toc">
 
-<div class="container-fluid">
-<div class="row">
-  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+<body>
 
-    <div class="d-flex align-items-start justify-content-between">
-      <h1>
-        <a href="index.html" title="">Statistics 1 for Economics</a>
-      </h1>
-      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
-    </div>
 
-    <div id="main-nav" class="collapse-lg">
-      <form role="search">
-        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
-</form>
 
-      <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html">Welcome</a></li>
-<li class="book-part">Appendix</li>
-<li><a class="" href="frequencies.html"><span class="header-section-number">A</span> Frequencies</a></li>
-<li><a class="" href="empirical-parameters.html"><span class="header-section-number">B</span> Empirical Parameters</a></li>
-<li><a class="" href="concentration-analysis.html"><span class="header-section-number">C</span> Concentration Analysis</a></li>
-<li><a class="" href="multivariate-analysis.html"><span class="header-section-number">D</span> Multivariate Analysis</a></li>
-<li><a class="" href="correlation-analysis.html"><span class="header-section-number">E</span> Correlation Analysis</a></li>
-<li><a class="active" href="combinatorics-and-algebra-of-events.html"><span class="header-section-number">F</span> Combinatorics and Algebra of Events</a></li>
-<li><a class="" href="discrete-random-variables-and-distributions.html"><span class="header-section-number">G</span> Discrete Random Variables and Distributions</a></li>
-<li><a class="" href="continuous-random-variables-and-distributions.html"><span class="header-section-number">H</span> Continuous Random Variables and Distributions</a></li>
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="frequencies.html"><a href="frequencies.html"><i class="fa fa-check"></i><b>A</b> Frequencies</a><ul>
+<li class="chapter" data-level="" data-path="frequencies.html"><a href="frequencies.html#prerequisites"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="A.1" data-path="frequencies.html"><a href="frequencies.html#exercise-a1"><i class="fa fa-check"></i><b>A.1</b> Exercise A1</a><ul>
+<li class="chapter" data-level="A.1.1" data-path="frequencies.html"><a href="frequencies.html#part-a"><i class="fa fa-check"></i><b>A.1.1</b> Part A</a></li>
+<li class="chapter" data-level="A.1.2" data-path="frequencies.html"><a href="frequencies.html#part-b"><i class="fa fa-check"></i><b>A.1.2</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="A.2" data-path="frequencies.html"><a href="frequencies.html#exercise-a2"><i class="fa fa-check"></i><b>A.2</b> Exercise A2</a><ul>
+<li class="chapter" data-level="A.2.1" data-path="frequencies.html"><a href="frequencies.html#m-race"><i class="fa fa-check"></i><b>A.2.1</b> 100m race</a></li>
+</ul></li>
+<li class="chapter" data-level="A.3" data-path="frequencies.html"><a href="frequencies.html#exercise-a3"><i class="fa fa-check"></i><b>A.3</b> Exercise A3</a><ul>
+<li class="chapter" data-level="A.3.1" data-path="frequencies.html"><a href="frequencies.html#tennis"><i class="fa fa-check"></i><b>A.3.1</b> Tennis</a></li>
+</ul></li>
+<li class="chapter" data-level="A.4" data-path="frequencies.html"><a href="frequencies.html#exercise-a4"><i class="fa fa-check"></i><b>A.4</b> Exercise A4</a><ul>
+<li class="chapter" data-level="A.4.1" data-path="frequencies.html"><a href="frequencies.html#study-time"><i class="fa fa-check"></i><b>A.4.1</b> Study time</a></li>
+</ul></li>
+<li class="chapter" data-level="A.5" data-path="frequencies.html"><a href="frequencies.html#exercise-a5"><i class="fa fa-check"></i><b>A.5</b> Exercise A5</a><ul>
+<li class="chapter" data-level="A.5.1" data-path="frequencies.html"><a href="frequencies.html#ice-cream"><i class="fa fa-check"></i><b>A.5.1</b> Ice cream</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="empirical-parameters.html"><a href="empirical-parameters.html"><i class="fa fa-check"></i><b>B</b> Empirical Parameters</a><ul>
+<li class="chapter" data-level="" data-path="empirical-parameters.html"><a href="empirical-parameters.html#prerequisites-1"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="" data-path="empirical-parameters.html"><a href="empirical-parameters.html#model-exercise-b0---geometric-mean"><i class="fa fa-check"></i>Model Exercise B0 - Geometric mean</a><ul>
+<li class="chapter" data-level="B.0.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-1"><i class="fa fa-check"></i><b>B.0.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="B.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b1"><i class="fa fa-check"></i><b>B.1</b> Exercise B1</a><ul>
+<li class="chapter" data-level="B.1.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-2"><i class="fa fa-check"></i><b>B.1.1</b> Part A</a></li>
+<li class="chapter" data-level="B.1.2" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-b-1"><i class="fa fa-check"></i><b>B.1.2</b> Part B</a></li>
+<li class="chapter" data-level="B.1.3" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-c"><i class="fa fa-check"></i><b>B.1.3</b> Part C</a></li>
+</ul></li>
+<li class="chapter" data-level="B.2" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b2"><i class="fa fa-check"></i><b>B.2</b> Exercise B2</a><ul>
+<li class="chapter" data-level="B.2.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-3"><i class="fa fa-check"></i><b>B.2.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="B.3" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b3"><i class="fa fa-check"></i><b>B.3</b> Exercise B3</a><ul>
+<li class="chapter" data-level="B.3.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-4"><i class="fa fa-check"></i><b>B.3.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="B.4" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b4"><i class="fa fa-check"></i><b>B.4</b> Exercise B4</a><ul>
+<li class="chapter" data-level="B.4.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-5"><i class="fa fa-check"></i><b>B.4.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="B.5" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b5"><i class="fa fa-check"></i><b>B.5</b> Exercise B5</a><ul>
+<li class="chapter" data-level="B.5.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-6"><i class="fa fa-check"></i><b>B.5.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="B.6" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b6"><i class="fa fa-check"></i><b>B.6</b> Exercise B6</a><ul>
+<li class="chapter" data-level="B.6.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-7"><i class="fa fa-check"></i><b>B.6.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="B.7" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b7"><i class="fa fa-check"></i><b>B.7</b> Exercise B7</a><ul>
+<li class="chapter" data-level="B.7.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#multiple-choice-questions"><i class="fa fa-check"></i><b>B.7.1</b> Multiple Choice Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="B.8" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b8"><i class="fa fa-check"></i><b>B.8</b> Exercise B8</a><ul>
+<li class="chapter" data-level="B.8.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#wages"><i class="fa fa-check"></i><b>B.8.1</b> Wages</a></li>
+</ul></li>
+<li class="chapter" data-level="B.9" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b9"><i class="fa fa-check"></i><b>B.9</b> Exercise B9</a><ul>
+<li class="chapter" data-level="B.9.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#rents"><i class="fa fa-check"></i><b>B.9.1</b> Rents</a></li>
+</ul></li>
+<li class="chapter" data-level="B.10" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b10"><i class="fa fa-check"></i><b>B.10</b> Exercise B10</a><ul>
+<li class="chapter" data-level="B.10.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-8"><i class="fa fa-check"></i><b>B.10.1</b> Part A</a></li>
+<li class="chapter" data-level="B.10.2" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-b-2"><i class="fa fa-check"></i><b>B.10.2</b> Part B</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="C" data-path="concentration-analysis.html"><a href="concentration-analysis.html"><i class="fa fa-check"></i><b>C</b> Concentration Analysis</a><ul>
+<li class="chapter" data-level="" data-path="concentration-analysis.html"><a href="concentration-analysis.html#prerequisites-3"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="C.1" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c1"><i class="fa fa-check"></i><b>C.1</b> Exercise C1</a></li>
+<li class="chapter" data-level="C.2" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c2"><i class="fa fa-check"></i><b>C.2</b> Exercise C2</a></li>
+<li class="chapter" data-level="C.3" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c3"><i class="fa fa-check"></i><b>C.3</b> Exercise C3</a></li>
+<li class="chapter" data-level="C.4" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c4"><i class="fa fa-check"></i><b>C.4</b> Exercise C4</a></li>
+<li class="chapter" data-level="C.5" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c5"><i class="fa fa-check"></i><b>C.5</b> Exercise C5</a></li>
+<li class="chapter" data-level="C.6" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c6"><i class="fa fa-check"></i><b>C.6</b> Exercise C6</a></li>
+<li class="chapter" data-level="C.7" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c7"><i class="fa fa-check"></i><b>C.7</b> Exercise C7</a></li>
+<li class="chapter" data-level="C.8" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c8"><i class="fa fa-check"></i><b>C.8</b> Exercise C8</a></li>
+<li class="chapter" data-level="C.9" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c9"><i class="fa fa-check"></i><b>C.9</b> Exercise C9</a></li>
+<li class="chapter" data-level="C.10" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c10"><i class="fa fa-check"></i><b>C.10</b> Exercise C10</a></li>
+</ul></li>
+<li class="chapter" data-level="D" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html"><i class="fa fa-check"></i><b>D</b> Multivariate Analysis</a><ul>
+<li class="chapter" data-level="" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#prerequisites-4"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="D.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#exercise-d1"><i class="fa fa-check"></i><b>D.1</b> Exercise D1</a><ul>
+<li class="chapter" data-level="D.1.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#voting-behavior"><i class="fa fa-check"></i><b>D.1.1</b> Voting behavior</a></li>
+</ul></li>
+<li class="chapter" data-level="D.2" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#exercise-d2"><i class="fa fa-check"></i><b>D.2</b> Exercise D2</a><ul>
+<li class="chapter" data-level="D.2.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#packaging-color"><i class="fa fa-check"></i><b>D.2.1</b> Packaging color</a></li>
+</ul></li>
+<li class="chapter" data-level="D.3" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#exercise-d3"><i class="fa fa-check"></i><b>D.3</b> Exercise D3</a><ul>
+<li class="chapter" data-level="D.3.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#love-for-animals"><i class="fa fa-check"></i><b>D.3.1</b> Love for animals</a></li>
+</ul></li>
+<li class="chapter" data-level="D.4" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#exercise-d4"><i class="fa fa-check"></i><b>D.4</b> Exercise D4</a><ul>
+<li class="chapter" data-level="D.4.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#infections"><i class="fa fa-check"></i><b>D.4.1</b> Infections</a></li>
+</ul></li>
+<li class="chapter" data-level="D.5" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#exercise-d5"><i class="fa fa-check"></i><b>D.5</b> Exercise D5</a><ul>
+<li class="chapter" data-level="D.5.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#part-a-9"><i class="fa fa-check"></i><b>D.5.1</b> Part A</a></li>
+<li class="chapter" data-level="D.5.2" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#part-b-3"><i class="fa fa-check"></i><b>D.5.2</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="D.6" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#exercise-d6"><i class="fa fa-check"></i><b>D.6</b> Exercise D6</a><ul>
+<li class="chapter" data-level="D.6.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#part-a-10"><i class="fa fa-check"></i><b>D.6.1</b> Part A</a></li>
+<li class="chapter" data-level="D.6.2" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#part-b-4"><i class="fa fa-check"></i><b>D.6.2</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="D.7" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#exercise-d7"><i class="fa fa-check"></i><b>D.7</b> Exercise D7</a><ul>
+<li class="chapter" data-level="D.7.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#part-a-11"><i class="fa fa-check"></i><b>D.7.1</b> Part A</a></li>
+<li class="chapter" data-level="D.7.2" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#part-b-5"><i class="fa fa-check"></i><b>D.7.2</b> Part B</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="E" data-path="correlation-analysis.html"><a href="correlation-analysis.html"><i class="fa fa-check"></i><b>E</b> Correlation Analysis</a><ul>
+<li class="chapter" data-level="" data-path="correlation-analysis.html"><a href="correlation-analysis.html#prerequisites-5"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="E.1" data-path="correlation-analysis.html"><a href="correlation-analysis.html#exercise-e1"><i class="fa fa-check"></i><b>E.1</b> Exercise E1</a><ul>
+<li class="chapter" data-level="E.1.1" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-a-12"><i class="fa fa-check"></i><b>E.1.1</b> Part A</a></li>
+<li class="chapter" data-level="E.1.2" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-b-6"><i class="fa fa-check"></i><b>E.1.2</b> Part B</a></li>
+<li class="chapter" data-level="E.1.3" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-c-1"><i class="fa fa-check"></i><b>E.1.3</b> Part C</a></li>
+<li class="chapter" data-level="E.1.4" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-d"><i class="fa fa-check"></i><b>E.1.4</b> Part D</a></li>
+</ul></li>
+<li class="chapter" data-level="E.2" data-path="correlation-analysis.html"><a href="correlation-analysis.html#exercise-e2"><i class="fa fa-check"></i><b>E.2</b> Exercise E2</a><ul>
+<li class="chapter" data-level="E.2.1" data-path="correlation-analysis.html"><a href="correlation-analysis.html#sex-education"><i class="fa fa-check"></i><b>E.2.1</b> Sex education</a></li>
+</ul></li>
+<li class="chapter" data-level="E.3" data-path="correlation-analysis.html"><a href="correlation-analysis.html#exercise-e3"><i class="fa fa-check"></i><b>E.3</b> Exercise E3</a><ul>
+<li class="chapter" data-level="E.3.1" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-a-13"><i class="fa fa-check"></i><b>E.3.1</b> Part A</a></li>
+<li class="chapter" data-level="E.3.2" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-b-7"><i class="fa fa-check"></i><b>E.3.2</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="E.4" data-path="correlation-analysis.html"><a href="correlation-analysis.html#exercise-e4"><i class="fa fa-check"></i><b>E.4</b> Exercise E4</a><ul>
+<li class="chapter" data-level="E.4.1" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-a-14"><i class="fa fa-check"></i><b>E.4.1</b> Part A</a></li>
+<li class="chapter" data-level="E.4.2" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-b-8"><i class="fa fa-check"></i><b>E.4.2</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="E.5" data-path="correlation-analysis.html"><a href="correlation-analysis.html#exercise-e5"><i class="fa fa-check"></i><b>E.5</b> Exercise E5</a><ul>
+<li class="chapter" data-level="E.5.1" data-path="correlation-analysis.html"><a href="correlation-analysis.html#work-performance"><i class="fa fa-check"></i><b>E.5.1</b> Work performance</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="F" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html"><i class="fa fa-check"></i><b>F</b> Combinatorics and Algebra of Events</a><ul>
+<li class="chapter" data-level="" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#prerequisites-6"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="F.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f1"><i class="fa fa-check"></i><b>F.1</b> Exercise F1</a><ul>
+<li class="chapter" data-level="F.1.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-15"><i class="fa fa-check"></i><b>F.1.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.2" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f2"><i class="fa fa-check"></i><b>F.2</b> Exercise F2</a><ul>
+<li class="chapter" data-level="F.2.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-16"><i class="fa fa-check"></i><b>F.2.1</b> Part A</a></li>
+<li class="chapter" data-level="F.2.2" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-b-9"><i class="fa fa-check"></i><b>F.2.2</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="F.3" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#multiple-choice"><i class="fa fa-check"></i><b>F.3</b> Multiple Choice</a><ul>
+<li class="chapter" data-level="F.3.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-17"><i class="fa fa-check"></i><b>F.3.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.4" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f4"><i class="fa fa-check"></i><b>F.4</b> Exercise F4</a><ul>
+<li class="chapter" data-level="F.4.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-18"><i class="fa fa-check"></i><b>F.4.1</b> Part A</a></li>
+<li class="chapter" data-level="F.4.2" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-b-10"><i class="fa fa-check"></i><b>F.4.2</b> Part B</a></li>
+<li class="chapter" data-level="F.4.3" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-c-2"><i class="fa fa-check"></i><b>F.4.3</b> Part C</a></li>
+</ul></li>
+<li class="chapter" data-level="F.5" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f5"><i class="fa fa-check"></i><b>F.5</b> Exercise F5</a><ul>
+<li class="chapter" data-level="F.5.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-19"><i class="fa fa-check"></i><b>F.5.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.6" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f6"><i class="fa fa-check"></i><b>F.6</b> Exercise F6</a><ul>
+<li class="chapter" data-level="F.6.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-20"><i class="fa fa-check"></i><b>F.6.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.7" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f7"><i class="fa fa-check"></i><b>F.7</b> Exercise F7</a><ul>
+<li class="chapter" data-level="F.7.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-21"><i class="fa fa-check"></i><b>F.7.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.8" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f8"><i class="fa fa-check"></i><b>F.8</b> Exercise F8</a><ul>
+<li class="chapter" data-level="F.8.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-22"><i class="fa fa-check"></i><b>F.8.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.9" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f9"><i class="fa fa-check"></i><b>F.9</b> Exercise F9</a><ul>
+<li class="chapter" data-level="F.9.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-23"><i class="fa fa-check"></i><b>F.9.1</b> Part A</a></li>
+<li class="chapter" data-level="F.9.2" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#define-meaningful-events-based-on-the-text-and-formalize-the-specified-probabilities."><i class="fa fa-check"></i><b>F.9.2</b> Define meaningful events based on the text and formalize the specified probabilities.</a></li>
+<li class="chapter" data-level="F.9.3" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#what-is-the-probability-that-your-car-will-be-searched"><i class="fa fa-check"></i><b>F.9.3</b> What is the probability that your car will be searched?</a></li>
+<li class="chapter" data-level="F.9.4" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#what-is-the-probability-of-a-passport-check"><i class="fa fa-check"></i><b>F.9.4</b> What is the probability of a passport check?</a></li>
+<li class="chapter" data-level="F.9.5" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#what-is-the-probability-that-you-will-be-searched-and-your-car-will-be-checked"><i class="fa fa-check"></i><b>F.9.5</b> What is the probability that you will be searched and your car will be checked?</a></li>
+<li class="chapter" data-level="F.9.6" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#if-your-passport-has-already-been-checked-how-likely-are-you-to-have-your-car-searched"><i class="fa fa-check"></i><b>F.9.6</b> If your passport has already been checked, how likely are you to have your car searched?</a></li>
+<li class="chapter" data-level="F.9.7" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#if-your-car-has-already-been-searched-how-likely-are-you-to-face-an-additional-passport-check"><i class="fa fa-check"></i><b>F.9.7</b> If your car has already been searched, how likely are you to face an additional passport check?</a></li>
+<li class="chapter" data-level="F.9.8" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#what-is-the-probability-that-you-will-have-to-expect-exactly-one-of-both-measures"><i class="fa fa-check"></i><b>F.9.8</b> What is the probability that you will have to expect exactly one of both measures?</a></li>
+</ul></li>
+<li class="chapter" data-level="F.10" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f10"><i class="fa fa-check"></i><b>F.10</b> Exercise F10</a><ul>
+<li class="chapter" data-level="F.10.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-24"><i class="fa fa-check"></i><b>F.10.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.11" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f11"><i class="fa fa-check"></i><b>F.11</b> Exercise F11</a><ul>
+<li class="chapter" data-level="F.11.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-25"><i class="fa fa-check"></i><b>F.11.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.12" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f12"><i class="fa fa-check"></i><b>F.12</b> Exercise F12</a><ul>
+<li class="chapter" data-level="F.12.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-26"><i class="fa fa-check"></i><b>F.12.1</b> Part A</a></li>
+<li class="chapter" data-level="F.12.2" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-b-11"><i class="fa fa-check"></i><b>F.12.2</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="F.13" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f13"><i class="fa fa-check"></i><b>F.13</b> Exercise F13</a><ul>
+<li class="chapter" data-level="F.13.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-27"><i class="fa fa-check"></i><b>F.13.1</b> Part A</a></li>
+<li class="chapter" data-level="F.13.2" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-b-12"><i class="fa fa-check"></i><b>F.13.2</b> Part B</a></li>
+<li class="chapter" data-level="F.13.3" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-c-3"><i class="fa fa-check"></i><b>F.13.3</b> Part C</a></li>
+<li class="chapter" data-level="F.13.4" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#depending-on-p-specify-the-probability-that-player-a-will-win-the-match."><i class="fa fa-check"></i><b>F.13.4</b> Depending on p, specify the probability that player A will win the match.</a></li>
+</ul></li>
+<li class="chapter" data-level="F.14" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f14"><i class="fa fa-check"></i><b>F.14</b> Exercise F14</a><ul>
+<li class="chapter" data-level="F.14.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-28"><i class="fa fa-check"></i><b>F.14.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.15" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f15"><i class="fa fa-check"></i><b>F.15</b> Exercise F15</a><ul>
+<li class="chapter" data-level="F.15.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-29"><i class="fa fa-check"></i><b>F.15.1</b> Part A</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="G" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html"><i class="fa fa-check"></i><b>G</b> Discrete Random Variables and Distributions</a><ul>
+<li class="chapter" data-level="" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#prerequisites-7"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="G.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g1"><i class="fa fa-check"></i><b>G.1</b> Exercise G1</a><ul>
+<li class="chapter" data-level="G.1.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#the-pigsty"><i class="fa fa-check"></i><b>G.1.1</b> The pigsty</a></li>
+</ul></li>
+<li class="chapter" data-level="G.2" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g2"><i class="fa fa-check"></i><b>G.2</b> Exercise G2</a><ul>
+<li class="chapter" data-level="G.2.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#lottery"><i class="fa fa-check"></i><b>G.2.1</b> Lottery</a></li>
+</ul></li>
+<li class="chapter" data-level="G.3" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g3"><i class="fa fa-check"></i><b>G.3</b> Exercise G3</a><ul>
+<li class="chapter" data-level="G.3.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#aircraft-engine"><i class="fa fa-check"></i><b>G.3.1</b> Aircraft engine</a></li>
+<li class="chapter" data-level="G.3.2" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#part-a-30"><i class="fa fa-check"></i><b>G.3.2</b> Part A</a></li>
+<li class="chapter" data-level="G.3.3" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#part-b-13"><i class="fa fa-check"></i><b>G.3.3</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="G.4" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g4"><i class="fa fa-check"></i><b>G.4</b> Exercise G4</a><ul>
+<li class="chapter" data-level="G.4.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#mini-roulette"><i class="fa fa-check"></i><b>G.4.1</b> Mini-Roulette</a></li>
+</ul></li>
+<li class="chapter" data-level="G.5" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g5"><i class="fa fa-check"></i><b>G.5</b> Exercise G5</a><ul>
+<li class="chapter" data-level="G.5.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#card-game"><i class="fa fa-check"></i><b>G.5.1</b> Card game</a></li>
+</ul></li>
+<li class="chapter" data-level="G.6" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g6"><i class="fa fa-check"></i><b>G.6</b> Exercise G6</a><ul>
+<li class="chapter" data-level="G.6.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#one-will-win"><i class="fa fa-check"></i><b>G.6.1</b> One will win</a></li>
+</ul></li>
+<li class="chapter" data-level="G.7" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g7"><i class="fa fa-check"></i><b>G.7</b> Exercise G7</a><ul>
+<li class="chapter" data-level="G.7.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#coin-toss"><i class="fa fa-check"></i><b>G.7.1</b> Coin toss</a></li>
+</ul></li>
+<li class="chapter" data-level="G.8" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g8"><i class="fa fa-check"></i><b>G.8</b> Exercise G8</a><ul>
+<li class="chapter" data-level="G.8.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#environmentalists"><i class="fa fa-check"></i><b>G.8.1</b> Environmentalists</a></li>
+</ul></li>
+<li class="chapter" data-level="G.9" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g9"><i class="fa fa-check"></i><b>G.9</b> Exercise G9</a><ul>
+<li class="chapter" data-level="G.9.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#two-dimensional-random-variable"><i class="fa fa-check"></i><b>G.9.1</b> Two-dimensional random variable</a></li>
+</ul></li>
+<li class="chapter" data-level="G.10" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g10"><i class="fa fa-check"></i><b>G.10</b> Exercise G10</a><ul>
+<li class="chapter" data-level="G.10.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#candles"><i class="fa fa-check"></i><b>G.10.1</b> Candles</a></li>
+</ul></li>
+<li class="chapter" data-level="G.11" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g11"><i class="fa fa-check"></i><b>G.11</b> Exercise G11</a><ul>
+<li class="chapter" data-level="G.11.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#self-employment"><i class="fa fa-check"></i><b>G.11.1</b> Self-employment</a></li>
+</ul></li>
+<li class="chapter" data-level="G.12" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g12"><i class="fa fa-check"></i><b>G.12</b> Exercise G12</a><ul>
+<li class="chapter" data-level="G.12.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#free-tokens"><i class="fa fa-check"></i><b>G.12.1</b> Free tokens</a></li>
+</ul></li>
+<li class="chapter" data-level="G.13" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g13"><i class="fa fa-check"></i><b>G.13</b> Exercise G13</a><ul>
+<li class="chapter" data-level="G.13.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#bridge"><i class="fa fa-check"></i><b>G.13.1</b> Bridge</a></li>
+</ul></li>
+<li class="chapter" data-level="G.14" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#g14"><i class="fa fa-check"></i><b>G.14</b> G14</a><ul>
+<li class="chapter" data-level="G.14.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#end-of-the-soccer-season"><i class="fa fa-check"></i><b>G.14.1</b> End of the soccer season</a></li>
+</ul></li>
+<li class="chapter" data-level="G.15" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g15"><i class="fa fa-check"></i><b>G.15</b> Exercise G15</a><ul>
+<li class="chapter" data-level="G.15.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#three-balls"><i class="fa fa-check"></i><b>G.15.1</b> Three balls</a></li>
+</ul></li>
+<li class="chapter" data-level="G.16" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g16"><i class="fa fa-check"></i><b>G.16</b> Exercise G16</a><ul>
+<li class="chapter" data-level="G.16.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#statistics-exam"><i class="fa fa-check"></i><b>G.16.1</b> Statistics exam</a></li>
+</ul></li>
+<li class="chapter" data-level="G.17" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g17"><i class="fa fa-check"></i><b>G.17</b> Exercise G17</a></li>
+</ul></li>
+<li class="chapter" data-level="H" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html"><i class="fa fa-check"></i><b>H</b> Continuous Random Variables and Distributions</a><ul>
+<li class="chapter" data-level="H.1" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h1"><i class="fa fa-check"></i><b>H.1</b> Exercise H1</a><ul>
+<li class="chapter" data-level="H.1.1" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#part-a---pocket-calculator"><i class="fa fa-check"></i><b>H.1.1</b> Part A - Pocket calculator</a></li>
+<li class="chapter" data-level="H.1.2" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#part-b---electric-component"><i class="fa fa-check"></i><b>H.1.2</b> Part B - Electric Component</a></li>
+</ul></li>
+<li class="chapter" data-level="H.2" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h2"><i class="fa fa-check"></i><b>H.2</b> Exercise H2</a><ul>
+<li class="chapter" data-level="H.2.1" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#part-a-31"><i class="fa fa-check"></i><b>H.2.1</b> Part A</a></li>
+<li class="chapter" data-level="H.2.2" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#part-b-14"><i class="fa fa-check"></i><b>H.2.2</b> Part B</a></li>
+<li class="chapter" data-level="H.2.3" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#part-c-4"><i class="fa fa-check"></i><b>H.2.3</b> Part C</a></li>
+</ul></li>
+<li class="chapter" data-level="H.3" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h3"><i class="fa fa-check"></i><b>H.3</b> Exercise H3</a><ul>
+<li class="chapter" data-level="H.3.1" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#steel-pins"><i class="fa fa-check"></i><b>H.3.1</b> Steel pins</a></li>
+</ul></li>
+<li class="chapter" data-level="H.4" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h4"><i class="fa fa-check"></i><b>H.4</b> Exercise H4</a></li>
+<li class="chapter" data-level="H.5" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h5"><i class="fa fa-check"></i><b>H.5</b> Exercise H5</a></li>
+<li class="chapter" data-level="H.6" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h6"><i class="fa fa-check"></i><b>H.6</b> Exercise H6</a></li>
+<li class="chapter" data-level="H.7" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h7"><i class="fa fa-check"></i><b>H.7</b> Exercise H7</a></li>
+<li class="chapter" data-level="H.8" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h8"><i class="fa fa-check"></i><b>H.8</b> Exercise H8</a></li>
+<li class="chapter" data-level="H.9" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h9"><i class="fa fa-check"></i><b>H.9</b> Exercise H9</a></li>
+<li class="chapter" data-level="H.10" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h10"><i class="fa fa-check"></i><b>H.10</b> Exercise H10</a></li>
+<li class="chapter" data-level="H.11" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h11"><i class="fa fa-check"></i><b>H.11</b> Exercise H11</a></li>
+<li class="chapter" data-level="H.12" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h12"><i class="fa fa-check"></i><b>H.12</b> Exercise H12</a></li>
+<li class="chapter" data-level="H.13" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h13"><i class="fa fa-check"></i><b>H.13</b> Exercise H13</a></li>
+<li class="chapter" data-level="H.14" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h14"><i class="fa fa-check"></i><b>H.14</b> Exercise H14</a></li>
+<li class="chapter" data-level="H.15" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h15"><i class="fa fa-check"></i><b>H.15</b> Exercise H15</a></li>
+<li class="chapter" data-level="H.16" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h16"><i class="fa fa-check"></i><b>H.16</b> Exercise H16</a></li>
+<li class="chapter" data-level="H.17" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h17"><i class="fa fa-check"></i><b>H.17</b> Exercise H17</a></li>
+</ul></li>
 </ul>
 
-        <div class="book-extra">
-          <p><a id="book-repo" href="https://github.com/DavidBarke/Stat1">View book source <i class="fab fa-github"></i></a></p>
-        </div>
       </nav>
-</div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="combinatorics-and-algebra-of-events" class="section level1">
-<h1>
-<span class="header-section-number">F</span> Combinatorics and Algebra of Events<a class="anchor" aria-label="anchor" href="#combinatorics-and-algebra-of-events"><i class="fas fa-link"></i></a>
-</h1>
-<div id="prerequisites-6" class="section level2 unnumbered">
-<h2>Prerequisites<a class="anchor" aria-label="anchor" href="#prerequisites-6"><i class="fas fa-link"></i></a>
-</h2>
-<div class="sourceCode" id="cb79"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://yihui.org/knitr/">knitr</a></span><span class="op">)</span>
+    </div>
 
-<span class="co"># Set ggplot2 theme</span>
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme_get.html">theme_set</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics 1 for Economics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="combinatorics-and-algebra-of-events" class="section level1">
+<h1><span class="header-section-number">F</span> Combinatorics and Algebra of Events</h1>
+<div id="prerequisites-6" class="section level2 unnumbered">
+<h2>Prerequisites</h2>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="combinatorics-and-algebra-of-events.html#cb79-1"></a><span class="kw">library</span>(ggplot2)</span>
+<span id="cb79-2"><a href="combinatorics-and-algebra-of-events.html#cb79-2"></a><span class="kw">library</span>(dplyr)</span>
+<span id="cb79-3"><a href="combinatorics-and-algebra-of-events.html#cb79-3"></a><span class="kw">library</span>(knitr)</span>
+<span id="cb79-4"><a href="combinatorics-and-algebra-of-events.html#cb79-4"></a></span>
+<span id="cb79-5"><a href="combinatorics-and-algebra-of-events.html#cb79-5"></a><span class="co"># Set ggplot2 theme</span></span>
+<span id="cb79-6"><a href="combinatorics-and-algebra-of-events.html#cb79-6"></a><span class="kw">theme_set</span>(<span class="kw">theme_bw</span>())</span></code></pre></div>
 </div>
 <div id="exercise-f1" class="section level2">
-<h2>
-<span class="header-section-number">F.1</span> Exercise F1<a class="anchor" aria-label="anchor" href="#exercise-f1"><i class="fas fa-link"></i></a>
-</h2>
-<div id="part-a-9" class="section level3">
-<h3>
-<span class="header-section-number">F.1.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-9"><i class="fas fa-link"></i></a>
-</h3>
+<h2><span class="header-section-number">F.1</span> Exercise F1</h2>
+<div id="part-a-15" class="section level3">
+<h3><span class="header-section-number">F.1.1</span> Part A</h3>
 <p>Three doctors work in the emergency room of a hospital: N, O and P. Since the division of weekend services (Saturday and Sunday) is very difficult, the three doctors decide to conduct a random experiment to determine the division. Three slips of paper with the first letters of their names (N, O and P) are placed in an urn. Two pieces of paper are then drawn at random from the urn to make the division.</p>
 <p>Specify the possible outputs (2-tuples) of this random experiment, if</p>
 <div id="with-the-allocation-you-want-to-determine-on-which-day-a-doctor-is-on-duty-first-element-of-the-2-tuple-stands-for-saturday-and-it-should-be-possible-for-a-doctor-to-be-on-duty-i.e.-double-duty-on-both-days." class="section level4">
-<h4>
-<span class="header-section-number">F.1.1.1</span> with the allocation you want to determine on which day a doctor is on duty (first element of the 2-tuple stands for Saturday), and it should be possible for a doctor to be on duty (i.e.Â double duty) on both days.<a class="anchor" aria-label="anchor" href="#with-the-allocation-you-want-to-determine-on-which-day-a-doctor-is-on-duty-first-element-of-the-2-tuple-stands-for-saturday-and-it-should-be-possible-for-a-doctor-to-be-on-duty-i.e.-double-duty-on-both-days."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.1.1.1</span> with the allocation you want to determine on which day a doctor is on duty (first element of the 2-tuple stands for Saturday), and it should be possible for a doctor to be on duty (i.e. double duty) on both days.</h4>
 </div>
 <div id="double-duty-is-possible-but-it-should-not-be-determined-on-which-day-a-doctor-is-on-duty." class="section level4">
-<h4>
-<span class="header-section-number">F.1.1.2</span> double duty is possible, but it should not be determined on which day a doctor is on duty.<a class="anchor" aria-label="anchor" href="#double-duty-is-possible-but-it-should-not-be-determined-on-which-day-a-doctor-is-on-duty."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.1.1.2</span> double duty is possible, but it should not be determined on which day a doctor is on duty.</h4>
 </div>
 <div id="double-duty-is-not-possible-but-it-should-be-determined-on-which-day-a-doctor-is-on-duty." class="section level4">
-<h4>
-<span class="header-section-number">F.1.1.3</span> double duty is not possible, but it should be determined on which day a doctor is on duty.<a class="anchor" aria-label="anchor" href="#double-duty-is-not-possible-but-it-should-be-determined-on-which-day-a-doctor-is-on-duty."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.1.1.3</span> double duty is not possible, but it should be determined on which day a doctor is on duty.</h4>
 </div>
 <div id="double-duty-is-not-possible-and-it-should-not-be-determined-on-which-day-a-doctor-is-on-duty." class="section level4">
-<h4>
-<span class="header-section-number">F.1.1.4</span> double duty is not possible and it should not be determined on which day a doctor is on duty.<a class="anchor" aria-label="anchor" href="#double-duty-is-not-possible-and-it-should-not-be-determined-on-which-day-a-doctor-is-on-duty."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.1.1.4</span> double duty is not possible and it should not be determined on which day a doctor is on duty.</h4>
 </div>
 </div>
 </div>
 <div id="exercise-f2" class="section level2">
-<h2>
-<span class="header-section-number">F.2</span> Exercise F2<a class="anchor" aria-label="anchor" href="#exercise-f2"><i class="fas fa-link"></i></a>
-</h2>
-<div id="part-a-10" class="section level3">
-<h3>
-<span class="header-section-number">F.2.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-10"><i class="fas fa-link"></i></a>
-</h3>
+<h2><span class="header-section-number">F.2</span> Exercise F2</h2>
+<div id="part-a-16" class="section level3">
+<h3><span class="header-section-number">F.2.1</span> Part A</h3>
 <p>At the beginning of the semester, a group of students would like to offer a 5-day orientation tour of the university for first-year students. There are 5 volunteer members available.</p>
 <div id="how-many-different-ways-are-there-to-give-each-member-a-weekday-monday-to-friday" class="section level4">
-<h4>
-<span class="header-section-number">F.2.1.1</span> How many different ways are there to give each member a weekday (Monday to Friday)?<a class="anchor" aria-label="anchor" href="#how-many-different-ways-are-there-to-give-each-member-a-weekday-monday-to-friday"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.2.1.1</span> How many different ways are there to give each member a weekday (Monday to Friday)?</h4>
 <p>Since Klaus has fallen ill, Karl will lead a tour twice.</p>
 </div>
 <div id="how-many-different-options-are-there-for-scheduling-the-tours-by-name" class="section level4">
-<h4>
-<span class="header-section-number">F.2.1.2</span> How many different options are there for scheduling the tours by name?<a class="anchor" aria-label="anchor" href="#how-many-different-options-are-there-for-scheduling-the-tours-by-name"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.2.1.2</span> How many different options are there for scheduling the tours by name?</h4>
 <p>Karl suddenly insists that he does not want to lead a tour on two consecutive days.</p>
 </div>
 <div id="how-many-different-options-are-there-for-scheduling-the-tours-by-name-now" class="section level4">
-<h4>
-<span class="header-section-number">F.2.1.3</span> How many different options are there for scheduling the tours by name now?<a class="anchor" aria-label="anchor" href="#how-many-different-options-are-there-for-scheduling-the-tours-by-name-now"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.2.1.3</span> How many different options are there for scheduling the tours by name now?</h4>
 </div>
 </div>
 <div id="part-b-9" class="section level3">
-<h3>
-<span class="header-section-number">F.2.2</span> Part B<a class="anchor" aria-label="anchor" href="#part-b-9"><i class="fas fa-link"></i></a>
-</h3>
+<h3><span class="header-section-number">F.2.2</span> Part B</h3>
 <p>In two urns there are 6 different colored balls in each of the two urns, whereby the color composition of the balls in both urns is the same. Two balls are drawn at random from each urn without putting them back.</p>
 <p>How many possibilities are there,</p>
 <div id="to-draw-a-total-of-2-balls-from-both-urns" class="section level4">
-<h4>
-<span class="header-section-number">F.2.2.1</span> to draw a total of 2 balls from both urns?<a class="anchor" aria-label="anchor" href="#to-draw-a-total-of-2-balls-from-both-urns"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.2.2.1</span> to draw a total of 2 balls from both urns?</h4>
 </div>
 <div id="to-get-two-pairs-of-balls-of-the-same-color" class="section level4">
-<h4>
-<span class="header-section-number">F.2.2.2</span> to get two pairs of balls of the same color?<a class="anchor" aria-label="anchor" href="#to-get-two-pairs-of-balls-of-the-same-color"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.2.2.2</span> to get two pairs of balls of the same color?</h4>
 </div>
 <div id="to-get-four-different-colored-balls" class="section level4">
-<h4>
-<span class="header-section-number">F.2.2.3</span> to get four different colored balls?<a class="anchor" aria-label="anchor" href="#to-get-four-different-colored-balls"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.2.2.3</span> to get four different colored balls?</h4>
 </div>
 <div id="to-get-exactly-one-pair-of-balls-of-the-same-color" class="section level4">
-<h4>
-<span class="header-section-number">F.2.2.4</span> to get exactly one pair of balls of the same color?<a class="anchor" aria-label="anchor" href="#to-get-exactly-one-pair-of-balls-of-the-same-color"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.2.2.4</span> to get exactly one pair of balls of the same color?</h4>
 </div>
 </div>
 </div>
 <div id="multiple-choice" class="section level2">
-<h2>
-<span class="header-section-number">F.3</span> Multiple Choice<a class="anchor" aria-label="anchor" href="#multiple-choice"><i class="fas fa-link"></i></a>
-</h2>
-<div id="part-a-11" class="section level3">
-<h3>
-<span class="header-section-number">F.3.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-11"><i class="fas fa-link"></i></a>
-</h3>
+<h2><span class="header-section-number">F.3</span> Multiple Choice</h2>
+<div id="part-a-17" class="section level3">
+<h3><span class="header-section-number">F.3.1</span> Part A</h3>
 <p>Are the following statements right or wrong?</p>
 <div id="be-a-b-c-subset-omega-events.-the-event-at-least-two-of-these-events-occur-can-be-represented-graphically-as-follows" class="section level4">
-<h4>
-<span class="header-section-number">F.3.1.1</span> Be <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span> <span class="math inline">\(\subset \omega\)</span> events. The event: â€œAt least two of these events occurâ€ can be represented graphically as follows:<a class="anchor" aria-label="anchor" href="#be-a-b-c-subset-omega-events.-the-event-at-least-two-of-these-events-occur-can-be-represented-graphically-as-follows"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.3.1.1</span> Be <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span> <span class="math inline">\(\subset \omega\)</span> events. The event: “At least two of these events occur” can be represented graphically as follows:</h4>
 </div>
 <div id="from-n-objects-r-elements-shall-be-selected.-then-the-number-of-choices-for-a-variation-with-repetition-can-not-be-smaller-than-for-a-variation-without-repetition." class="section level4">
-<h4>
-<span class="header-section-number">F.3.1.2</span> From <span class="math inline">\(n\)</span> objects <span class="math inline">\(r\)</span> elements shall be selected. Then the number of choices for a variation with repetition can not be smaller than for a variation without repetition.<a class="anchor" aria-label="anchor" href="#from-n-objects-r-elements-shall-be-selected.-then-the-number-of-choices-for-a-variation-with-repetition-can-not-be-smaller-than-for-a-variation-without-repetition."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.3.1.2</span> From <span class="math inline">\(n\)</span> objects <span class="math inline">\(r\)</span> elements shall be selected. Then the number of choices for a variation with repetition can not be smaller than for a variation without repetition.</h4>
 </div>
 <div id="the-certain-event-has-the-probability-one.-but-an-event-with-a-probability-of-one-is-only-almost-certain." class="section level4">
-<h4>
-<span class="header-section-number">F.3.1.3</span> The certain event has the probability one. But an event with a probability of one is only â€œalmost certainâ€.<a class="anchor" aria-label="anchor" href="#the-certain-event-has-the-probability-one.-but-an-event-with-a-probability-of-one-is-only-almost-certain."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.3.1.3</span> The certain event has the probability one. But an event with a probability of one is only “almost certain”.</h4>
 </div>
 <div id="two-events-which-have-no-common-elements-are-disjoint." class="section level4">
-<h4>
-<span class="header-section-number">F.3.1.4</span> Two events, which have no common elements, are disjoint.<a class="anchor" aria-label="anchor" href="#two-events-which-have-no-common-elements-are-disjoint."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.3.1.4</span> Two events, which have no common elements, are disjoint.</h4>
 </div>
 <div id="using-the-objective-concept-of-probability-the-individual-case-is-considered-but-not-the-series-long-run." class="section level4">
-<h4>
-<span class="header-section-number">F.3.1.5</span> Using the objective concept of probability, the individual case is considered, but not the series (â€œlong runâ€).<a class="anchor" aria-label="anchor" href="#using-the-objective-concept-of-probability-the-individual-case-is-considered-but-not-the-series-long-run."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.3.1.5</span> Using the objective concept of probability, the individual case is considered, but not the series (“long run”).</h4>
 </div>
 <div id="for-two-events-a-and-b-applies-pa-cap-b-le-pa-le-pa-cup-b-le-pa-pb." class="section level4">
-<h4>
-<span class="header-section-number">F.3.1.6</span> For two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> applies: <span class="math inline">\(P(A \cap B) \le P(A) \le P(A \cup B) \le P(A) + P(B)\)</span>.<a class="anchor" aria-label="anchor" href="#for-two-events-a-and-b-applies-pa-cap-b-le-pa-le-pa-cup-b-le-pa-pb."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.3.1.6</span> For two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> applies: <span class="math inline">\(P(A \cap B) \le P(A) \le P(A \cup B) \le P(A) + P(B)\)</span>.</h4>
 </div>
 <div id="if-three-events-a-b-and-c-are-stochastically-independent-in-pairs-then-there-is-valid-pa-cap-b-cap-c-pa-cdot-pb-cdot-pc." class="section level4">
-<h4>
-<span class="header-section-number">F.3.1.7</span> If three events <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> are stochastically independent in pairs, then there is valid: <span class="math inline">\(P(A \cap B \cap C) = P(A) \cdot P(B) \cdot P(C)\)</span>.<a class="anchor" aria-label="anchor" href="#if-three-events-a-b-and-c-are-stochastically-independent-in-pairs-then-there-is-valid-pa-cap-b-cap-c-pa-cdot-pb-cdot-pc."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.3.1.7</span> If three events <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> are stochastically independent in pairs, then there is valid: <span class="math inline">\(P(A \cap B \cap C) = P(A) \cdot P(B) \cdot P(C)\)</span>.</h4>
 </div>
 <div id="if-three-events-a-b-and-c-are-completely-disjoint-i.e.-a-cap-b-cap-c-emptyset-then-they-are-also-disjoint-in-pairs-i.e.-a-cap-b-emptyset-b-cap-c-emptyset-and-c-cap-a-emptyset." class="section level4">
-<h4>
-<span class="header-section-number">F.3.1.8</span> If three events <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> are completely disjoint [i.e.Â <span class="math inline">\((A \cap B \cap C) = \emptyset\)</span>], then they are also disjoint in pairs [i.e.Â <span class="math inline">\((A \cap B) = \emptyset\)</span>, <span class="math inline">\((B \cap C) = \emptyset\)</span> and <span class="math inline">\((C \cap A) = \emptyset\)</span>].<a class="anchor" aria-label="anchor" href="#if-three-events-a-b-and-c-are-completely-disjoint-i.e.-a-cap-b-cap-c-emptyset-then-they-are-also-disjoint-in-pairs-i.e.-a-cap-b-emptyset-b-cap-c-emptyset-and-c-cap-a-emptyset."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.3.1.8</span> If three events <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> are completely disjoint [i.e. <span class="math inline">\((A \cap B \cap C) = \emptyset\)</span>], then they are also disjoint in pairs [i.e. <span class="math inline">\((A \cap B) = \emptyset\)</span>, <span class="math inline">\((B \cap C) = \emptyset\)</span> and <span class="math inline">\((C \cap A) = \emptyset\)</span>].</h4>
 </div>
 <div id="let-a-and-b-be-events-with-0-pa-1-and-0-pb-1.-if-pa-cap-b-0-then-a-and-b-are-stochastically-independent." class="section level4">
-<h4>
-<span class="header-section-number">F.3.1.9</span> Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be events (with: <span class="math inline">\(0 &lt; P(A) &lt; 1\)</span> and <span class="math inline">\(0 &lt; P(B) &lt; 1\)</span>). If <span class="math inline">\(P(A \cap B) = 0\)</span>, then <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are stochastically independent.<a class="anchor" aria-label="anchor" href="#let-a-and-b-be-events-with-0-pa-1-and-0-pb-1.-if-pa-cap-b-0-then-a-and-b-are-stochastically-independent."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.3.1.9</span> Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be events (with: <span class="math inline">\(0 &lt; P(A) &lt; 1\)</span> and <span class="math inline">\(0 &lt; P(B) &lt; 1\)</span>). If <span class="math inline">\(P(A \cap B) = 0\)</span>, then <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are stochastically independent.</h4>
 </div>
 <div id="the-probability-of-throwing-a-non-ideal-die-twice-with-a-maximum-of-a-6-is-equal-to-the-probability-of-not-throwing-a-6-at-least-once." class="section level4">
-<h4>
-<span class="header-section-number">F.3.1.10</span> The probability of throwing a non-ideal die twice with a maximum of a â€œ6â€ is equal to the probability of not throwing a â€œ6â€ at least once.<a class="anchor" aria-label="anchor" href="#the-probability-of-throwing-a-non-ideal-die-twice-with-a-maximum-of-a-6-is-equal-to-the-probability-of-not-throwing-a-6-at-least-once."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.3.1.10</span> The probability of throwing a non-ideal die twice with a maximum of a “6” is equal to the probability of not throwing a “6” at least once.</h4>
 </div>
 </div>
 </div>
 <div id="exercise-f4" class="section level2">
-<h2>
-<span class="header-section-number">F.4</span> Exercise F4<a class="anchor" aria-label="anchor" href="#exercise-f4"><i class="fas fa-link"></i></a>
-</h2>
-<div id="part-a-12" class="section level3">
-<h3>
-<span class="header-section-number">F.4.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-12"><i class="fas fa-link"></i></a>
-</h3>
+<h2><span class="header-section-number">F.4</span> Exercise F4</h2>
+<div id="part-a-18" class="section level3">
+<h3><span class="header-section-number">F.4.1</span> Part A</h3>
 <p>Three different special prizes are raffled off in a game show. Three urns are available for the raffle, each containing six tickets with the names of the six players. One ticket is drawn from each urn.</p>
 <div id="how-many-possibilities-are-there-to-draw-a-ticket-from-each-of-the-three-urns" class="section level4">
-<h4>
-<span class="header-section-number">F.4.1.1</span> How many possibilities are there to draw a ticket from each of the three urns?<a class="anchor" aria-label="anchor" href="#how-many-possibilities-are-there-to-draw-a-ticket-from-each-of-the-three-urns"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.4.1.1</span> How many possibilities are there to draw a ticket from each of the three urns?</h4>
 </div>
 <div id="how-many-possibilities-are-there-to-draw-a-ticket-from-each-of-the-three-urns-whereby-no-name-is-drawn-several-times" class="section level4">
-<h4>
-<span class="header-section-number">F.4.1.2</span> How many possibilities are there to draw a ticket from each of the three urns, whereby no name is drawn several times?<a class="anchor" aria-label="anchor" href="#how-many-possibilities-are-there-to-draw-a-ticket-from-each-of-the-three-urns-whereby-no-name-is-drawn-several-times"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.4.1.2</span> How many possibilities are there to draw a ticket from each of the three urns, whereby no name is drawn several times?</h4>
 </div>
 </div>
 <div id="part-b-10" class="section level3">
-<h3>
-<span class="header-section-number">F.4.2</span> Part B<a class="anchor" aria-label="anchor" href="#part-b-10"><i class="fas fa-link"></i></a>
-</h3>
+<h3><span class="header-section-number">F.4.2</span> Part B</h3>
 <p>After the game show, the six candidates (who are all looking for comfort) are taken to their hotel in two cars of different comfort. One car can accommodate up to four candidates.</p>
 <div id="how-many-possibilities-are-there-to-accommodate-the-six-candidates-in-the-two-cars" class="section level4">
-<h4>
-<span class="header-section-number">F.4.2.1</span> How many possibilities are there to accommodate the six candidates in the two cars?<a class="anchor" aria-label="anchor" href="#how-many-possibilities-are-there-to-accommodate-the-six-candidates-in-the-two-cars"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.4.2.1</span> How many possibilities are there to accommodate the six candidates in the two cars?</h4>
 </div>
 </div>
 <div id="part-c-2" class="section level3">
-<h3>
-<span class="header-section-number">F.4.3</span> Part C<a class="anchor" aria-label="anchor" href="#part-c-2"><i class="fas fa-link"></i></a>
-</h3>
-<p>The publishing house â€œSchÃ¶ne Kinderweltâ€ would like to publish a fairy tale book. The publishing house owns the rights to 6 fairy tales by the Brothers Grimm and 4 fairy tales by Hans Christian Andersen as well as the rights to 2 fairy tales by other authors. For reasons of cost, only 7 fairy tales should be selected.</p>
+<h3><span class="header-section-number">F.4.3</span> Part C</h3>
+<p>The publishing house “Schöne Kinderwelt” would like to publish a fairy tale book. The publishing house owns the rights to 6 fairy tales by the Brothers Grimm and 4 fairy tales by Hans Christian Andersen as well as the rights to 2 fairy tales by other authors. For reasons of cost, only 7 fairy tales should be selected.</p>
 <div id="how-many-possibilities-are-there-to-select-the-7-fairy-tales" class="section level4">
-<h4>
-<span class="header-section-number">F.4.3.1</span> How many possibilities are there to select the 7 fairy tales?<a class="anchor" aria-label="anchor" href="#how-many-possibilities-are-there-to-select-the-7-fairy-tales"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.4.3.1</span> How many possibilities are there to select the 7 fairy tales?</h4>
 </div>
 <div id="how-many-possibilities-remain-if-3-fairy-tales-by-the-grimm-brothers-3-by-hans-christian-andersen-and-1-fairy-tale-by-other-authors-are-to-be-selected" class="section level4">
-<h4>
-<span class="header-section-number">F.4.3.2</span> How many possibilities remain if 3 fairy tales by the Grimm brothers, 3 by Hans Christian Andersen and 1 fairy tale by other authors are to be selected?<a class="anchor" aria-label="anchor" href="#how-many-possibilities-remain-if-3-fairy-tales-by-the-grimm-brothers-3-by-hans-christian-andersen-and-1-fairy-tale-by-other-authors-are-to-be-selected"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.4.3.2</span> How many possibilities remain if 3 fairy tales by the Grimm brothers, 3 by Hans Christian Andersen and 1 fairy tale by other authors are to be selected?</h4>
 </div>
 <div id="how-many-possibilities-are-there-to-arrange-the-7-selected-fairy-tales-in-a-book" class="section level4">
-<h4>
-<span class="header-section-number">F.4.3.3</span> How many possibilities are there to arrange the 7 selected fairy tales in a book?<a class="anchor" aria-label="anchor" href="#how-many-possibilities-are-there-to-arrange-the-7-selected-fairy-tales-in-a-book"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.4.3.3</span> How many possibilities are there to arrange the 7 selected fairy tales in a book?</h4>
 </div>
 </div>
 </div>
 <div id="exercise-f5" class="section level2">
-<h2>
-<span class="header-section-number">F.5</span> Exercise F5<a class="anchor" aria-label="anchor" href="#exercise-f5"><i class="fas fa-link"></i></a>
-</h2>
-<div id="part-a-13" class="section level3">
-<h3>
-<span class="header-section-number">F.5.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-13"><i class="fas fa-link"></i></a>
-</h3>
+<h2><span class="header-section-number">F.5</span> Exercise F5</h2>
+<div id="part-a-19" class="section level3">
+<h3><span class="header-section-number">F.5.1</span> Part A</h3>
 <p>In a lottery there are 10 winners. The following cars are available as main prizes:
-5 cars from â€œIduaâ€ | 3 cars from â€œWMBâ€ | 2 cars from â€œWVâ€.</p>
+5 cars from “Idua” | 3 cars from “WMB” | 2 cars from “WV”.</p>
 <div id="how-many-ways-are-there-to-distribute-the-cars-to-the-winners" class="section level4">
-<h4>
-<span class="header-section-number">F.5.1.1</span> How many ways are there to distribute the cars to the winners?<a class="anchor" aria-label="anchor" href="#how-many-ways-are-there-to-distribute-the-cars-to-the-winners"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.5.1.1</span> How many ways are there to distribute the cars to the winners?</h4>
 <p>In another lottery, six companies each provide one car, but the cars differ considerably in price and quality. Only three winners have declared their claim to the prize.</p>
 </div>
 <div id="how-many-possibilities-are-there-to-distribute-the-cars-among-the-three-winners-if-everyone-should-only-get-one-car-at-a-time" class="section level4">
-<h4>
-<span class="header-section-number">F.5.1.2</span> How many possibilities are there to distribute the cars among the three winners, if everyone should only get one car at a time?<a class="anchor" aria-label="anchor" href="#how-many-possibilities-are-there-to-distribute-the-cars-among-the-three-winners-if-everyone-should-only-get-one-car-at-a-time"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.5.1.2</span> How many possibilities are there to distribute the cars among the three winners, if everyone should only get one car at a time?</h4>
 </div>
 </div>
 </div>
 <div id="exercise-f6" class="section level2">
-<h2>
-<span class="header-section-number">F.6</span> Exercise F6<a class="anchor" aria-label="anchor" href="#exercise-f6"><i class="fas fa-link"></i></a>
-</h2>
-<div id="part-a-14" class="section level3">
-<h3>
-<span class="header-section-number">F.6.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-14"><i class="fas fa-link"></i></a>
-</h3>
+<h2><span class="header-section-number">F.6</span> Exercise F6</h2>
+<div id="part-a-20" class="section level3">
+<h3><span class="header-section-number">F.6.1</span> Part A</h3>
 <p>Of three events <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span> occur:</p>
 <ol style="list-style-type: decimal">
 <li>only <span class="math inline">\(A\)</span>.</li>
@@ -308,287 +582,188 @@
 <li>at least two not.</li>
 </ol>
 <div id="use-the-event-operations-to-formally-represent-the-searched-events-and-draw-the-corresponding-venn-diagram-for-each." class="section level4">
-<h4>
-<span class="header-section-number">F.6.1.1</span> Use the event operations to formally represent the searched events and draw the corresponding Venn diagram for each.<a class="anchor" aria-label="anchor" href="#use-the-event-operations-to-formally-represent-the-searched-events-and-draw-the-corresponding-venn-diagram-for-each."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.6.1.1</span> Use the event operations to formally represent the searched events and draw the corresponding Venn diagram for each.</h4>
 </div>
 </div>
 </div>
 <div id="exercise-f7" class="section level2">
-<h2>
-<span class="header-section-number">F.7</span> Exercise F7<a class="anchor" aria-label="anchor" href="#exercise-f7"><i class="fas fa-link"></i></a>
-</h2>
-<div id="part-a-15" class="section level3">
-<h3>
-<span class="header-section-number">F.7.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-15"><i class="fas fa-link"></i></a>
-</h3>
+<h2><span class="header-section-number">F.7</span> Exercise F7</h2>
+<div id="part-a-21" class="section level3">
+<h3><span class="header-section-number">F.7.1</span> Part A</h3>
 <p>In a small town there are only the two daily newspapers <span class="math inline">\(Z1\)</span> and <span class="math inline">\(Z2\)</span>. 60% of the inhabitants read <span class="math inline">\(Z1\)</span> and 80% of the inhabitants read <span class="math inline">\(Z2\)</span>. Neither newspaper is read by 10% of the residents. A person is chosen at random. What is the probability that this person</p>
 <div id="reads-both-newspapers" class="section level4">
-<h4>
-<span class="header-section-number">F.7.1.1</span> reads both newspapers?<a class="anchor" aria-label="anchor" href="#reads-both-newspapers"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.7.1.1</span> reads both newspapers?</h4>
 </div>
 <div id="reads-z1-but-not-z2" class="section level4">
-<h4>
-<span class="header-section-number">F.7.1.2</span> reads <span class="math inline">\(Z1\)</span>, but not <span class="math inline">\(Z2\)</span>?<a class="anchor" aria-label="anchor" href="#reads-z1-but-not-z2"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.7.1.2</span> reads <span class="math inline">\(Z1\)</span>, but not <span class="math inline">\(Z2\)</span>?</h4>
 </div>
 <div id="reads-z2-if-she-is-not-a-z1-reader" class="section level4">
-<h4>
-<span class="header-section-number">F.7.1.3</span> reads <span class="math inline">\(Z2\)</span> if she is not a Z1 reader?<a class="anchor" aria-label="anchor" href="#reads-z2-if-she-is-not-a-z1-reader"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.7.1.3</span> reads <span class="math inline">\(Z2\)</span> if she is not a Z1 reader?</h4>
 </div>
 <div id="reads-at-most-one-newspaper" class="section level4">
-<h4>
-<span class="header-section-number">F.7.1.4</span> reads at most one newspaper?<a class="anchor" aria-label="anchor" href="#reads-at-most-one-newspaper"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.7.1.4</span> reads at most one newspaper?</h4>
 </div>
 <div id="does-not-read-z1" class="section level4">
-<h4>
-<span class="header-section-number">F.7.1.5</span> does not read <span class="math inline">\(Z1\)</span>?<a class="anchor" aria-label="anchor" href="#does-not-read-z1"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.7.1.5</span> does not read <span class="math inline">\(Z1\)</span>?</h4>
 </div>
 </div>
 </div>
 <div id="exercise-f8" class="section level2">
-<h2>
-<span class="header-section-number">F.8</span> Exercise F8<a class="anchor" aria-label="anchor" href="#exercise-f8"><i class="fas fa-link"></i></a>
-</h2>
-<div id="part-a-16" class="section level3">
-<h3>
-<span class="header-section-number">F.8.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-16"><i class="fas fa-link"></i></a>
-</h3>
+<h2><span class="header-section-number">F.8</span> Exercise F8</h2>
+<div id="part-a-22" class="section level3">
+<h3><span class="header-section-number">F.8.1</span> Part A</h3>
 <p>In an apartment in an old building with exterior walls and an outdated electrical system, it can happen that the electricity fails or the water supply freezes. Both circumstances occur independently, but depend on the season. Thus, of course, the water only freezes when it is winter, with a probability of 80%. However, even if it is not winter, there is a 40% probability that the electricity will fail, which is the same probability that the electricity will not fail when it is winter.
 Assume that the winter season accounts for 30% of the total season.</p>
 <div id="use-event-symbols-to-formalize-the-probability-statements-mentioned-in-the-text." class="section level4">
-<h4>
-<span class="header-section-number">F.8.1.1</span> Use event symbols to formalize the probability statements mentioned in the text.<a class="anchor" aria-label="anchor" href="#use-event-symbols-to-formalize-the-probability-statements-mentioned-in-the-text."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.8.1.1</span> Use event symbols to formalize the probability statements mentioned in the text.</h4>
 </div>
 <div id="with-what-probability-must-one-expect-the-water-supply-to-freeze" class="section level4">
-<h4>
-<span class="header-section-number">F.8.1.2</span> With what probability must one expect the water supply to freeze?<a class="anchor" aria-label="anchor" href="#with-what-probability-must-one-expect-the-water-supply-to-freeze"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.8.1.2</span> With what probability must one expect the water supply to freeze?</h4>
 </div>
 <div id="with-what-probability-must-one-expect-a-power-failure" class="section level4">
-<h4>
-<span class="header-section-number">F.8.1.3</span> With what probability must one expect a power failure?<a class="anchor" aria-label="anchor" href="#with-what-probability-must-one-expect-a-power-failure"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.8.1.3</span> With what probability must one expect a power failure?</h4>
 </div>
 <div id="with-what-probability-must-one-expect-the-water-supply-to-freeze-and-a-power-failure" class="section level4">
-<h4>
-<span class="header-section-number">F.8.1.4</span> With what probability must one expect the water supply to freeze and a power failure?<a class="anchor" aria-label="anchor" href="#with-what-probability-must-one-expect-the-water-supply-to-freeze-and-a-power-failure"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.8.1.4</span> With what probability must one expect the water supply to freeze and a power failure?</h4>
 </div>
 <div id="if-the-power-has-already-been-cut-off-with-what-probability-must-one-expect-the-water-supply-to-freeze" class="section level4">
-<h4>
-<span class="header-section-number">F.8.1.5</span> If the power has already been cut off, with what probability must one expect the water supply to freeze?<a class="anchor" aria-label="anchor" href="#if-the-power-has-already-been-cut-off-with-what-probability-must-one-expect-the-water-supply-to-freeze"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.8.1.5</span> If the power has already been cut off, with what probability must one expect the water supply to freeze?</h4>
 </div>
 <div id="with-what-probability-must-one-additionally-expect-a-power-failure-if-the-water-supply-is-already-frozen" class="section level4">
-<h4>
-<span class="header-section-number">F.8.1.6</span> With what probability must one additionally expect a power failure if the water supply is already frozen?<a class="anchor" aria-label="anchor" href="#with-what-probability-must-one-additionally-expect-a-power-failure-if-the-water-supply-is-already-frozen"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.8.1.6</span> With what probability must one additionally expect a power failure if the water supply is already frozen?</h4>
 </div>
 <div id="with-what-probability-must-one-expect-at-least-one-of-both-problems" class="section level4">
-<h4>
-<span class="header-section-number">F.8.1.7</span> With what probability must one expect at least one of both problems?<a class="anchor" aria-label="anchor" href="#with-what-probability-must-one-expect-at-least-one-of-both-problems"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.8.1.7</span> With what probability must one expect at least one of both problems?</h4>
 </div>
 <div id="with-what-probability-must-one-expect-at-most-one-of-the-two-problems" class="section level4">
-<h4>
-<span class="header-section-number">F.8.1.8</span> With what probability must one expect at most one of the two problems?<a class="anchor" aria-label="anchor" href="#with-what-probability-must-one-expect-at-most-one-of-the-two-problems"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.8.1.8</span> With what probability must one expect at most one of the two problems?</h4>
 </div>
 </div>
 </div>
 <div id="exercise-f9" class="section level2">
-<h2>
-<span class="header-section-number">F.9</span> Exercise F9<a class="anchor" aria-label="anchor" href="#exercise-f9"><i class="fas fa-link"></i></a>
-</h2>
-<div id="part-a-17" class="section level3">
-<h3>
-<span class="header-section-number">F.9.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-17"><i class="fas fa-link"></i></a>
-</h3>
+<h2><span class="header-section-number">F.9</span> Exercise F9</h2>
+<div id="part-a-23" class="section level3">
+<h3><span class="header-section-number">F.9.1</span> Part A</h3>
 <p>At a small border crossing, two customs officers share the duty exactly halfway. When the first customs officer is on duty, he checks passports with a probability of 20% and searches cars with a probability of 10% independently of a passport check. When the second customs officer is on duty, he checks passports with a probability of 70% and searches cars with a probability of 40% independently of a passport control.</p>
 </div>
 <div id="define-meaningful-events-based-on-the-text-and-formalize-the-specified-probabilities." class="section level3">
-<h3>
-<span class="header-section-number">F.9.2</span> Define meaningful events based on the text and formalize the specified probabilities.<a class="anchor" aria-label="anchor" href="#define-meaningful-events-based-on-the-text-and-formalize-the-specified-probabilities."><i class="fas fa-link"></i></a>
-</h3>
+<h3><span class="header-section-number">F.9.2</span> Define meaningful events based on the text and formalize the specified probabilities.</h3>
 <p>You drive to this border crossing with a car at any time.</p>
 </div>
 <div id="what-is-the-probability-that-your-car-will-be-searched" class="section level3">
-<h3>
-<span class="header-section-number">F.9.3</span> What is the probability that your car will be searched?<a class="anchor" aria-label="anchor" href="#what-is-the-probability-that-your-car-will-be-searched"><i class="fas fa-link"></i></a>
-</h3>
+<h3><span class="header-section-number">F.9.3</span> What is the probability that your car will be searched?</h3>
 </div>
 <div id="what-is-the-probability-of-a-passport-check" class="section level3">
-<h3>
-<span class="header-section-number">F.9.4</span> What is the probability of a passport check?<a class="anchor" aria-label="anchor" href="#what-is-the-probability-of-a-passport-check"><i class="fas fa-link"></i></a>
-</h3>
+<h3><span class="header-section-number">F.9.4</span> What is the probability of a passport check?</h3>
 </div>
 <div id="what-is-the-probability-that-you-will-be-searched-and-your-car-will-be-checked" class="section level3">
-<h3>
-<span class="header-section-number">F.9.5</span> What is the probability that you will be searched and your car will be checked?<a class="anchor" aria-label="anchor" href="#what-is-the-probability-that-you-will-be-searched-and-your-car-will-be-checked"><i class="fas fa-link"></i></a>
-</h3>
+<h3><span class="header-section-number">F.9.5</span> What is the probability that you will be searched and your car will be checked?</h3>
 </div>
 <div id="if-your-passport-has-already-been-checked-how-likely-are-you-to-have-your-car-searched" class="section level3">
-<h3>
-<span class="header-section-number">F.9.6</span> If your passport has already been checked, how likely are you to have your car searched?<a class="anchor" aria-label="anchor" href="#if-your-passport-has-already-been-checked-how-likely-are-you-to-have-your-car-searched"><i class="fas fa-link"></i></a>
-</h3>
+<h3><span class="header-section-number">F.9.6</span> If your passport has already been checked, how likely are you to have your car searched?</h3>
 </div>
 <div id="if-your-car-has-already-been-searched-how-likely-are-you-to-face-an-additional-passport-check" class="section level3">
-<h3>
-<span class="header-section-number">F.9.7</span> If your car has already been searched, how likely are you to face an additional passport check?<a class="anchor" aria-label="anchor" href="#if-your-car-has-already-been-searched-how-likely-are-you-to-face-an-additional-passport-check"><i class="fas fa-link"></i></a>
-</h3>
+<h3><span class="header-section-number">F.9.7</span> If your car has already been searched, how likely are you to face an additional passport check?</h3>
 </div>
 <div id="what-is-the-probability-that-you-will-have-to-expect-exactly-one-of-both-measures" class="section level3">
-<h3>
-<span class="header-section-number">F.9.8</span> What is the probability that you will have to expect exactly one of both measures?<a class="anchor" aria-label="anchor" href="#what-is-the-probability-that-you-will-have-to-expect-exactly-one-of-both-measures"><i class="fas fa-link"></i></a>
-</h3>
+<h3><span class="header-section-number">F.9.8</span> What is the probability that you will have to expect exactly one of both measures?</h3>
 </div>
 </div>
 <div id="exercise-f10" class="section level2">
-<h2>
-<span class="header-section-number">F.10</span> Exercise F10<a class="anchor" aria-label="anchor" href="#exercise-f10"><i class="fas fa-link"></i></a>
-</h2>
-<div id="part-a-18" class="section level3">
-<h3>
-<span class="header-section-number">F.10.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-18"><i class="fas fa-link"></i></a>
-</h3>
+<h2><span class="header-section-number">F.10</span> Exercise F10</h2>
+<div id="part-a-24" class="section level3">
+<h3><span class="header-section-number">F.10.1</span> Part A</h3>
 <p>A man is looking for his umbrella, which he has left in a building with a 60% probability. And if it is true, with equal probability in one of the 6 floors.</p>
 <p>Use the following events for your solution:</p>
 <ul>
-<li>
-<span class="math inline">\(B\)</span>: â€œUmbrella is in the building.â€</li>
-<li>
-<span class="math inline">\(F\)</span>: "Umbrella is in the first 5 floors.</li>
-<li>
-<span class="math inline">\(S\)</span>: â€œThe umbrella is on the 6th floor.â€</li>
+<li><span class="math inline">\(B\)</span>: “Umbrella is in the building.”</li>
+<li><span class="math inline">\(F\)</span>: "Umbrella is in the first 5 floors.</li>
+<li><span class="math inline">\(S\)</span>: “The umbrella is on the 6th floor.”</li>
 </ul>
 <div id="what-is-the-probability-that-the-umbrella-is-in-the-building-and-on-the-6th-floor-of-the-building" class="section level4">
-<h4>
-<span class="header-section-number">F.10.1.1</span> What is the probability that the umbrella is in the building and on the 6th floor of the building?<a class="anchor" aria-label="anchor" href="#what-is-the-probability-that-the-umbrella-is-in-the-building-and-on-the-6th-floor-of-the-building"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.10.1.1</span> What is the probability that the umbrella is in the building and on the 6th floor of the building?</h4>
 </div>
 <div id="what-is-the-probability-that-the-umbrella-is-on-the-6th-floor-if-you-dont-know-if-it-is-in-the-building" class="section level4">
-<h4>
-<span class="header-section-number">F.10.1.2</span> What is the probability that the umbrella is on the 6th floor if you donâ€™t know if it is in the building?<a class="anchor" aria-label="anchor" href="#what-is-the-probability-that-the-umbrella-is-on-the-6th-floor-if-you-dont-know-if-it-is-in-the-building"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.10.1.2</span> What is the probability that the umbrella is on the 6th floor if you don’t know if it is in the building?</h4>
 </div>
 <div id="what-is-the-probability-that-the-umbrella-is-not-on-the-first-5-floors-if-you-know-that-it-is-not-on-the-6th-floor" class="section level4">
-<h4>
-<span class="header-section-number">F.10.1.3</span> What is the probability that the umbrella is not on the first 5 floors if you know that it is not on the 6th floor?<a class="anchor" aria-label="anchor" href="#what-is-the-probability-that-the-umbrella-is-not-on-the-first-5-floors-if-you-know-that-it-is-not-on-the-6th-floor"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.10.1.3</span> What is the probability that the umbrella is not on the first 5 floors if you know that it is not on the 6th floor?</h4>
 </div>
 <div id="what-is-the-probability-that-the-umbrella-is-not-on-the-first-5-floors" class="section level4">
-<h4>
-<span class="header-section-number">F.10.1.4</span> What is the probability that the umbrella is not on the first 5 floors?<a class="anchor" aria-label="anchor" href="#what-is-the-probability-that-the-umbrella-is-not-on-the-first-5-floors"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.10.1.4</span> What is the probability that the umbrella is not on the first 5 floors?</h4>
 </div>
 <div id="the-umbrella-is-not-in-the-first-5-floors.-what-is-the-probability-that-the-umbrella-is-in-the-building" class="section level4">
-<h4>
-<span class="header-section-number">F.10.1.5</span> The umbrella is not in the first 5 floors. What is the probability that the umbrella is in the building?<a class="anchor" aria-label="anchor" href="#the-umbrella-is-not-in-the-first-5-floors.-what-is-the-probability-that-the-umbrella-is-in-the-building"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.10.1.5</span> The umbrella is not in the first 5 floors. What is the probability that the umbrella is in the building?</h4>
 </div>
 </div>
 </div>
 <div id="exercise-f11" class="section level2">
-<h2>
-<span class="header-section-number">F.11</span> Exercise F11<a class="anchor" aria-label="anchor" href="#exercise-f11"><i class="fas fa-link"></i></a>
-</h2>
-<div id="part-a-19" class="section level3">
-<h3>
-<span class="header-section-number">F.11.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-19"><i class="fas fa-link"></i></a>
-</h3>
+<h2><span class="header-section-number">F.11</span> Exercise F11</h2>
+<div id="part-a-25" class="section level3">
+<h3><span class="header-section-number">F.11.1</span> Part A</h3>
 <p>The Road Traffic Office is conducting a study on the aggression behavior of drivers towards cyclists and comes to the following conclusion:</p>
 <ul>
-<li>A male motorist reacts to a hindrance by a cyclist with a 30% probability by â€œhonkingâ€ and (independently of this) with a 20% probability by â€œinsultingâ€.</li>
-<li>A female motorist reacts to a hindrance caused by a cyclist with a 15% probability by â€œhonkingâ€ and (independently of this) with a 10% probability by â€œinsultingâ€.</li>
+<li>A male motorist reacts to a hindrance by a cyclist with a 30% probability by “honking” and (independently of this) with a 20% probability by “insulting”.</li>
+<li>A female motorist reacts to a hindrance caused by a cyclist with a 15% probability by “honking” and (independently of this) with a 10% probability by “insulting”.</li>
 <li>Meeting a man behind the wheel or a woman behind the wheel can be considered equally likely.</li>
 </ul>
 <div id="define-corresponding-events-and-assign-the-probability-values-mentioned-in-the-text-to-them." class="section level4">
-<h4>
-<span class="header-section-number">F.11.1.1</span> Define corresponding events and assign the probability values mentioned in the text to them.<a class="anchor" aria-label="anchor" href="#define-corresponding-events-and-assign-the-probability-values-mentioned-in-the-text-to-them."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.11.1.1</span> Define corresponding events and assign the probability values mentioned in the text to them.</h4>
 <p>Suppose you are a cyclist who is hindering a person behind the wheel of a car.</p>
 </div>
 <div id="will-this-person-honk" class="section level4">
-<h4>
-<span class="header-section-number">F.11.1.2</span> Will this person honk?<a class="anchor" aria-label="anchor" href="#will-this-person-honk"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.11.1.2</span> Will this person honk?</h4>
 </div>
 <div id="will-this-person-insult-you" class="section level4">
-<h4>
-<span class="header-section-number">F.11.1.3</span> Will this person insult you?<a class="anchor" aria-label="anchor" href="#will-this-person-insult-you"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.11.1.3</span> Will this person insult you?</h4>
 </div>
 <div id="will-this-person-honk-the-horn-and-insult-you" class="section level4">
-<h4>
-<span class="header-section-number">F.11.1.4</span> Will this person honk the horn and insult you?<a class="anchor" aria-label="anchor" href="#will-this-person-honk-the-horn-and-insult-you"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.11.1.4</span> Will this person honk the horn and insult you?</h4>
 </div>
 <div id="will-this-person-insult-you-even-if-he-or-she-honks-already" class="section level4">
-<h4>
-<span class="header-section-number">F.11.1.5</span> Will this person insult you even if he or she honks already?<a class="anchor" aria-label="anchor" href="#will-this-person-insult-you-even-if-he-or-she-honks-already"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.11.1.5</span> Will this person insult you even if he or she honks already?</h4>
 </div>
 </div>
 </div>
 <div id="exercise-f12" class="section level2">
-<h2>
-<span class="header-section-number">F.12</span> Exercise F12<a class="anchor" aria-label="anchor" href="#exercise-f12"><i class="fas fa-link"></i></a>
-</h2>
-<div id="part-a-20" class="section level3">
-<h3>
-<span class="header-section-number">F.12.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-20"><i class="fas fa-link"></i></a>
-</h3>
+<h2><span class="header-section-number">F.12</span> Exercise F12</h2>
+<div id="part-a-26" class="section level3">
+<h3><span class="header-section-number">F.12.1</span> Part A</h3>
 <p>In a horse race exactly seven horses start.</p>
 <div id="how-many-possibilities-are-there-to-divide-the-seven-horses-among-the-ten-starting-boxes" class="section level4">
-<h4>
-<span class="header-section-number">F.12.1.1</span> How many possibilities are there to divide the seven horses among the ten starting boxes?<a class="anchor" aria-label="anchor" href="#how-many-possibilities-are-there-to-divide-the-seven-horses-among-the-ten-starting-boxes"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.12.1.1</span> How many possibilities are there to divide the seven horses among the ten starting boxes?</h4>
 </div>
 <div id="how-many-possible-finishes-are-there-in-places-one-to-seven" class="section level4">
-<h4>
-<span class="header-section-number">F.12.1.2</span> How many possible finishes are there in places one to seven?<a class="anchor" aria-label="anchor" href="#how-many-possible-finishes-are-there-in-places-one-to-seven"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.12.1.2</span> How many possible finishes are there in places one to seven?</h4>
 </div>
 <div id="how-many-possibilities-are-there-for-the-distribution-of-ranks-one-to-three" class="section level4">
-<h4>
-<span class="header-section-number">F.12.1.3</span> How many possibilities are there for the distribution of ranks one to three?<a class="anchor" aria-label="anchor" href="#how-many-possibilities-are-there-for-the-distribution-of-ranks-one-to-three"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.12.1.3</span> How many possibilities are there for the distribution of ranks one to three?</h4>
 </div>
 </div>
 <div id="part-b-11" class="section level3">
-<h3>
-<span class="header-section-number">F.12.2</span> Part B<a class="anchor" aria-label="anchor" href="#part-b-11"><i class="fas fa-link"></i></a>
-</h3>
+<h3><span class="header-section-number">F.12.2</span> Part B</h3>
 <p>Today is a big race day in Hoppewald with three scheduled races. In the individual races the following horses will be at the start:</p>
 <ul>
-<li>Race I : <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span>
-</li>
-<li>Race II : <span class="math inline">\(D\)</span>, <span class="math inline">\(E\)</span>, <span class="math inline">\(F\)</span>, <span class="math inline">\(G\)</span> and <span class="math inline">\(H\)</span>
-</li>
-<li>Race III: <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, <span class="math inline">\(D\)</span>, <span class="math inline">\(E\)</span>, <span class="math inline">\(F\)</span>, <span class="math inline">\(G\)</span> and <span class="math inline">\(H\)</span>
-</li>
+<li>Race I : <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span></li>
+<li>Race II : <span class="math inline">\(D\)</span>, <span class="math inline">\(E\)</span>, <span class="math inline">\(F\)</span>, <span class="math inline">\(G\)</span> and <span class="math inline">\(H\)</span></li>
+<li>Race III: <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, <span class="math inline">\(D\)</span>, <span class="math inline">\(E\)</span>, <span class="math inline">\(F\)</span>, <span class="math inline">\(G\)</span> and <span class="math inline">\(H\)</span></li>
 </ul>
 <p>The following victory probabilities apply to the individual horses, with the outcomes of the three races being independent of each other:</p>
-<div class="sourceCode" id="cb80"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">race</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="st">"I"</span>, times <span class="op">=</span> <span class="fl">2</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="st">"II"</span>, times <span class="op">=</span> <span class="fl">4</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="st">"III"</span>, times <span class="op">=</span> <span class="fl">7</span><span class="op">)</span><span class="op">)</span>
-<span class="va">horse</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span>, <span class="va">LETTERS</span><span class="op">[</span><span class="fl">4</span><span class="op">:</span><span class="fl">7</span><span class="op">]</span>, <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">7</span><span class="op">]</span><span class="op">)</span>
-<span class="va">victory</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.2</span>, <span class="fl">0.4</span>, <span class="fl">0.1</span>, <span class="fl">0.2</span>, <span class="fl">0.3</span>, <span class="fl">0.4</span>, <span class="fl">0.05</span>, <span class="fl">0.1</span>, <span class="fl">0.05</span>, <span class="fl">0.05</span>, <span class="fl">0.1</span>, <span class="fl">0.1</span>, <span class="fl">0.05</span><span class="op">)</span>
-<span class="va">tbl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>race <span class="op">=</span> <span class="va">race</span>, horse <span class="op">=</span> <span class="va">horse</span>, victory <span class="op">=</span> <span class="va">victory</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">tbl</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Race"</span>, <span class="st">"Horse"</span>, <span class="st">"Probability of Victory"</span><span class="op">)</span>
-
-<span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="va">tbl</span><span class="op">)</span></code></pre></div>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="combinatorics-and-algebra-of-events.html#cb80-1"></a>race &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">rep</span>(<span class="st">&quot;I&quot;</span>, <span class="dt">times =</span> <span class="dv">2</span>), <span class="kw">rep</span>(<span class="st">&quot;II&quot;</span>, <span class="dt">times =</span> <span class="dv">4</span>), <span class="kw">rep</span>(<span class="st">&quot;III&quot;</span>, <span class="dt">times =</span> <span class="dv">7</span>))</span>
+<span id="cb80-2"><a href="combinatorics-and-algebra-of-events.html#cb80-2"></a>horse &lt;-<span class="st"> </span><span class="kw">c</span>(LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>], LETTERS[<span class="dv">4</span><span class="op">:</span><span class="dv">7</span>], LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">7</span>])</span>
+<span id="cb80-3"><a href="combinatorics-and-algebra-of-events.html#cb80-3"></a>victory &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">0.2</span>, <span class="fl">0.4</span>, <span class="fl">0.1</span>, <span class="fl">0.2</span>, <span class="fl">0.3</span>, <span class="fl">0.4</span>, <span class="fl">0.05</span>, <span class="fl">0.1</span>, <span class="fl">0.05</span>, <span class="fl">0.05</span>, <span class="fl">0.1</span>, <span class="fl">0.1</span>, <span class="fl">0.05</span>)</span>
+<span id="cb80-4"><a href="combinatorics-and-algebra-of-events.html#cb80-4"></a>tbl &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">race =</span> race, <span class="dt">horse =</span> horse, <span class="dt">victory =</span> victory)</span>
+<span id="cb80-5"><a href="combinatorics-and-algebra-of-events.html#cb80-5"></a><span class="kw">names</span>(tbl) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Race&quot;</span>, <span class="st">&quot;Horse&quot;</span>, <span class="st">&quot;Probability of Victory&quot;</span>)</span>
+<span id="cb80-6"><a href="combinatorics-and-algebra-of-events.html#cb80-6"></a></span>
+<span id="cb80-7"><a href="combinatorics-and-algebra-of-events.html#cb80-7"></a><span class="kw">kable</span>(tbl)</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
 <th align="left">Race</th>
 <th align="left">Horse</th>
 <th align="right">Probability of Victory</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td align="left">I</td>
@@ -656,341 +831,214 @@ Assume that the winter season accounts for 30% of the total season.</p>
 <td align="right">0.05</td>
 </tr>
 </tbody>
-</table></div>
+</table>
 <p>What are the probabilities of the following events:</p>
 <div id="horse-c-wins-exactly-one-of-his-races." class="section level4">
-<h4>
-<span class="header-section-number">F.12.2.1</span> Horse <span class="math inline">\(C\)</span> wins exactly one of his races.<a class="anchor" aria-label="anchor" href="#horse-c-wins-exactly-one-of-his-races."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.12.2.1</span> Horse <span class="math inline">\(C\)</span> wins exactly one of his races.</h4>
 </div>
 <div id="horse-c-wins-both-of-his-races." class="section level4">
-<h4>
-<span class="header-section-number">F.12.2.2</span> Horse <span class="math inline">\(C\)</span> wins both of his races.<a class="anchor" aria-label="anchor" href="#horse-c-wins-both-of-his-races."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.12.2.2</span> Horse <span class="math inline">\(C\)</span> wins both of his races.</h4>
 </div>
 <div id="horse-c-wins-at-least-one-of-his-races." class="section level4">
-<h4>
-<span class="header-section-number">F.12.2.3</span> Horse <span class="math inline">\(C\)</span> wins at least one of his races.<a class="anchor" aria-label="anchor" href="#horse-c-wins-at-least-one-of-his-races."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.12.2.3</span> Horse <span class="math inline">\(C\)</span> wins at least one of his races.</h4>
 </div>
 <div id="horse-c-wins-at-most-one-of-his-races." class="section level4">
-<h4>
-<span class="header-section-number">F.12.2.4</span> Horse <span class="math inline">\(C\)</span> wins at most one of his races.<a class="anchor" aria-label="anchor" href="#horse-c-wins-at-most-one-of-his-races."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.12.2.4</span> Horse <span class="math inline">\(C\)</span> wins at most one of his races.</h4>
 </div>
 <div id="horse-c-wins-none-of-his-races." class="section level4">
-<h4>
-<span class="header-section-number">F.12.2.5</span> Horse <span class="math inline">\(C\)</span> wins none of his races.<a class="anchor" aria-label="anchor" href="#horse-c-wins-none-of-his-races."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.12.2.5</span> Horse <span class="math inline">\(C\)</span> wins none of his races.</h4>
 <p>The horses C and H belong to the same racing stable.</p>
 </div>
 <div id="what-is-the-probability-that-this-racing-team-will-be-able-to-celebrate-a-winner-today-i.e.-to-be-the-winner-in-at-least-one-race" class="section level4">
-<h4>
-<span class="header-section-number">F.12.2.6</span> What is the probability that this racing team will be able to celebrate a winner today, i.e.Â to be the winner in at least one race?<a class="anchor" aria-label="anchor" href="#what-is-the-probability-that-this-racing-team-will-be-able-to-celebrate-a-winner-today-i.e.-to-be-the-winner-in-at-least-one-race"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.12.2.6</span> What is the probability that this racing team will be able to celebrate a winner today, i.e. to be the winner in at least one race?</h4>
 </div>
 </div>
 </div>
 <div id="exercise-f13" class="section level2">
-<h2>
-<span class="header-section-number">F.13</span> Exercise F13<a class="anchor" aria-label="anchor" href="#exercise-f13"><i class="fas fa-link"></i></a>
-</h2>
-<div id="part-a-21" class="section level3">
-<h3>
-<span class="header-section-number">F.13.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-21"><i class="fas fa-link"></i></a>
-</h3>
-<p>In Skat, an ideal deck of cards (32 cards) is distributed among three players and the â€œSkatâ€. Each player receives 10 cards, the remaining 2 cards go into the â€œSkatâ€. The four existing jacks have a particularly important meaning in the Skat game.</p>
+<h2><span class="header-section-number">F.13</span> Exercise F13</h2>
+<div id="part-a-27" class="section level3">
+<h3><span class="header-section-number">F.13.1</span> Part A</h3>
+<p>In Skat, an ideal deck of cards (32 cards) is distributed among three players and the “Skat”. Each player receives 10 cards, the remaining 2 cards go into the “Skat”. The four existing jacks have a particularly important meaning in the Skat game.</p>
 <div id="what-is-the-probability-that-two-jacks-are-in-the-skat" class="section level4">
-<h4>
-<span class="header-section-number">F.13.1.1</span> What is the probability that two jacks are in the â€œSkatâ€?<a class="anchor" aria-label="anchor" href="#what-is-the-probability-that-two-jacks-are-in-the-skat"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.13.1.1</span> What is the probability that two jacks are in the “Skat”?</h4>
 </div>
 <div id="what-is-the-probability-that-exactly-one-jack-is-in-the-skat" class="section level4">
-<h4>
-<span class="header-section-number">F.13.1.2</span> What is the probability that exactly one jack is in the â€œSkatâ€?<a class="anchor" aria-label="anchor" href="#what-is-the-probability-that-exactly-one-jack-is-in-the-skat"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.13.1.2</span> What is the probability that exactly one jack is in the “Skat”?</h4>
 </div>
 <div id="what-is-the-probability-that-the-jack-of-clubs-is-in-the-skat" class="section level4">
-<h4>
-<span class="header-section-number">F.13.1.3</span> What is the probability that the jack of clubs is in the â€œSkatâ€?<a class="anchor" aria-label="anchor" href="#what-is-the-probability-that-the-jack-of-clubs-is-in-the-skat"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.13.1.3</span> What is the probability that the jack of clubs is in the “Skat”?</h4>
 </div>
 </div>
 <div id="part-b-12" class="section level3">
-<h3>
-<span class="header-section-number">F.13.2</span> Part B<a class="anchor" aria-label="anchor" href="#part-b-12"><i class="fas fa-link"></i></a>
-</h3>
+<h3><span class="header-section-number">F.13.2</span> Part B</h3>
 <p>Two ideal dice are thrown. One cube is red, the other is white. The following events are defined:</p>
 <ul>
-<li>
-<span class="math inline">\(A\)</span>: â€œThe number of the white cube is even.â€</li>
-<li>
-<span class="math inline">\(B\)</span>: â€œThe number of the red cube is odd.â€</li>
-<li>
-<span class="math inline">\(C\)</span>: â€œThe sum of the eyes of both cubes is straight.â€</li>
-<li>
-<span class="math inline">\(D\)</span>: â€œThe sum of the eyes of both cubes is odd.â€</li>
+<li><span class="math inline">\(A\)</span>: “The number of the white cube is even.”</li>
+<li><span class="math inline">\(B\)</span>: “The number of the red cube is odd.”</li>
+<li><span class="math inline">\(C\)</span>: “The sum of the eyes of both cubes is straight.”</li>
+<li><span class="math inline">\(D\)</span>: “The sum of the eyes of both cubes is odd.”</li>
 </ul>
 <div id="determine-the-probabilities-of-the-events-a-b-c-and-d." class="section level4">
-<h4>
-<span class="header-section-number">F.13.2.1</span> Determine the probabilities of the events <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span> and <span class="math inline">\(D\)</span>.<a class="anchor" aria-label="anchor" href="#determine-the-probabilities-of-the-events-a-b-c-and-d."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.13.2.1</span> Determine the probabilities of the events <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span> and <span class="math inline">\(D\)</span>.</h4>
 </div>
 <div id="what-elements-of-omega-make-up-the-following-events" class="section level4">
-<h4>
-<span class="header-section-number">F.13.2.2</span> What elements of <span class="math inline">\(\Omega\)</span> make up the following events?<a class="anchor" aria-label="anchor" href="#what-elements-of-omega-make-up-the-following-events"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.13.2.2</span> What elements of <span class="math inline">\(\Omega\)</span> make up the following events?</h4>
 <ol style="list-style-type: decimal">
-<li>
-<span class="math inline">\(A \cap B\)</span>.</li>
-<li>
-<span class="math inline">\(A \cap C\)</span>.</li>
-<li>
-<span class="math inline">\(B \cap C\)</span>.</li>
+<li><span class="math inline">\(A \cap B\)</span>.</li>
+<li><span class="math inline">\(A \cap C\)</span>.</li>
+<li><span class="math inline">\(B \cap C\)</span>.</li>
 </ol>
 </div>
 <div id="use-laplaces-concept-of-probability-to-determine-the-probabilities-of-the-events" class="section level4">
-<h4>
-<span class="header-section-number">F.13.2.3</span> Use <em>Laplace</em>â€™s concept of probability to determine the probabilities of the events<a class="anchor" aria-label="anchor" href="#use-laplaces-concept-of-probability-to-determine-the-probabilities-of-the-events"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.13.2.3</span> Use <em>Laplace</em>’s concept of probability to determine the probabilities of the events</h4>
 </div>
 <div id="are-the-events-a-b-and-c-pairwise-stochastically-independent-justify-your-respective-answer-with-the-help-of-a-formal-arithmetic-operation." class="section level4">
-<h4>
-<span class="header-section-number">F.13.2.4</span> Are the events <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> pairwise stochastically independent? Justify your respective answer with the help of a formal arithmetic operation.<a class="anchor" aria-label="anchor" href="#are-the-events-a-b-and-c-pairwise-stochastically-independent-justify-your-respective-answer-with-the-help-of-a-formal-arithmetic-operation."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.13.2.4</span> Are the events <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> pairwise stochastically independent? Justify your respective answer with the help of a formal arithmetic operation.</h4>
 </div>
 <div id="determine-the-probability-of-the-event-a-cap-b-cap-c" class="section level4">
-<h4>
-<span class="header-section-number">F.13.2.5</span> Determine the probability of the event: <span class="math inline">\((A \cap B \cap C)\)</span><a class="anchor" aria-label="anchor" href="#determine-the-probability-of-the-event-a-cap-b-cap-c"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.13.2.5</span> Determine the probability of the event: <span class="math inline">\((A \cap B \cap C)\)</span></h4>
 </div>
 <div id="are-the-events-a-b-and-c-completely-stochastically-independent-i.e.-pa-cap-b-cap-c-pa-cdot-pb-cdot-pc" class="section level4">
-<h4>
-<span class="header-section-number">F.13.2.6</span> Are the events <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> completely stochastically independent? [i.e.Â <span class="math inline">\(P(A \cap B \cap C) = P(A) \cdot P(B) \cdot P(C)\)</span>]<a class="anchor" aria-label="anchor" href="#are-the-events-a-b-and-c-completely-stochastically-independent-i.e.-pa-cap-b-cap-c-pa-cdot-pb-cdot-pc"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.13.2.6</span> Are the events <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> completely stochastically independent? [i.e. <span class="math inline">\(P(A \cap B \cap C) = P(A) \cdot P(B) \cdot P(C)\)</span>]</h4>
 <p>One of the following statements is correct. Indicate which statement is correct:</p>
 <ol style="list-style-type: decimal">
-<li>â€œCompletely stochastically independent events are always also stochastically independent in pairs.â€</li>
-<li>â€œPairwise stochastically independent events are always also completely stochastically independent.â€</li>
+<li>“Completely stochastically independent events are always also stochastically independent in pairs.”</li>
+<li>“Pairwise stochastically independent events are always also completely stochastically independent.”</li>
 </ol>
 </div>
 </div>
 <div id="part-c-3" class="section level3">
-<h3>
-<span class="header-section-number">F.13.3</span> Part C<a class="anchor" aria-label="anchor" href="#part-c-3"><i class="fas fa-link"></i></a>
-</h3>
+<h3><span class="header-section-number">F.13.3</span> Part C</h3>
 <p>In a tennis match, player A wins a single set against player B with probability <span class="math inline">\(p\)</span>. The winner of the whole match is the first player to win two sets.</p>
-<p>Be <span class="math inline">\(G_i\)</span> : â€œPlayer A wins the ith setâ€ with <span class="math inline">\(i \in \{ 1, 2, 3 \}\)</span>.</p>
+<p>Be <span class="math inline">\(G_i\)</span> : “Player A wins the ith set” with <span class="math inline">\(i \in \{ 1, 2, 3 \}\)</span>.</p>
 </div>
 <div id="depending-on-p-specify-the-probability-that-player-a-will-win-the-match." class="section level3">
-<h3>
-<span class="header-section-number">F.13.4</span> Depending on p, specify the probability that player A will win the match.<a class="anchor" aria-label="anchor" href="#depending-on-p-specify-the-probability-that-player-a-will-win-the-match."><i class="fas fa-link"></i></a>
-</h3>
+<h3><span class="header-section-number">F.13.4</span> Depending on p, specify the probability that player A will win the match.</h3>
 </div>
 </div>
 <div id="exercise-f14" class="section level2">
-<h2>
-<span class="header-section-number">F.14</span> Exercise F14<a class="anchor" aria-label="anchor" href="#exercise-f14"><i class="fas fa-link"></i></a>
-</h2>
-<div id="part-a-22" class="section level3">
-<h3>
-<span class="header-section-number">F.14.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-22"><i class="fas fa-link"></i></a>
-</h3>
+<h2><span class="header-section-number">F.14</span> Exercise F14</h2>
+<div id="part-a-28" class="section level3">
+<h3><span class="header-section-number">F.14.1</span> Part A</h3>
 <p>A family was at the picnic today: Father Martin, mother Silke, the children Anja and Dirk as well as grandpa Arnold. On the way home the children suddenly notice that grandpa is no longer there. There are three possibilities:</p>
 <ul>
-<li>
-<span class="math inline">\(A\)</span>: Grandpa is already at home and sitting comfortably in his armchair.</li>
-<li>
-<span class="math inline">\(B\)</span>: Grandpa is still at the picnic area and taking his nap.</li>
-<li>
-<span class="math inline">\(C\)</span>: Grandpa has gone to the nearby forest and is looking for mushrooms.</li>
+<li><span class="math inline">\(A\)</span>: Grandpa is already at home and sitting comfortably in his armchair.</li>
+<li><span class="math inline">\(B\)</span>: Grandpa is still at the picnic area and taking his nap.</li>
+<li><span class="math inline">\(C\)</span>: Grandpa has gone to the nearby forest and is looking for mushrooms.</li>
 </ul>
 <p>Because of the habits of grandpa, one knows the probabilities for the occurrence of events <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span>:</p>
 <p><span class="math display">\[P(A) = 0.15, \, P(B) = 0.8, \, P(C) = 0.05 \, .\]</span></p>
 <p>Anja is sent back to the picnic place and Dirk is sent to the edge of the forest to look for the grandfather. If grandpa is at the picnic place, Anja finds him with a probability of 90%. But if he is running around in the forest, Dirk will find him with a probability of only 50%.</p>
 <div id="what-is-the-probability-that-anja-will-find-the-grandpa" class="section level4">
-<h4>
-<span class="header-section-number">F.14.1.1</span> What is the probability that Anja will find the grandpa?<a class="anchor" aria-label="anchor" href="#what-is-the-probability-that-anja-will-find-the-grandpa"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.14.1.1</span> What is the probability that Anja will find the grandpa?</h4>
 </div>
 <div id="what-is-the-probability-that-dirk-will-find-the-grandpa" class="section level4">
-<h4>
-<span class="header-section-number">F.14.1.2</span> What is the probability that Dirk will find the grandpa?<a class="anchor" aria-label="anchor" href="#what-is-the-probability-that-dirk-will-find-the-grandpa"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.14.1.2</span> What is the probability that Dirk will find the grandpa?</h4>
 </div>
 <div id="what-is-the-probability-that-one-of-the-children-will-find-the-grandpa" class="section level4">
-<h4>
-<span class="header-section-number">F.14.1.3</span> What is the probability that one of the children will find the grandpa?<a class="anchor" aria-label="anchor" href="#what-is-the-probability-that-one-of-the-children-will-find-the-grandpa"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.14.1.3</span> What is the probability that one of the children will find the grandpa?</h4>
 </div>
 <div id="what-is-the-probability-that-the-grandpa-will-be-sitting-in-his-armchair-when-he-returns-home-in-case-the-children-do-not-find-him" class="section level4">
-<h4>
-<span class="header-section-number">F.14.1.4</span> What is the probability that the grandpa will be sitting in his armchair when he returns home, in case the children do not find him?<a class="anchor" aria-label="anchor" href="#what-is-the-probability-that-the-grandpa-will-be-sitting-in-his-armchair-when-he-returns-home-in-case-the-children-do-not-find-him"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.14.1.4</span> What is the probability that the grandpa will be sitting in his armchair when he returns home, in case the children do not find him?</h4>
 </div>
 </div>
 </div>
 <div id="exercise-f15" class="section level2">
-<h2>
-<span class="header-section-number">F.15</span> Exercise F15<a class="anchor" aria-label="anchor" href="#exercise-f15"><i class="fas fa-link"></i></a>
-</h2>
-<div id="part-a-23" class="section level3">
-<h3>
-<span class="header-section-number">F.15.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a-23"><i class="fas fa-link"></i></a>
-</h3>
+<h2><span class="header-section-number">F.15</span> Exercise F15</h2>
+<div id="part-a-29" class="section level3">
+<h3><span class="header-section-number">F.15.1</span> Part A</h3>
 <p>A florist has an assortment of tulip bulbs. Of these bulbs 20% make blue tulips, the rest make red tulips. 60% of the bulbs make tulips with smooth leaves, the rest make tulips with pointed leaves. If a tulip is blue, it has smooth leaves in 10% of the cases.</p>
 <p>It applies:</p>
 <ul>
-<li>R: â€œThe tulip turns red.â€</li>
-<li>G: â€œThe tulip will have smooth leaves.â€</li>
+<li>R: “The tulip turns red.”</li>
+<li>G: “The tulip will have smooth leaves.”</li>
 </ul>
 <div id="calculate-the-probability-that-a-tulip-will-have-red-color-and-smooth-leaves." class="section level4">
-<h4>
-<span class="header-section-number">F.15.1.1</span> Calculate the probability that a tulip will have red color <strong>and</strong> smooth leaves.<a class="anchor" aria-label="anchor" href="#calculate-the-probability-that-a-tulip-will-have-red-color-and-smooth-leaves."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.15.1.1</span> Calculate the probability that a tulip will have red color <strong>and</strong> smooth leaves.</h4>
 </div>
 <div id="calculate-the-probability-that-a-tulip-will-turn-red-if-you-know-that-it-will-have-smooth-leaves." class="section level4">
-<h4>
-<span class="header-section-number">F.15.1.2</span> Calculate the probability that a tulip will turn red if you know that it will have smooth leaves.<a class="anchor" aria-label="anchor" href="#calculate-the-probability-that-a-tulip-will-turn-red-if-you-know-that-it-will-have-smooth-leaves."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.15.1.2</span> Calculate the probability that a tulip will turn red if you know that it will have smooth leaves.</h4>
 </div>
 <div id="calculate-the-probability-that-a-tulip-will-have-smooth-leaves-if-you-know-that-it-will-turn-red." class="section level4">
-<h4>
-<span class="header-section-number">F.15.1.3</span> Calculate the probability that a tulip will have smooth leaves if you know that it will turn red.<a class="anchor" aria-label="anchor" href="#calculate-the-probability-that-a-tulip-will-have-smooth-leaves-if-you-know-that-it-will-turn-red."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.15.1.3</span> Calculate the probability that a tulip will have smooth leaves if you know that it will turn red.</h4>
 </div>
 <div id="calculate-the-probability-that-a-tulip-will-turn-red-if-you-know-that-it-will-turn-pointed." class="section level4">
-<h4>
-<span class="header-section-number">F.15.1.4</span> Calculate the probability that a tulip will turn red if you know that it will turn pointed.<a class="anchor" aria-label="anchor" href="#calculate-the-probability-that-a-tulip-will-turn-red-if-you-know-that-it-will-turn-pointed."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.15.1.4</span> Calculate the probability that a tulip will turn red if you know that it will turn pointed.</h4>
 </div>
 <div id="calculate-the-probability-that-a-tulip-will-turn-red-or-smooth-if-you-know-it-will-turn-red-and-smooth." class="section level4">
-<h4>
-<span class="header-section-number">F.15.1.5</span> Calculate the probability that a tulip will turn red <strong>or</strong> smooth if you know it will turn red <strong>and</strong> smooth.<a class="anchor" aria-label="anchor" href="#calculate-the-probability-that-a-tulip-will-turn-red-or-smooth-if-you-know-it-will-turn-red-and-smooth."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.15.1.5</span> Calculate the probability that a tulip will turn red <strong>or</strong> smooth if you know it will turn red <strong>and</strong> smooth.</h4>
 </div>
 <div id="calculate-the-probability-that-a-tulip-will-become-blue-or-smooth-if-you-know-it-will-become-red-and-pointed." class="section level4">
-<h4>
-<span class="header-section-number">F.15.1.6</span> Calculate the probability that a tulip will become blue <strong>or</strong> smooth if you know it will become red <strong>and</strong> pointed.<a class="anchor" aria-label="anchor" href="#calculate-the-probability-that-a-tulip-will-become-blue-or-smooth-if-you-know-it-will-become-red-and-pointed."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.15.1.6</span> Calculate the probability that a tulip will become blue <strong>or</strong> smooth if you know it will become red <strong>and</strong> pointed.</h4>
 </div>
 <div id="calculate-the-probability-that-a-tulip-will-turn-red-or-smooth-if-you-know-it-will-turn-red-and-pointed." class="section level4">
-<h4>
-<span class="header-section-number">F.15.1.7</span> Calculate the probability that a tulip will turn red <strong>or</strong> smooth if you know it will turn red <strong>and</strong> pointed.<a class="anchor" aria-label="anchor" href="#calculate-the-probability-that-a-tulip-will-turn-red-or-smooth-if-you-know-it-will-turn-red-and-pointed."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.15.1.7</span> Calculate the probability that a tulip will turn red <strong>or</strong> smooth if you know it will turn red <strong>and</strong> pointed.</h4>
 </div>
 <div id="calculate-the-probability-that-a-tulip-will-turn-red-and-smooth-if-you-know-it-will-turn-red-or-smooth." class="section level4">
-<h4>
-<span class="header-section-number">F.15.1.8</span> Calculate the probability that a tulip will turn red <strong>and</strong> smooth if you know it will turn red <strong>or</strong> smooth.<a class="anchor" aria-label="anchor" href="#calculate-the-probability-that-a-tulip-will-turn-red-and-smooth-if-you-know-it-will-turn-red-or-smooth."><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">F.15.1.8</span> Calculate the probability that a tulip will turn red <strong>and</strong> smooth if you know it will turn red <strong>or</strong> smooth.</h4>
 
 </div>
 </div>
 </div>
 </div>
-  <div class="chapter-nav">
-<div class="prev"><a href="correlation-analysis.html"><span class="header-section-number">E</span> Correlation Analysis</a></div>
-<div class="next"><a href="discrete-random-variables-and-distributions.html"><span class="header-section-number">G</span> Discrete Random Variables and Distributions</a></div>
-</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
-    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#combinatorics-and-algebra-of-events"><span class="header-section-number">F</span> Combinatorics and Algebra of Events</a></li>
-<li><a class="nav-link" href="#prerequisites-6">Prerequisites</a></li>
-<li>
-<a class="nav-link" href="#exercise-f1"><span class="header-section-number">F.1</span> Exercise F1</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#part-a-9"><span class="header-section-number">F.1.1</span> Part A</a></li></ul>
-</li>
-<li>
-<a class="nav-link" href="#exercise-f2"><span class="header-section-number">F.2</span> Exercise F2</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#part-a-10"><span class="header-section-number">F.2.1</span> Part A</a></li>
-<li><a class="nav-link" href="#part-b-9"><span class="header-section-number">F.2.2</span> Part B</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#multiple-choice"><span class="header-section-number">F.3</span> Multiple Choice</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#part-a-11"><span class="header-section-number">F.3.1</span> Part A</a></li></ul>
-</li>
-<li>
-<a class="nav-link" href="#exercise-f4"><span class="header-section-number">F.4</span> Exercise F4</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#part-a-12"><span class="header-section-number">F.4.1</span> Part A</a></li>
-<li><a class="nav-link" href="#part-b-10"><span class="header-section-number">F.4.2</span> Part B</a></li>
-<li><a class="nav-link" href="#part-c-2"><span class="header-section-number">F.4.3</span> Part C</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#exercise-f5"><span class="header-section-number">F.5</span> Exercise F5</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#part-a-13"><span class="header-section-number">F.5.1</span> Part A</a></li></ul>
-</li>
-<li>
-<a class="nav-link" href="#exercise-f6"><span class="header-section-number">F.6</span> Exercise F6</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#part-a-14"><span class="header-section-number">F.6.1</span> Part A</a></li></ul>
-</li>
-<li>
-<a class="nav-link" href="#exercise-f7"><span class="header-section-number">F.7</span> Exercise F7</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#part-a-15"><span class="header-section-number">F.7.1</span> Part A</a></li></ul>
-</li>
-<li>
-<a class="nav-link" href="#exercise-f8"><span class="header-section-number">F.8</span> Exercise F8</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#part-a-16"><span class="header-section-number">F.8.1</span> Part A</a></li></ul>
-</li>
-<li>
-<a class="nav-link" href="#exercise-f9"><span class="header-section-number">F.9</span> Exercise F9</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#part-a-17"><span class="header-section-number">F.9.1</span> Part A</a></li>
-<li><a class="nav-link" href="#define-meaningful-events-based-on-the-text-and-formalize-the-specified-probabilities."><span class="header-section-number">F.9.2</span> Define meaningful events based on the text and formalize the specified probabilities.</a></li>
-<li><a class="nav-link" href="#what-is-the-probability-that-your-car-will-be-searched"><span class="header-section-number">F.9.3</span> What is the probability that your car will be searched?</a></li>
-<li><a class="nav-link" href="#what-is-the-probability-of-a-passport-check"><span class="header-section-number">F.9.4</span> What is the probability of a passport check?</a></li>
-<li><a class="nav-link" href="#what-is-the-probability-that-you-will-be-searched-and-your-car-will-be-checked"><span class="header-section-number">F.9.5</span> What is the probability that you will be searched and your car will be checked?</a></li>
-<li><a class="nav-link" href="#if-your-passport-has-already-been-checked-how-likely-are-you-to-have-your-car-searched"><span class="header-section-number">F.9.6</span> If your passport has already been checked, how likely are you to have your car searched?</a></li>
-<li><a class="nav-link" href="#if-your-car-has-already-been-searched-how-likely-are-you-to-face-an-additional-passport-check"><span class="header-section-number">F.9.7</span> If your car has already been searched, how likely are you to face an additional passport check?</a></li>
-<li><a class="nav-link" href="#what-is-the-probability-that-you-will-have-to-expect-exactly-one-of-both-measures"><span class="header-section-number">F.9.8</span> What is the probability that you will have to expect exactly one of both measures?</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#exercise-f10"><span class="header-section-number">F.10</span> Exercise F10</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#part-a-18"><span class="header-section-number">F.10.1</span> Part A</a></li></ul>
-</li>
-<li>
-<a class="nav-link" href="#exercise-f11"><span class="header-section-number">F.11</span> Exercise F11</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#part-a-19"><span class="header-section-number">F.11.1</span> Part A</a></li></ul>
-</li>
-<li>
-<a class="nav-link" href="#exercise-f12"><span class="header-section-number">F.12</span> Exercise F12</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#part-a-20"><span class="header-section-number">F.12.1</span> Part A</a></li>
-<li><a class="nav-link" href="#part-b-11"><span class="header-section-number">F.12.2</span> Part B</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#exercise-f13"><span class="header-section-number">F.13</span> Exercise F13</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#part-a-21"><span class="header-section-number">F.13.1</span> Part A</a></li>
-<li><a class="nav-link" href="#part-b-12"><span class="header-section-number">F.13.2</span> Part B</a></li>
-<li><a class="nav-link" href="#part-c-3"><span class="header-section-number">F.13.3</span> Part C</a></li>
-<li><a class="nav-link" href="#depending-on-p-specify-the-probability-that-player-a-will-win-the-match."><span class="header-section-number">F.13.4</span> Depending on p, specify the probability that player A will win the match.</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#exercise-f14"><span class="header-section-number">F.14</span> Exercise F14</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#part-a-22"><span class="header-section-number">F.14.1</span> Part A</a></li></ul>
-</li>
-<li>
-<a class="nav-link" href="#exercise-f15"><span class="header-section-number">F.15</span> Exercise F15</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#part-a-23"><span class="header-section-number">F.15.1</span> Part A</a></li></ul>
-</li>
-</ul>
+            </section>
 
-      <div class="book-extra">
-        <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/DavidBarke/Stat1/blob/master/06_F_Combinatorics_and_Algebra_of_Events.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/DavidBarke/Stat1/edit/master/06_F_Combinatorics_and_Algebra_of_Events.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
-        </ul>
-</div>
-    </nav>
-</div>
-
-</div>
-</div> <!-- .container -->
-
-<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
-
-  <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Statistics 1 for Economics</strong>" was written by David Barkemeyer. </p>
+          </div>
+        </div>
+      </div>
+<a href="correlation-analysis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="discrete-random-variables-and-distributions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
   </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
 
-  <div class="col-12 col-md-6 mt-3">
-    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
-  </div>
-
-</div></div>
-</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -1004,4 +1052,5 @@ Assume that the winter season accounts for 30% of the total season.</p>
   })();
 </script>
 </body>
+
 </html>

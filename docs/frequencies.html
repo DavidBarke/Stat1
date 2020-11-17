@@ -1,86 +1,443 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="" xml:lang="">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>A Frequencies | Statistics 1 for Economics</title>
-<meta name="author" content="David Barkemeyer">
-<!-- CSS --><link rel="stylesheet" href="style.css">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.2"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="libs/bootstrap-4.5.3/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.5.3/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.1.9000/tabs.js"></script><script src="libs/bs3compat-0.2.1.9000/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js"></script>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>A Frequencies | Statistics 1 for Economics</title>
+  <meta name="description" content="A Frequencies | Statistics 1 for Economics" />
+  <meta name="generator" content="bookdown 0.21.4 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="A Frequencies | Statistics 1 for Economics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="A Frequencies | Statistics 1 for Economics" />
+  
+  
+  
+
+<meta name="author" content="David Barkemeyer" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="empirical-parameters.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
 </head>
-<body data-spy="scroll" data-target="#toc">
 
-<div class="container-fluid">
-<div class="row">
-  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+<body>
 
-    <div class="d-flex align-items-start justify-content-between">
-      <h1>
-        <a href="index.html" title="">Statistics 1 for Economics</a>
-      </h1>
-      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
-    </div>
 
-    <div id="main-nav" class="collapse-lg">
-      <form role="search">
-        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
-</form>
 
-      <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html">Welcome</a></li>
-<li class="book-part">Appendix</li>
-<li><a class="active" href="frequencies.html"><span class="header-section-number">A</span> Frequencies</a></li>
-<li><a class="" href="empirical-parameters.html"><span class="header-section-number">B</span> Empirical Parameters</a></li>
-<li><a class="" href="concentration-analysis.html"><span class="header-section-number">C</span> Concentration Analysis</a></li>
-<li><a class="" href="multivariate-analysis.html"><span class="header-section-number">D</span> Multivariate Analysis</a></li>
-<li><a class="" href="correlation-analysis.html"><span class="header-section-number">E</span> Correlation Analysis</a></li>
-<li><a class="" href="combinatorics-and-algebra-of-events.html"><span class="header-section-number">F</span> Combinatorics and Algebra of Events</a></li>
-<li><a class="" href="discrete-random-variables-and-distributions.html"><span class="header-section-number">G</span> Discrete Random Variables and Distributions</a></li>
-<li><a class="" href="continuous-random-variables-and-distributions.html"><span class="header-section-number">H</span> Continuous Random Variables and Distributions</a></li>
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="frequencies.html"><a href="frequencies.html"><i class="fa fa-check"></i><b>A</b> Frequencies</a><ul>
+<li class="chapter" data-level="" data-path="frequencies.html"><a href="frequencies.html#prerequisites"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="A.1" data-path="frequencies.html"><a href="frequencies.html#exercise-a1"><i class="fa fa-check"></i><b>A.1</b> Exercise A1</a><ul>
+<li class="chapter" data-level="A.1.1" data-path="frequencies.html"><a href="frequencies.html#part-a"><i class="fa fa-check"></i><b>A.1.1</b> Part A</a></li>
+<li class="chapter" data-level="A.1.2" data-path="frequencies.html"><a href="frequencies.html#part-b"><i class="fa fa-check"></i><b>A.1.2</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="A.2" data-path="frequencies.html"><a href="frequencies.html#exercise-a2"><i class="fa fa-check"></i><b>A.2</b> Exercise A2</a><ul>
+<li class="chapter" data-level="A.2.1" data-path="frequencies.html"><a href="frequencies.html#m-race"><i class="fa fa-check"></i><b>A.2.1</b> 100m race</a></li>
+</ul></li>
+<li class="chapter" data-level="A.3" data-path="frequencies.html"><a href="frequencies.html#exercise-a3"><i class="fa fa-check"></i><b>A.3</b> Exercise A3</a><ul>
+<li class="chapter" data-level="A.3.1" data-path="frequencies.html"><a href="frequencies.html#tennis"><i class="fa fa-check"></i><b>A.3.1</b> Tennis</a></li>
+</ul></li>
+<li class="chapter" data-level="A.4" data-path="frequencies.html"><a href="frequencies.html#exercise-a4"><i class="fa fa-check"></i><b>A.4</b> Exercise A4</a><ul>
+<li class="chapter" data-level="A.4.1" data-path="frequencies.html"><a href="frequencies.html#study-time"><i class="fa fa-check"></i><b>A.4.1</b> Study time</a></li>
+</ul></li>
+<li class="chapter" data-level="A.5" data-path="frequencies.html"><a href="frequencies.html#exercise-a5"><i class="fa fa-check"></i><b>A.5</b> Exercise A5</a><ul>
+<li class="chapter" data-level="A.5.1" data-path="frequencies.html"><a href="frequencies.html#ice-cream"><i class="fa fa-check"></i><b>A.5.1</b> Ice cream</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="empirical-parameters.html"><a href="empirical-parameters.html"><i class="fa fa-check"></i><b>B</b> Empirical Parameters</a><ul>
+<li class="chapter" data-level="" data-path="empirical-parameters.html"><a href="empirical-parameters.html#prerequisites-1"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="" data-path="empirical-parameters.html"><a href="empirical-parameters.html#model-exercise-b0---geometric-mean"><i class="fa fa-check"></i>Model Exercise B0 - Geometric mean</a><ul>
+<li class="chapter" data-level="B.0.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-1"><i class="fa fa-check"></i><b>B.0.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="B.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b1"><i class="fa fa-check"></i><b>B.1</b> Exercise B1</a><ul>
+<li class="chapter" data-level="B.1.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-2"><i class="fa fa-check"></i><b>B.1.1</b> Part A</a></li>
+<li class="chapter" data-level="B.1.2" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-b-1"><i class="fa fa-check"></i><b>B.1.2</b> Part B</a></li>
+<li class="chapter" data-level="B.1.3" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-c"><i class="fa fa-check"></i><b>B.1.3</b> Part C</a></li>
+</ul></li>
+<li class="chapter" data-level="B.2" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b2"><i class="fa fa-check"></i><b>B.2</b> Exercise B2</a><ul>
+<li class="chapter" data-level="B.2.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-3"><i class="fa fa-check"></i><b>B.2.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="B.3" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b3"><i class="fa fa-check"></i><b>B.3</b> Exercise B3</a><ul>
+<li class="chapter" data-level="B.3.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-4"><i class="fa fa-check"></i><b>B.3.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="B.4" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b4"><i class="fa fa-check"></i><b>B.4</b> Exercise B4</a><ul>
+<li class="chapter" data-level="B.4.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-5"><i class="fa fa-check"></i><b>B.4.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="B.5" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b5"><i class="fa fa-check"></i><b>B.5</b> Exercise B5</a><ul>
+<li class="chapter" data-level="B.5.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-6"><i class="fa fa-check"></i><b>B.5.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="B.6" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b6"><i class="fa fa-check"></i><b>B.6</b> Exercise B6</a><ul>
+<li class="chapter" data-level="B.6.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-7"><i class="fa fa-check"></i><b>B.6.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="B.7" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b7"><i class="fa fa-check"></i><b>B.7</b> Exercise B7</a><ul>
+<li class="chapter" data-level="B.7.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#multiple-choice-questions"><i class="fa fa-check"></i><b>B.7.1</b> Multiple Choice Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="B.8" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b8"><i class="fa fa-check"></i><b>B.8</b> Exercise B8</a><ul>
+<li class="chapter" data-level="B.8.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#wages"><i class="fa fa-check"></i><b>B.8.1</b> Wages</a></li>
+</ul></li>
+<li class="chapter" data-level="B.9" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b9"><i class="fa fa-check"></i><b>B.9</b> Exercise B9</a><ul>
+<li class="chapter" data-level="B.9.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#rents"><i class="fa fa-check"></i><b>B.9.1</b> Rents</a></li>
+</ul></li>
+<li class="chapter" data-level="B.10" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b10"><i class="fa fa-check"></i><b>B.10</b> Exercise B10</a><ul>
+<li class="chapter" data-level="B.10.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-8"><i class="fa fa-check"></i><b>B.10.1</b> Part A</a></li>
+<li class="chapter" data-level="B.10.2" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-b-2"><i class="fa fa-check"></i><b>B.10.2</b> Part B</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="C" data-path="concentration-analysis.html"><a href="concentration-analysis.html"><i class="fa fa-check"></i><b>C</b> Concentration Analysis</a><ul>
+<li class="chapter" data-level="" data-path="concentration-analysis.html"><a href="concentration-analysis.html#prerequisites-3"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="C.1" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c1"><i class="fa fa-check"></i><b>C.1</b> Exercise C1</a></li>
+<li class="chapter" data-level="C.2" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c2"><i class="fa fa-check"></i><b>C.2</b> Exercise C2</a></li>
+<li class="chapter" data-level="C.3" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c3"><i class="fa fa-check"></i><b>C.3</b> Exercise C3</a></li>
+<li class="chapter" data-level="C.4" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c4"><i class="fa fa-check"></i><b>C.4</b> Exercise C4</a></li>
+<li class="chapter" data-level="C.5" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c5"><i class="fa fa-check"></i><b>C.5</b> Exercise C5</a></li>
+<li class="chapter" data-level="C.6" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c6"><i class="fa fa-check"></i><b>C.6</b> Exercise C6</a></li>
+<li class="chapter" data-level="C.7" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c7"><i class="fa fa-check"></i><b>C.7</b> Exercise C7</a></li>
+<li class="chapter" data-level="C.8" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c8"><i class="fa fa-check"></i><b>C.8</b> Exercise C8</a></li>
+<li class="chapter" data-level="C.9" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c9"><i class="fa fa-check"></i><b>C.9</b> Exercise C9</a></li>
+<li class="chapter" data-level="C.10" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c10"><i class="fa fa-check"></i><b>C.10</b> Exercise C10</a></li>
+</ul></li>
+<li class="chapter" data-level="D" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html"><i class="fa fa-check"></i><b>D</b> Multivariate Analysis</a><ul>
+<li class="chapter" data-level="" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#prerequisites-4"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="D.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#exercise-d1"><i class="fa fa-check"></i><b>D.1</b> Exercise D1</a><ul>
+<li class="chapter" data-level="D.1.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#voting-behavior"><i class="fa fa-check"></i><b>D.1.1</b> Voting behavior</a></li>
+</ul></li>
+<li class="chapter" data-level="D.2" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#exercise-d2"><i class="fa fa-check"></i><b>D.2</b> Exercise D2</a><ul>
+<li class="chapter" data-level="D.2.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#packaging-color"><i class="fa fa-check"></i><b>D.2.1</b> Packaging color</a></li>
+</ul></li>
+<li class="chapter" data-level="D.3" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#exercise-d3"><i class="fa fa-check"></i><b>D.3</b> Exercise D3</a><ul>
+<li class="chapter" data-level="D.3.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#love-for-animals"><i class="fa fa-check"></i><b>D.3.1</b> Love for animals</a></li>
+</ul></li>
+<li class="chapter" data-level="D.4" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#exercise-d4"><i class="fa fa-check"></i><b>D.4</b> Exercise D4</a><ul>
+<li class="chapter" data-level="D.4.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#infections"><i class="fa fa-check"></i><b>D.4.1</b> Infections</a></li>
+</ul></li>
+<li class="chapter" data-level="D.5" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#exercise-d5"><i class="fa fa-check"></i><b>D.5</b> Exercise D5</a><ul>
+<li class="chapter" data-level="D.5.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#part-a-9"><i class="fa fa-check"></i><b>D.5.1</b> Part A</a></li>
+<li class="chapter" data-level="D.5.2" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#part-b-3"><i class="fa fa-check"></i><b>D.5.2</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="D.6" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#exercise-d6"><i class="fa fa-check"></i><b>D.6</b> Exercise D6</a><ul>
+<li class="chapter" data-level="D.6.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#part-a-10"><i class="fa fa-check"></i><b>D.6.1</b> Part A</a></li>
+<li class="chapter" data-level="D.6.2" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#part-b-4"><i class="fa fa-check"></i><b>D.6.2</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="D.7" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#exercise-d7"><i class="fa fa-check"></i><b>D.7</b> Exercise D7</a><ul>
+<li class="chapter" data-level="D.7.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#part-a-11"><i class="fa fa-check"></i><b>D.7.1</b> Part A</a></li>
+<li class="chapter" data-level="D.7.2" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#part-b-5"><i class="fa fa-check"></i><b>D.7.2</b> Part B</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="E" data-path="correlation-analysis.html"><a href="correlation-analysis.html"><i class="fa fa-check"></i><b>E</b> Correlation Analysis</a><ul>
+<li class="chapter" data-level="" data-path="correlation-analysis.html"><a href="correlation-analysis.html#prerequisites-5"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="E.1" data-path="correlation-analysis.html"><a href="correlation-analysis.html#exercise-e1"><i class="fa fa-check"></i><b>E.1</b> Exercise E1</a><ul>
+<li class="chapter" data-level="E.1.1" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-a-12"><i class="fa fa-check"></i><b>E.1.1</b> Part A</a></li>
+<li class="chapter" data-level="E.1.2" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-b-6"><i class="fa fa-check"></i><b>E.1.2</b> Part B</a></li>
+<li class="chapter" data-level="E.1.3" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-c-1"><i class="fa fa-check"></i><b>E.1.3</b> Part C</a></li>
+<li class="chapter" data-level="E.1.4" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-d"><i class="fa fa-check"></i><b>E.1.4</b> Part D</a></li>
+</ul></li>
+<li class="chapter" data-level="E.2" data-path="correlation-analysis.html"><a href="correlation-analysis.html#exercise-e2"><i class="fa fa-check"></i><b>E.2</b> Exercise E2</a><ul>
+<li class="chapter" data-level="E.2.1" data-path="correlation-analysis.html"><a href="correlation-analysis.html#sex-education"><i class="fa fa-check"></i><b>E.2.1</b> Sex education</a></li>
+</ul></li>
+<li class="chapter" data-level="E.3" data-path="correlation-analysis.html"><a href="correlation-analysis.html#exercise-e3"><i class="fa fa-check"></i><b>E.3</b> Exercise E3</a><ul>
+<li class="chapter" data-level="E.3.1" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-a-13"><i class="fa fa-check"></i><b>E.3.1</b> Part A</a></li>
+<li class="chapter" data-level="E.3.2" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-b-7"><i class="fa fa-check"></i><b>E.3.2</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="E.4" data-path="correlation-analysis.html"><a href="correlation-analysis.html#exercise-e4"><i class="fa fa-check"></i><b>E.4</b> Exercise E4</a><ul>
+<li class="chapter" data-level="E.4.1" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-a-14"><i class="fa fa-check"></i><b>E.4.1</b> Part A</a></li>
+<li class="chapter" data-level="E.4.2" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-b-8"><i class="fa fa-check"></i><b>E.4.2</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="E.5" data-path="correlation-analysis.html"><a href="correlation-analysis.html#exercise-e5"><i class="fa fa-check"></i><b>E.5</b> Exercise E5</a><ul>
+<li class="chapter" data-level="E.5.1" data-path="correlation-analysis.html"><a href="correlation-analysis.html#work-performance"><i class="fa fa-check"></i><b>E.5.1</b> Work performance</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="F" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html"><i class="fa fa-check"></i><b>F</b> Combinatorics and Algebra of Events</a><ul>
+<li class="chapter" data-level="" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#prerequisites-6"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="F.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f1"><i class="fa fa-check"></i><b>F.1</b> Exercise F1</a><ul>
+<li class="chapter" data-level="F.1.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-15"><i class="fa fa-check"></i><b>F.1.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.2" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f2"><i class="fa fa-check"></i><b>F.2</b> Exercise F2</a><ul>
+<li class="chapter" data-level="F.2.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-16"><i class="fa fa-check"></i><b>F.2.1</b> Part A</a></li>
+<li class="chapter" data-level="F.2.2" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-b-9"><i class="fa fa-check"></i><b>F.2.2</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="F.3" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#multiple-choice"><i class="fa fa-check"></i><b>F.3</b> Multiple Choice</a><ul>
+<li class="chapter" data-level="F.3.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-17"><i class="fa fa-check"></i><b>F.3.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.4" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f4"><i class="fa fa-check"></i><b>F.4</b> Exercise F4</a><ul>
+<li class="chapter" data-level="F.4.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-18"><i class="fa fa-check"></i><b>F.4.1</b> Part A</a></li>
+<li class="chapter" data-level="F.4.2" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-b-10"><i class="fa fa-check"></i><b>F.4.2</b> Part B</a></li>
+<li class="chapter" data-level="F.4.3" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-c-2"><i class="fa fa-check"></i><b>F.4.3</b> Part C</a></li>
+</ul></li>
+<li class="chapter" data-level="F.5" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f5"><i class="fa fa-check"></i><b>F.5</b> Exercise F5</a><ul>
+<li class="chapter" data-level="F.5.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-19"><i class="fa fa-check"></i><b>F.5.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.6" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f6"><i class="fa fa-check"></i><b>F.6</b> Exercise F6</a><ul>
+<li class="chapter" data-level="F.6.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-20"><i class="fa fa-check"></i><b>F.6.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.7" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f7"><i class="fa fa-check"></i><b>F.7</b> Exercise F7</a><ul>
+<li class="chapter" data-level="F.7.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-21"><i class="fa fa-check"></i><b>F.7.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.8" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f8"><i class="fa fa-check"></i><b>F.8</b> Exercise F8</a><ul>
+<li class="chapter" data-level="F.8.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-22"><i class="fa fa-check"></i><b>F.8.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.9" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f9"><i class="fa fa-check"></i><b>F.9</b> Exercise F9</a><ul>
+<li class="chapter" data-level="F.9.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-23"><i class="fa fa-check"></i><b>F.9.1</b> Part A</a></li>
+<li class="chapter" data-level="F.9.2" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#define-meaningful-events-based-on-the-text-and-formalize-the-specified-probabilities."><i class="fa fa-check"></i><b>F.9.2</b> Define meaningful events based on the text and formalize the specified probabilities.</a></li>
+<li class="chapter" data-level="F.9.3" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#what-is-the-probability-that-your-car-will-be-searched"><i class="fa fa-check"></i><b>F.9.3</b> What is the probability that your car will be searched?</a></li>
+<li class="chapter" data-level="F.9.4" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#what-is-the-probability-of-a-passport-check"><i class="fa fa-check"></i><b>F.9.4</b> What is the probability of a passport check?</a></li>
+<li class="chapter" data-level="F.9.5" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#what-is-the-probability-that-you-will-be-searched-and-your-car-will-be-checked"><i class="fa fa-check"></i><b>F.9.5</b> What is the probability that you will be searched and your car will be checked?</a></li>
+<li class="chapter" data-level="F.9.6" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#if-your-passport-has-already-been-checked-how-likely-are-you-to-have-your-car-searched"><i class="fa fa-check"></i><b>F.9.6</b> If your passport has already been checked, how likely are you to have your car searched?</a></li>
+<li class="chapter" data-level="F.9.7" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#if-your-car-has-already-been-searched-how-likely-are-you-to-face-an-additional-passport-check"><i class="fa fa-check"></i><b>F.9.7</b> If your car has already been searched, how likely are you to face an additional passport check?</a></li>
+<li class="chapter" data-level="F.9.8" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#what-is-the-probability-that-you-will-have-to-expect-exactly-one-of-both-measures"><i class="fa fa-check"></i><b>F.9.8</b> What is the probability that you will have to expect exactly one of both measures?</a></li>
+</ul></li>
+<li class="chapter" data-level="F.10" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f10"><i class="fa fa-check"></i><b>F.10</b> Exercise F10</a><ul>
+<li class="chapter" data-level="F.10.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-24"><i class="fa fa-check"></i><b>F.10.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.11" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f11"><i class="fa fa-check"></i><b>F.11</b> Exercise F11</a><ul>
+<li class="chapter" data-level="F.11.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-25"><i class="fa fa-check"></i><b>F.11.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.12" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f12"><i class="fa fa-check"></i><b>F.12</b> Exercise F12</a><ul>
+<li class="chapter" data-level="F.12.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-26"><i class="fa fa-check"></i><b>F.12.1</b> Part A</a></li>
+<li class="chapter" data-level="F.12.2" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-b-11"><i class="fa fa-check"></i><b>F.12.2</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="F.13" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f13"><i class="fa fa-check"></i><b>F.13</b> Exercise F13</a><ul>
+<li class="chapter" data-level="F.13.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-27"><i class="fa fa-check"></i><b>F.13.1</b> Part A</a></li>
+<li class="chapter" data-level="F.13.2" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-b-12"><i class="fa fa-check"></i><b>F.13.2</b> Part B</a></li>
+<li class="chapter" data-level="F.13.3" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-c-3"><i class="fa fa-check"></i><b>F.13.3</b> Part C</a></li>
+<li class="chapter" data-level="F.13.4" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#depending-on-p-specify-the-probability-that-player-a-will-win-the-match."><i class="fa fa-check"></i><b>F.13.4</b> Depending on p, specify the probability that player A will win the match.</a></li>
+</ul></li>
+<li class="chapter" data-level="F.14" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f14"><i class="fa fa-check"></i><b>F.14</b> Exercise F14</a><ul>
+<li class="chapter" data-level="F.14.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-28"><i class="fa fa-check"></i><b>F.14.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.15" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f15"><i class="fa fa-check"></i><b>F.15</b> Exercise F15</a><ul>
+<li class="chapter" data-level="F.15.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-29"><i class="fa fa-check"></i><b>F.15.1</b> Part A</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="G" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html"><i class="fa fa-check"></i><b>G</b> Discrete Random Variables and Distributions</a><ul>
+<li class="chapter" data-level="" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#prerequisites-7"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="G.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g1"><i class="fa fa-check"></i><b>G.1</b> Exercise G1</a><ul>
+<li class="chapter" data-level="G.1.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#the-pigsty"><i class="fa fa-check"></i><b>G.1.1</b> The pigsty</a></li>
+</ul></li>
+<li class="chapter" data-level="G.2" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g2"><i class="fa fa-check"></i><b>G.2</b> Exercise G2</a><ul>
+<li class="chapter" data-level="G.2.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#lottery"><i class="fa fa-check"></i><b>G.2.1</b> Lottery</a></li>
+</ul></li>
+<li class="chapter" data-level="G.3" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g3"><i class="fa fa-check"></i><b>G.3</b> Exercise G3</a><ul>
+<li class="chapter" data-level="G.3.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#aircraft-engine"><i class="fa fa-check"></i><b>G.3.1</b> Aircraft engine</a></li>
+<li class="chapter" data-level="G.3.2" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#part-a-30"><i class="fa fa-check"></i><b>G.3.2</b> Part A</a></li>
+<li class="chapter" data-level="G.3.3" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#part-b-13"><i class="fa fa-check"></i><b>G.3.3</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="G.4" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g4"><i class="fa fa-check"></i><b>G.4</b> Exercise G4</a><ul>
+<li class="chapter" data-level="G.4.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#mini-roulette"><i class="fa fa-check"></i><b>G.4.1</b> Mini-Roulette</a></li>
+</ul></li>
+<li class="chapter" data-level="G.5" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g5"><i class="fa fa-check"></i><b>G.5</b> Exercise G5</a><ul>
+<li class="chapter" data-level="G.5.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#card-game"><i class="fa fa-check"></i><b>G.5.1</b> Card game</a></li>
+</ul></li>
+<li class="chapter" data-level="G.6" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g6"><i class="fa fa-check"></i><b>G.6</b> Exercise G6</a><ul>
+<li class="chapter" data-level="G.6.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#one-will-win"><i class="fa fa-check"></i><b>G.6.1</b> One will win</a></li>
+</ul></li>
+<li class="chapter" data-level="G.7" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g7"><i class="fa fa-check"></i><b>G.7</b> Exercise G7</a><ul>
+<li class="chapter" data-level="G.7.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#coin-toss"><i class="fa fa-check"></i><b>G.7.1</b> Coin toss</a></li>
+</ul></li>
+<li class="chapter" data-level="G.8" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g8"><i class="fa fa-check"></i><b>G.8</b> Exercise G8</a><ul>
+<li class="chapter" data-level="G.8.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#environmentalists"><i class="fa fa-check"></i><b>G.8.1</b> Environmentalists</a></li>
+</ul></li>
+<li class="chapter" data-level="G.9" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g9"><i class="fa fa-check"></i><b>G.9</b> Exercise G9</a><ul>
+<li class="chapter" data-level="G.9.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#two-dimensional-random-variable"><i class="fa fa-check"></i><b>G.9.1</b> Two-dimensional random variable</a></li>
+</ul></li>
+<li class="chapter" data-level="G.10" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g10"><i class="fa fa-check"></i><b>G.10</b> Exercise G10</a><ul>
+<li class="chapter" data-level="G.10.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#candles"><i class="fa fa-check"></i><b>G.10.1</b> Candles</a></li>
+</ul></li>
+<li class="chapter" data-level="G.11" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g11"><i class="fa fa-check"></i><b>G.11</b> Exercise G11</a><ul>
+<li class="chapter" data-level="G.11.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#self-employment"><i class="fa fa-check"></i><b>G.11.1</b> Self-employment</a></li>
+</ul></li>
+<li class="chapter" data-level="G.12" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g12"><i class="fa fa-check"></i><b>G.12</b> Exercise G12</a><ul>
+<li class="chapter" data-level="G.12.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#free-tokens"><i class="fa fa-check"></i><b>G.12.1</b> Free tokens</a></li>
+</ul></li>
+<li class="chapter" data-level="G.13" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g13"><i class="fa fa-check"></i><b>G.13</b> Exercise G13</a><ul>
+<li class="chapter" data-level="G.13.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#bridge"><i class="fa fa-check"></i><b>G.13.1</b> Bridge</a></li>
+</ul></li>
+<li class="chapter" data-level="G.14" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#g14"><i class="fa fa-check"></i><b>G.14</b> G14</a><ul>
+<li class="chapter" data-level="G.14.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#end-of-the-soccer-season"><i class="fa fa-check"></i><b>G.14.1</b> End of the soccer season</a></li>
+</ul></li>
+<li class="chapter" data-level="G.15" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g15"><i class="fa fa-check"></i><b>G.15</b> Exercise G15</a><ul>
+<li class="chapter" data-level="G.15.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#three-balls"><i class="fa fa-check"></i><b>G.15.1</b> Three balls</a></li>
+</ul></li>
+<li class="chapter" data-level="G.16" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g16"><i class="fa fa-check"></i><b>G.16</b> Exercise G16</a><ul>
+<li class="chapter" data-level="G.16.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#statistics-exam"><i class="fa fa-check"></i><b>G.16.1</b> Statistics exam</a></li>
+</ul></li>
+<li class="chapter" data-level="G.17" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g17"><i class="fa fa-check"></i><b>G.17</b> Exercise G17</a></li>
+</ul></li>
+<li class="chapter" data-level="H" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html"><i class="fa fa-check"></i><b>H</b> Continuous Random Variables and Distributions</a><ul>
+<li class="chapter" data-level="H.1" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h1"><i class="fa fa-check"></i><b>H.1</b> Exercise H1</a><ul>
+<li class="chapter" data-level="H.1.1" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#part-a---pocket-calculator"><i class="fa fa-check"></i><b>H.1.1</b> Part A - Pocket calculator</a></li>
+<li class="chapter" data-level="H.1.2" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#part-b---electric-component"><i class="fa fa-check"></i><b>H.1.2</b> Part B - Electric Component</a></li>
+</ul></li>
+<li class="chapter" data-level="H.2" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h2"><i class="fa fa-check"></i><b>H.2</b> Exercise H2</a><ul>
+<li class="chapter" data-level="H.2.1" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#part-a-31"><i class="fa fa-check"></i><b>H.2.1</b> Part A</a></li>
+<li class="chapter" data-level="H.2.2" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#part-b-14"><i class="fa fa-check"></i><b>H.2.2</b> Part B</a></li>
+<li class="chapter" data-level="H.2.3" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#part-c-4"><i class="fa fa-check"></i><b>H.2.3</b> Part C</a></li>
+</ul></li>
+<li class="chapter" data-level="H.3" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h3"><i class="fa fa-check"></i><b>H.3</b> Exercise H3</a><ul>
+<li class="chapter" data-level="H.3.1" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#steel-pins"><i class="fa fa-check"></i><b>H.3.1</b> Steel pins</a></li>
+</ul></li>
+<li class="chapter" data-level="H.4" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h4"><i class="fa fa-check"></i><b>H.4</b> Exercise H4</a></li>
+<li class="chapter" data-level="H.5" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h5"><i class="fa fa-check"></i><b>H.5</b> Exercise H5</a></li>
+<li class="chapter" data-level="H.6" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h6"><i class="fa fa-check"></i><b>H.6</b> Exercise H6</a></li>
+<li class="chapter" data-level="H.7" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h7"><i class="fa fa-check"></i><b>H.7</b> Exercise H7</a></li>
+<li class="chapter" data-level="H.8" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h8"><i class="fa fa-check"></i><b>H.8</b> Exercise H8</a></li>
+<li class="chapter" data-level="H.9" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h9"><i class="fa fa-check"></i><b>H.9</b> Exercise H9</a></li>
+<li class="chapter" data-level="H.10" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h10"><i class="fa fa-check"></i><b>H.10</b> Exercise H10</a></li>
+<li class="chapter" data-level="H.11" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h11"><i class="fa fa-check"></i><b>H.11</b> Exercise H11</a></li>
+<li class="chapter" data-level="H.12" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h12"><i class="fa fa-check"></i><b>H.12</b> Exercise H12</a></li>
+<li class="chapter" data-level="H.13" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h13"><i class="fa fa-check"></i><b>H.13</b> Exercise H13</a></li>
+<li class="chapter" data-level="H.14" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h14"><i class="fa fa-check"></i><b>H.14</b> Exercise H14</a></li>
+<li class="chapter" data-level="H.15" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h15"><i class="fa fa-check"></i><b>H.15</b> Exercise H15</a></li>
+<li class="chapter" data-level="H.16" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h16"><i class="fa fa-check"></i><b>H.16</b> Exercise H16</a></li>
+<li class="chapter" data-level="H.17" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h17"><i class="fa fa-check"></i><b>H.17</b> Exercise H17</a></li>
+</ul></li>
 </ul>
 
-        <div class="book-extra">
-          <p><a id="book-repo" href="https://github.com/DavidBarke/Stat1">View book source <i class="fab fa-github"></i></a></p>
-        </div>
       </nav>
-</div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="frequencies" class="section level1">
-<h1>
-<span class="header-section-number">A</span> Frequencies<a class="anchor" aria-label="anchor" href="#frequencies"><i class="fas fa-link"></i></a>
-</h1>
-<div id="prerequisites" class="section level2 unnumbered">
-<h2>Prerequisites<a class="anchor" aria-label="anchor" href="#prerequisites"><i class="fas fa-link"></i></a>
-</h2>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://yihui.org/knitr/">knitr</a></span><span class="op">)</span>
+    </div>
 
-<span class="co"># Set ggplot2 theme</span>
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme_get.html">theme_set</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics 1 for Economics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="frequencies" class="section level1">
+<h1><span class="header-section-number">A</span> Frequencies</h1>
+<div id="prerequisites" class="section level2 unnumbered">
+<h2>Prerequisites</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="frequencies.html#cb1-1"></a><span class="kw">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="frequencies.html#cb1-2"></a><span class="kw">library</span>(dplyr)</span>
+<span id="cb1-3"><a href="frequencies.html#cb1-3"></a><span class="kw">library</span>(knitr)</span>
+<span id="cb1-4"><a href="frequencies.html#cb1-4"></a></span>
+<span id="cb1-5"><a href="frequencies.html#cb1-5"></a><span class="co"># Set ggplot2 theme</span></span>
+<span id="cb1-6"><a href="frequencies.html#cb1-6"></a><span class="kw">theme_set</span>(<span class="kw">theme_bw</span>())</span></code></pre></div>
 </div>
 <div id="exercise-a1" class="section level2">
-<h2>
-<span class="header-section-number">A.1</span> Exercise A1<a class="anchor" aria-label="anchor" href="#exercise-a1"><i class="fas fa-link"></i></a>
-</h2>
+<h2><span class="header-section-number">A.1</span> Exercise A1</h2>
 <div id="part-a" class="section level3">
-<h3>
-<span class="header-section-number">A.1.1</span> Part A<a class="anchor" aria-label="anchor" href="#part-a"><i class="fas fa-link"></i></a>
-</h3>
+<h3><span class="header-section-number">A.1.1</span> Part A</h3>
 <p>The duration of study of 200 industrial engineers is examined. The following results were obtained:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">n</span> <span class="op">&lt;-</span> <span class="fl">200</span>
-<span class="va">duration</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">11</span>, <span class="fl">12</span>, <span class="fl">13</span>, <span class="fl">14</span>, <span class="fl">15</span><span class="op">)</span>
-<span class="va">rel_frequency</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.1</span>, <span class="fl">0.1</span>, <span class="fl">0.4</span>, <span class="fl">0.2</span>, <span class="fl">0.15</span>, <span class="fl">0.05</span><span class="op">)</span>
-<span class="va">tbl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>duration <span class="op">=</span> <span class="va">duration</span>, rel_frequency <span class="op">=</span> <span class="va">rel_frequency</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>cum_rel_frequency <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/cumsum.html">cumsum</a></span><span class="op">(</span><span class="va">rel_frequency</span><span class="op">)</span><span class="op">)</span>
-
-<span class="va">tbl</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="frequencies.html#cb2-1"></a>n &lt;-<span class="st"> </span><span class="dv">200</span></span>
+<span id="cb2-2"><a href="frequencies.html#cb2-2"></a>duration &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="dv">14</span>, <span class="dv">15</span>)</span>
+<span id="cb2-3"><a href="frequencies.html#cb2-3"></a>rel_frequency &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">0.1</span>, <span class="fl">0.1</span>, <span class="fl">0.4</span>, <span class="fl">0.2</span>, <span class="fl">0.15</span>, <span class="fl">0.05</span>)</span>
+<span id="cb2-4"><a href="frequencies.html#cb2-4"></a>tbl &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">duration =</span> duration, <span class="dt">rel_frequency =</span> rel_frequency) <span class="op">%&gt;%</span></span>
+<span id="cb2-5"><a href="frequencies.html#cb2-5"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">cum_rel_frequency =</span> <span class="kw">cumsum</span>(rel_frequency))</span>
+<span id="cb2-6"><a href="frequencies.html#cb2-6"></a></span>
+<span id="cb2-7"><a href="frequencies.html#cb2-7"></a>tbl</span></code></pre></div>
 <pre><code>## # A tibble: 6 x 3
 ##   duration rel_frequency cum_rel_frequency
 ##      &lt;dbl&gt;         &lt;dbl&gt;             &lt;dbl&gt;
@@ -91,178 +448,136 @@
 ## 5       14          0.15              0.95
 ## 6       15          0.05              1</code></pre>
 <div id="what-is-the-statistical-feature-how-is-it-scaled" class="section level4">
-<h4>
-<span class="header-section-number">A.1.1.1</span> What is the statistical feature? How is it scaled?<a class="anchor" aria-label="anchor" href="#what-is-the-statistical-feature-how-is-it-scaled"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">A.1.1.1</span> What is the statistical feature? How is it scaled?</h4>
 <p>The feature is the duration study of an industrial engineer. It is interval-scaled.</p>
 </div>
 <div id="determine-the-absolute-frequencies." class="section level4">
-<h4>
-<span class="header-section-number">A.1.1.2</span> Determine the absolute frequencies.<a class="anchor" aria-label="anchor" href="#determine-the-absolute-frequencies."><i class="fas fa-link"></i></a>
-</h4>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">tbl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="va">tbl</span>, abs_frequency <span class="op">=</span> <span class="va">n</span> <span class="op">*</span> <span class="va">rel_frequency</span><span class="op">)</span>
-<span class="va">tbl</span><span class="op">$</span><span class="va">abs_frequency</span></code></pre></div>
+<h4><span class="header-section-number">A.1.1.2</span> Determine the absolute frequencies.</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="frequencies.html#cb4-1"></a>tbl &lt;-<span class="st"> </span><span class="kw">mutate</span>(tbl, <span class="dt">abs_frequency =</span> n <span class="op">*</span><span class="st"> </span>rel_frequency)</span>
+<span id="cb4-2"><a href="frequencies.html#cb4-2"></a>tbl<span class="op">$</span>abs_frequency</span></code></pre></div>
 <pre><code>## [1] 20 20 80 40 30 10</code></pre>
 </div>
 <div id="determine-the-cumulative-absolute-frequencies." class="section level4">
-<h4>
-<span class="header-section-number">A.1.1.3</span> Determine the cumulative absolute frequencies.<a class="anchor" aria-label="anchor" href="#determine-the-cumulative-absolute-frequencies."><i class="fas fa-link"></i></a>
-</h4>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">tbl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="va">tbl</span>, cum_abs_frequency <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/cumsum.html">cumsum</a></span><span class="op">(</span><span class="va">abs_frequency</span><span class="op">)</span><span class="op">)</span>
-<span class="va">tbl</span><span class="op">$</span><span class="va">cum_abs_frequency</span></code></pre></div>
+<h4><span class="header-section-number">A.1.1.3</span> Determine the cumulative absolute frequencies.</h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="frequencies.html#cb6-1"></a>tbl &lt;-<span class="st"> </span><span class="kw">mutate</span>(tbl, <span class="dt">cum_abs_frequency =</span> <span class="kw">cumsum</span>(abs_frequency))</span>
+<span id="cb6-2"><a href="frequencies.html#cb6-2"></a>tbl<span class="op">$</span>cum_abs_frequency</span></code></pre></div>
 <pre><code>## [1]  20  40 120 160 190 200</code></pre>
 </div>
 <div id="plot-frequencies-and-cumulative-relative-and-absolute." class="section level4">
-<h4>
-<span class="header-section-number">A.1.1.4</span> Plot frequencies and cumulative (relative and absolute).<a class="anchor" aria-label="anchor" href="#plot-frequencies-and-cumulative-relative-and-absolute."><i class="fas fa-link"></i></a>
-</h4>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Relative frequencies</span>
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">tbl</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">duration</span>, y <span class="op">=</span> <span class="va">rel_frequency</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<div class="inline-figure"><img src="01_A_Frequencies_files/figure-html/unnamed-chunk-5-1.png" width="672"></div>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Relative cumulative frequencies</span>
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">tbl</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">duration</span>, y <span class="op">=</span> <span class="va">cum_rel_frequency</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<div class="inline-figure"><img src="01_A_Frequencies_files/figure-html/unnamed-chunk-5-2.png" width="672"></div>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Absolute frequencies</span>
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">tbl</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">duration</span>, y <span class="op">=</span> <span class="va">abs_frequency</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<div class="inline-figure"><img src="01_A_Frequencies_files/figure-html/unnamed-chunk-5-3.png" width="672"></div>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Absolute cumulative frequencies</span>
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">tbl</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">duration</span>, y <span class="op">=</span> <span class="va">cum_abs_frequency</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<div class="inline-figure"><img src="01_A_Frequencies_files/figure-html/unnamed-chunk-5-4.png" width="672"></div>
+<h4><span class="header-section-number">A.1.1.4</span> Plot frequencies and cumulative (relative and absolute).</h4>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="frequencies.html#cb8-1"></a><span class="co"># Relative frequencies</span></span>
+<span id="cb8-2"><a href="frequencies.html#cb8-2"></a><span class="kw">ggplot</span>(tbl) <span class="op">+</span></span>
+<span id="cb8-3"><a href="frequencies.html#cb8-3"></a><span class="st">  </span><span class="kw">geom_col</span>(<span class="kw">aes</span>(<span class="dt">x =</span> duration, <span class="dt">y =</span> rel_frequency))</span></code></pre></div>
+<p><img src="01_A_Frequencies_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="frequencies.html#cb9-1"></a><span class="co"># Relative cumulative frequencies</span></span>
+<span id="cb9-2"><a href="frequencies.html#cb9-2"></a><span class="kw">ggplot</span>(tbl) <span class="op">+</span></span>
+<span id="cb9-3"><a href="frequencies.html#cb9-3"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x =</span> duration, <span class="dt">y =</span> cum_rel_frequency))</span></code></pre></div>
+<p><img src="01_A_Frequencies_files/figure-html/unnamed-chunk-5-2.png" width="672" /></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="frequencies.html#cb10-1"></a><span class="co"># Absolute frequencies</span></span>
+<span id="cb10-2"><a href="frequencies.html#cb10-2"></a><span class="kw">ggplot</span>(tbl) <span class="op">+</span></span>
+<span id="cb10-3"><a href="frequencies.html#cb10-3"></a><span class="st">  </span><span class="kw">geom_col</span>(<span class="kw">aes</span>(<span class="dt">x =</span> duration, <span class="dt">y =</span> abs_frequency))</span></code></pre></div>
+<p><img src="01_A_Frequencies_files/figure-html/unnamed-chunk-5-3.png" width="672" /></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="frequencies.html#cb11-1"></a><span class="co"># Absolute cumulative frequencies</span></span>
+<span id="cb11-2"><a href="frequencies.html#cb11-2"></a><span class="kw">ggplot</span>(tbl) <span class="op">+</span></span>
+<span id="cb11-3"><a href="frequencies.html#cb11-3"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x =</span> duration, <span class="dt">y =</span> cum_abs_frequency))</span></code></pre></div>
+<p><img src="01_A_Frequencies_files/figure-html/unnamed-chunk-5-4.png" width="672" /></p>
 </div>
 <div id="what-is-the-maximum-duration-of-study-of-the-10-fastest-students" class="section level4">
-<h4>
-<span class="header-section-number">A.1.1.5</span> What is the maximum duration of study of the 10%-fastest students?<a class="anchor" aria-label="anchor" href="#what-is-the-maximum-duration-of-study-of-the-10-fastest-students"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">A.1.1.5</span> What is the maximum duration of study of the 10%-fastest students?</h4>
 <p>10 semesters.</p>
 </div>
 <div id="what-is-the-minimum-duration-of-study-of-the-80-slowest-students" class="section level4">
-<h4>
-<span class="header-section-number">A.1.1.6</span> What is the minimum duration of study of the 80%-slowest students?<a class="anchor" aria-label="anchor" href="#what-is-the-minimum-duration-of-study-of-the-80-slowest-students"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">A.1.1.6</span> What is the minimum duration of study of the 80%-slowest students?</h4>
 <p>12 semesters.</p>
 </div>
 <div id="what-is-the-duration-of-study-for-exact-20-of-all-students" class="section level4">
-<h4>
-<span class="header-section-number">A.1.1.7</span> What is the duration of study for exact 20% of all students?<a class="anchor" aria-label="anchor" href="#what-is-the-duration-of-study-for-exact-20-of-all-students"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">A.1.1.7</span> What is the duration of study for exact 20% of all students?</h4>
 <p>13 semesters.</p>
 </div>
 </div>
 <div id="part-b" class="section level3">
-<h3>
-<span class="header-section-number">A.1.2</span> Part B<a class="anchor" aria-label="anchor" href="#part-b"><i class="fas fa-link"></i></a>
-</h3>
+<h3><span class="header-section-number">A.1.2</span> Part B</h3>
 <p>Now we consider the feature <span class="math inline">\(Y\)</span>: <em>duration of study</em> with levels:</p>
 <ul>
-<li>
-<em>small</em> (less than 12 semesters)</li>
-<li>
-<em>medium</em> (12 semesters)</li>
-<li>
-<em>large</em> (more than 12 semesters)</li>
+<li><em>small</em> (less than 12 semesters)</li>
+<li><em>medium</em> (12 semesters)</li>
+<li><em>large</em> (more than 12 semesters)</li>
 </ul>
 <div id="how-is-the-feature-y-scaled" class="section level4">
-<h4>
-<span class="header-section-number">A.1.2.1</span> How is the feature Y scaled?<a class="anchor" aria-label="anchor" href="#how-is-the-feature-y-scaled"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">A.1.2.1</span> How is the feature Y scaled?</h4>
 <p>It is ordinal-scaled.</p>
 </div>
 <div id="plot-the-absolute-frequency-function." class="section level4">
-<h4>
-<span class="header-section-number">A.1.2.2</span> Plot the absolute frequency function.<a class="anchor" aria-label="anchor" href="#plot-the-absolute-frequency-function."><i class="fas fa-link"></i></a>
-</h4>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Function that converts duration to level</span>
-<span class="va">duration_to_level</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span>
-  <span class="kw">if</span> <span class="op">(</span><span class="va">x</span> <span class="op">&lt;</span> <span class="fl">12</span><span class="op">)</span> <span class="st">"small"</span> <span class="kw">else</span> <span class="kw">if</span> <span class="op">(</span><span class="va">x</span> <span class="op">==</span> <span class="fl">12</span><span class="op">)</span> <span class="st">"medium"</span> <span class="kw">else</span> <span class="st">"large"</span>
-<span class="op">}</span>
-<span class="co"># Vectorize this function in order to work with vector input</span>
-<span class="va">duration_to_level</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Vectorize.html">Vectorize</a></span><span class="op">(</span><span class="va">duration_to_level</span><span class="op">)</span>
-
-<span class="co"># Prepare dataset</span>
-<span class="va">tbl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">tbl</span>, <span class="va">duration</span>, <span class="va">rel_frequency</span>, <span class="va">abs_frequency</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>level <span class="op">=</span> <span class="fu">duration_to_level</span><span class="op">(</span><span class="va">duration</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">level</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>rel_frequency <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">rel_frequency</span><span class="op">)</span>, abs_frequency <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">abs_frequency</span><span class="op">)</span><span class="op">)</span>
-<span class="va">tbl</span></code></pre></div>
+<h4><span class="header-section-number">A.1.2.2</span> Plot the absolute frequency function.</h4>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="frequencies.html#cb12-1"></a><span class="co"># Function that converts duration to level</span></span>
+<span id="cb12-2"><a href="frequencies.html#cb12-2"></a>duration_to_level &lt;-<span class="st"> </span><span class="cf">function</span>(x) {</span>
+<span id="cb12-3"><a href="frequencies.html#cb12-3"></a>  <span class="cf">if</span> (x <span class="op">&lt;</span><span class="st"> </span><span class="dv">12</span>) <span class="st">&quot;small&quot;</span> <span class="cf">else</span> <span class="cf">if</span> (x <span class="op">==</span><span class="st"> </span><span class="dv">12</span>) <span class="st">&quot;medium&quot;</span> <span class="cf">else</span> <span class="st">&quot;large&quot;</span></span>
+<span id="cb12-4"><a href="frequencies.html#cb12-4"></a>}</span>
+<span id="cb12-5"><a href="frequencies.html#cb12-5"></a><span class="co"># Vectorize this function in order to work with vector input</span></span>
+<span id="cb12-6"><a href="frequencies.html#cb12-6"></a>duration_to_level &lt;-<span class="st"> </span><span class="kw">Vectorize</span>(duration_to_level)</span>
+<span id="cb12-7"><a href="frequencies.html#cb12-7"></a></span>
+<span id="cb12-8"><a href="frequencies.html#cb12-8"></a><span class="co"># Prepare dataset</span></span>
+<span id="cb12-9"><a href="frequencies.html#cb12-9"></a>tbl &lt;-<span class="st"> </span><span class="kw">select</span>(tbl, duration, rel_frequency, abs_frequency) <span class="op">%&gt;%</span></span>
+<span id="cb12-10"><a href="frequencies.html#cb12-10"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">level =</span> <span class="kw">duration_to_level</span>(duration)) <span class="op">%&gt;%</span></span>
+<span id="cb12-11"><a href="frequencies.html#cb12-11"></a><span class="st">  </span><span class="kw">group_by</span>(level) <span class="op">%&gt;%</span></span>
+<span id="cb12-12"><a href="frequencies.html#cb12-12"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">rel_frequency =</span> <span class="kw">sum</span>(rel_frequency), <span class="dt">abs_frequency =</span> <span class="kw">sum</span>(abs_frequency))</span>
+<span id="cb12-13"><a href="frequencies.html#cb12-13"></a>tbl</span></code></pre></div>
 <pre><code>## # A tibble: 3 x 3
 ##   level  rel_frequency abs_frequency
 ##   &lt;chr&gt;          &lt;dbl&gt;         &lt;dbl&gt;
 ## 1 large            0.4            80
 ## 2 medium           0.4            80
 ## 3 small            0.2            40</code></pre>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Plot</span>
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">tbl</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">level</span>, y <span class="op">=</span> <span class="va">abs_frequency</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<div class="inline-figure"><img src="01_A_Frequencies_files/figure-html/unnamed-chunk-6-1.png" width="672"></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="frequencies.html#cb14-1"></a><span class="co"># Plot</span></span>
+<span id="cb14-2"><a href="frequencies.html#cb14-2"></a><span class="kw">ggplot</span>(tbl) <span class="op">+</span></span>
+<span id="cb14-3"><a href="frequencies.html#cb14-3"></a><span class="st">  </span><span class="kw">geom_col</span>(<span class="kw">aes</span>(<span class="dt">x =</span> level, <span class="dt">y =</span> abs_frequency))</span></code></pre></div>
+<p><img src="01_A_Frequencies_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 </div>
 <div id="does-it-make-sense-to-use-a-cumulative-distribution-function-for-a-nominal-scaled-feature" class="section level4">
-<h4>
-<span class="header-section-number">A.1.2.3</span> Does it make sense to use a cumulative distribution function for a nominal-scaled feature?<a class="anchor" aria-label="anchor" href="#does-it-make-sense-to-use-a-cumulative-distribution-function-for-a-nominal-scaled-feature"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">A.1.2.3</span> Does it make sense to use a cumulative distribution function for a nominal-scaled feature?</h4>
 <p>No.</p>
 </div>
 </div>
 </div>
 <div id="exercise-a2" class="section level2">
-<h2>
-<span class="header-section-number">A.2</span> Exercise A2<a class="anchor" aria-label="anchor" href="#exercise-a2"><i class="fas fa-link"></i></a>
-</h2>
+<h2><span class="header-section-number">A.2</span> Exercise A2</h2>
+<div id="m-race" class="section level3">
+<h3><span class="header-section-number">A.2.1</span> 100m race</h3>
 <p>The 100m times of 20 athletes were measured. They obtained the following cumulative distribution function:</p>
-<div class="inline-figure"><img src="01_A_Frequencies_files/figure-html/unnamed-chunk-7-1.png" width="672"></div>
-<div id="draw-the-corresponding-histogram" class="section level3">
-<h3>
-<span class="header-section-number">A.2.1</span> Draw the corresponding histogram<a class="anchor" aria-label="anchor" href="#draw-the-corresponding-histogram"><i class="fas fa-link"></i></a>
-</h3>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">break_left</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">10.2</span>, <span class="fl">10.6</span>, <span class="fl">10.8</span><span class="op">)</span>
-<span class="va">break_right</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">10.2</span>, <span class="fl">10.6</span>, <span class="fl">10.8</span>, <span class="fl">11</span><span class="op">)</span>
-<span class="va">f</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.1</span> <span class="op">/</span> <span class="fl">0.2</span>, <span class="fl">0.5</span> <span class="op">/</span> <span class="fl">0.4</span>, <span class="fl">0.2</span> <span class="op">/</span> <span class="fl">0.2</span>, <span class="fl">0.2</span> <span class="op">/</span> <span class="fl">0.2</span><span class="op">)</span>
-<span class="va">tbl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>break_left <span class="op">=</span> <span class="va">break_left</span>, break_right <span class="op">=</span> <span class="va">break_right</span>, f <span class="op">=</span> <span class="va">f</span><span class="op">)</span>
-
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">tbl</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>xmin <span class="op">=</span> <span class="va">break_left</span>, xmax <span class="op">=</span> <span class="va">break_right</span>, ymax <span class="op">=</span> <span class="va">f</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_tile.html">geom_rect</a></span><span class="op">(</span>ymin <span class="op">=</span> <span class="fl">0</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"x"</span>, y <span class="op">=</span> <span class="st">"f(x)"</span><span class="op">)</span></code></pre></div>
-<div class="inline-figure"><img src="01_A_Frequencies_files/figure-html/unnamed-chunk-8-1.png" width="672"></div>
+<p><img src="01_A_Frequencies_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<div id="draw-the-corresponding-histogram" class="section level4">
+<h4><span class="header-section-number">A.2.1.1</span> Draw the corresponding histogram</h4>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="frequencies.html#cb15-1"></a>break_left &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="fl">10.2</span>, <span class="fl">10.6</span>, <span class="fl">10.8</span>)</span>
+<span id="cb15-2"><a href="frequencies.html#cb15-2"></a>break_right &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">10.2</span>, <span class="fl">10.6</span>, <span class="fl">10.8</span>, <span class="dv">11</span>)</span>
+<span id="cb15-3"><a href="frequencies.html#cb15-3"></a>f &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">0.1</span> <span class="op">/</span><span class="st"> </span><span class="fl">0.2</span>, <span class="fl">0.5</span> <span class="op">/</span><span class="st"> </span><span class="fl">0.4</span>, <span class="fl">0.2</span> <span class="op">/</span><span class="st"> </span><span class="fl">0.2</span>, <span class="fl">0.2</span> <span class="op">/</span><span class="st"> </span><span class="fl">0.2</span>)</span>
+<span id="cb15-4"><a href="frequencies.html#cb15-4"></a>tbl &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">break_left =</span> break_left, <span class="dt">break_right =</span> break_right, <span class="dt">f =</span> f)</span>
+<span id="cb15-5"><a href="frequencies.html#cb15-5"></a></span>
+<span id="cb15-6"><a href="frequencies.html#cb15-6"></a><span class="kw">ggplot</span>(tbl, <span class="kw">aes</span>(<span class="dt">xmin =</span> break_left, <span class="dt">xmax =</span> break_right, <span class="dt">ymax =</span> f)) <span class="op">+</span></span>
+<span id="cb15-7"><a href="frequencies.html#cb15-7"></a><span class="st">  </span><span class="kw">geom_rect</span>(<span class="dt">ymin =</span> <span class="dv">0</span>) <span class="op">+</span></span>
+<span id="cb15-8"><a href="frequencies.html#cb15-8"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;x&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;f(x)&quot;</span>)</span></code></pre></div>
+<p><img src="01_A_Frequencies_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 </div>
-<div id="which-was-the-maximum-time-of-the-80-fastest-athletes" class="section level3">
-<h3>
-<span class="header-section-number">A.2.2</span> Which was the maximum time of the 80%-fastest athletes?<a class="anchor" aria-label="anchor" href="#which-was-the-maximum-time-of-the-80-fastest-athletes"><i class="fas fa-link"></i></a>
-</h3>
+<div id="which-was-the-maximum-time-of-the-80-fastest-athletes" class="section level4">
+<h4><span class="header-section-number">A.2.1.2</span> Which was the maximum time of the 80%-fastest athletes?</h4>
 <p>10.8 seconds.</p>
 </div>
-<div id="what-is-the-assumption-about-the-distribution-of-measured-values-within-a-group-when-determining-the-cumulative-distribution-function" class="section level3">
-<h3>
-<span class="header-section-number">A.2.3</span> What is the assumption about the distribution of measured values within a group when determining the cumulative distribution function?<a class="anchor" aria-label="anchor" href="#what-is-the-assumption-about-the-distribution-of-measured-values-within-a-group-when-determining-the-cumulative-distribution-function"><i class="fas fa-link"></i></a>
-</h3>
+<div id="what-is-the-assumption-about-the-distribution-of-measured-values-within-a-group-when-determining-the-cumulative-distribution-function" class="section level4">
+<h4><span class="header-section-number">A.2.1.3</span> What is the assumption about the distribution of measured values within a group when determining the cumulative distribution function?</h4>
 <p>Uniform distribution within a group.</p>
 </div>
-<div id="use-the-cumulative-distribution-function-to-determine-which-was-the-maximum-time-needed-by-the-five-fastest-athletes." class="section level3">
-<h3>
-<span class="header-section-number">A.2.4</span> Use the cumulative distribution function to determine which was the maximum time needed by the five fastest athletes.<a class="anchor" aria-label="anchor" href="#use-the-cumulative-distribution-function-to-determine-which-was-the-maximum-time-needed-by-the-five-fastest-athletes."><i class="fas fa-link"></i></a>
-</h3>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Interpolation</span>
-<span class="va">t_max</span> <span class="op">&lt;-</span> <span class="fl">10.2</span> <span class="op">+</span> <span class="op">(</span><span class="fl">0.25</span> <span class="op">-</span> <span class="fl">0.1</span><span class="op">)</span> <span class="op">/</span> <span class="op">(</span><span class="fl">0.6</span> <span class="op">-</span> <span class="fl">0.1</span><span class="op">)</span> <span class="op">*</span> <span class="op">(</span><span class="fl">10.6</span> <span class="op">-</span> <span class="fl">10.2</span><span class="op">)</span>
-<span class="va">t_max</span></code></pre></div>
+<div id="use-the-cumulative-distribution-function-to-determine-which-was-the-maximum-time-needed-by-the-five-fastest-athletes." class="section level4">
+<h4><span class="header-section-number">A.2.1.4</span> Use the cumulative distribution function to determine which was the maximum time needed by the five fastest athletes.</h4>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="frequencies.html#cb16-1"></a><span class="co"># Interpolation</span></span>
+<span id="cb16-2"><a href="frequencies.html#cb16-2"></a>t_max &lt;-<span class="st"> </span><span class="fl">10.2</span> <span class="op">+</span><span class="st"> </span>(<span class="fl">0.25</span> <span class="op">-</span><span class="st"> </span><span class="fl">0.1</span>) <span class="op">/</span><span class="st"> </span>(<span class="fl">0.6</span> <span class="op">-</span><span class="st"> </span><span class="fl">0.1</span>) <span class="op">*</span><span class="st"> </span>(<span class="fl">10.6</span> <span class="op">-</span><span class="st"> </span><span class="fl">10.2</span>)</span>
+<span id="cb16-3"><a href="frequencies.html#cb16-3"></a>t_max</span></code></pre></div>
 <pre><code>## [1] 10.32</code></pre>
 </div>
 </div>
+</div>
 <div id="exercise-a3" class="section level2">
-<h2>
-<span class="header-section-number">A.3</span> Exercise A3<a class="anchor" aria-label="anchor" href="#exercise-a3"><i class="fas fa-link"></i></a>
-</h2>
+<h2><span class="header-section-number">A.3</span> Exercise A3</h2>
+<div id="tennis" class="section level3">
+<h3><span class="header-section-number">A.3.1</span> Tennis</h3>
 <p>In a year tennis ace Boris B. participated in 40 tournaments all around the world. Every tournament consisted of six rounds:
 * 1st Round
 * 2nd Round
@@ -271,26 +586,21 @@
 * 5th Round (Semi-Final)
 * 6th Round (Final)</p>
 <p>Boris is not satisfied with his overall performance. Even though he reached the final two times and was six times only defeated in the semi-final, he lost ten times in the 1st Round and 16 times in the 2nd Round. He never dropped out in the 3rd Round.</p>
-<div id="what-is-the-statistical-feature-how-is-it-scaled-1" class="section level3">
-<h3>
-<span class="header-section-number">A.3.1</span> What is the statistical feature? How is it scaled?<a class="anchor" aria-label="anchor" href="#what-is-the-statistical-feature-how-is-it-scaled-1"><i class="fas fa-link"></i></a>
-</h3>
+<div id="what-is-the-statistical-feature-how-is-it-scaled-1" class="section level4">
+<h4><span class="header-section-number">A.3.1.1</span> What is the statistical feature? How is it scaled?</h4>
 <p>The feature is the number of the highest round Boris reached in a tournament. It is interval-scaled.</p>
 </div>
-<div id="determine-absolute-and-relative-frequencies-as-well-as-absolute-and-relative-cumulative-frequencies." class="section level3">
-<h3>
-<span class="header-section-number">A.3.2</span> Determine absolute and relative frequencies as well as absolute and relative cumulative frequencies.<a class="anchor" aria-label="anchor" href="#determine-absolute-and-relative-frequencies-as-well-as-absolute-and-relative-cumulative-frequencies."><i class="fas fa-link"></i></a>
-</h3>
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">6</span>
-<span class="va">abs_frequency</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">16</span>, <span class="fl">0</span>, <span class="fl">6</span>, <span class="fl">6</span>, <span class="fl">2</span><span class="op">)</span>
-<span class="va">tbl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, abs_frequency <span class="op">=</span> <span class="va">abs_frequency</span><span class="op">)</span>
-
-<span class="va">tbl</span> <span class="op">&lt;-</span> <span class="va">tbl</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>rel_frequency <span class="op">=</span> <span class="va">abs_frequency</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">abs_frequency</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>cum_abs_frequency <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/cumsum.html">cumsum</a></span><span class="op">(</span><span class="va">abs_frequency</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>cum_rel_frequency <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/cumsum.html">cumsum</a></span><span class="op">(</span><span class="va">rel_frequency</span><span class="op">)</span><span class="op">)</span>
-<span class="va">tbl</span></code></pre></div>
+<div id="determine-absolute-and-relative-frequencies-as-well-as-absolute-and-relative-cumulative-frequencies." class="section level4">
+<h4><span class="header-section-number">A.3.1.2</span> Determine absolute and relative frequencies as well as absolute and relative cumulative frequencies.</h4>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="frequencies.html#cb18-1"></a>x &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">6</span></span>
+<span id="cb18-2"><a href="frequencies.html#cb18-2"></a>abs_frequency &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">6</span>, <span class="dv">6</span>, <span class="dv">2</span>)</span>
+<span id="cb18-3"><a href="frequencies.html#cb18-3"></a>tbl &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">x =</span> x, <span class="dt">abs_frequency =</span> abs_frequency)</span>
+<span id="cb18-4"><a href="frequencies.html#cb18-4"></a></span>
+<span id="cb18-5"><a href="frequencies.html#cb18-5"></a>tbl &lt;-<span class="st"> </span>tbl <span class="op">%&gt;%</span></span>
+<span id="cb18-6"><a href="frequencies.html#cb18-6"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">rel_frequency =</span> abs_frequency <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(abs_frequency)) <span class="op">%&gt;%</span></span>
+<span id="cb18-7"><a href="frequencies.html#cb18-7"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">cum_abs_frequency =</span> <span class="kw">cumsum</span>(abs_frequency)) <span class="op">%&gt;%</span></span>
+<span id="cb18-8"><a href="frequencies.html#cb18-8"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">cum_rel_frequency =</span> <span class="kw">cumsum</span>(rel_frequency))</span>
+<span id="cb18-9"><a href="frequencies.html#cb18-9"></a>tbl</span></code></pre></div>
 <pre><code>## # A tibble: 6 x 5
 ##       x abs_frequency rel_frequency cum_abs_frequency cum_rel_frequency
 ##   &lt;int&gt;         &lt;dbl&gt;         &lt;dbl&gt;             &lt;dbl&gt;             &lt;dbl&gt;
@@ -301,83 +611,64 @@
 ## 5     5             6          0.15                38              0.95
 ## 6     6             2          0.05                40              1</code></pre>
 </div>
-<div id="draw-the-empirical-relative-distribution-function." class="section level3">
-<h3>
-<span class="header-section-number">A.3.3</span> Draw the empirical relative distribution function.<a class="anchor" aria-label="anchor" href="#draw-the-empirical-relative-distribution-function."><i class="fas fa-link"></i></a>
-</h3>
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">tbl</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, y <span class="op">=</span> <span class="va">rel_frequency</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<div class="inline-figure"><img src="01_A_Frequencies_files/figure-html/unnamed-chunk-11-1.png" width="672"></div>
+<div id="draw-the-empirical-relative-distribution-function." class="section level4">
+<h4><span class="header-section-number">A.3.1.3</span> Draw the empirical relative distribution function.</h4>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="frequencies.html#cb20-1"></a><span class="kw">ggplot</span>(tbl) <span class="op">+</span></span>
+<span id="cb20-2"><a href="frequencies.html#cb20-2"></a><span class="st">  </span><span class="kw">geom_col</span>(<span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> rel_frequency))</span></code></pre></div>
+<p><img src="01_A_Frequencies_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
-<div id="at-what-percentage-of-tournaments-boris-dropped-out-before-the-3rd-round" class="section level3">
-<h3>
-<span class="header-section-number">A.3.4</span> At what percentage of tournaments Boris dropped out before the 3rd Round?<a class="anchor" aria-label="anchor" href="#at-what-percentage-of-tournaments-boris-dropped-out-before-the-3rd-round"><i class="fas fa-link"></i></a>
-</h3>
+<div id="at-what-percentage-of-tournaments-boris-dropped-out-before-the-3rd-round" class="section level4">
+<h4><span class="header-section-number">A.3.1.4</span> At what percentage of tournaments Boris dropped out before the 3rd Round?</h4>
 <p>26 / 40.</p>
 </div>
-<div id="at-what-percentage-of-tournaments-boris-reached-at-least-the-semi-finals" class="section level3">
-<h3>
-<span class="header-section-number">A.3.5</span> At what percentage of tournaments Boris reached at least the semi-finals?<a class="anchor" aria-label="anchor" href="#at-what-percentage-of-tournaments-boris-reached-at-least-the-semi-finals"><i class="fas fa-link"></i></a>
-</h3>
+<div id="at-what-percentage-of-tournaments-boris-reached-at-least-the-semi-finals" class="section level4">
+<h4><span class="header-section-number">A.3.1.5</span> At what percentage of tournaments Boris reached at least the semi-finals?</h4>
 <p>8 / 40.</p>
 </div>
-<div id="at-how-many-tournaments-boris-played-at-least-in-the-2nd-round" class="section level3">
-<h3>
-<span class="header-section-number">A.3.6</span> At how many tournaments Boris played at least in the 2nd Round?<a class="anchor" aria-label="anchor" href="#at-how-many-tournaments-boris-played-at-least-in-the-2nd-round"><i class="fas fa-link"></i></a>
-</h3>
+<div id="at-how-many-tournaments-boris-played-at-least-in-the-2nd-round" class="section level4">
+<h4><span class="header-section-number">A.3.1.6</span> At how many tournaments Boris played at least in the 2nd Round?</h4>
 <ol start="30" style="list-style-type: decimal">
-<li>
+<li></li>
 </ol>
 </div>
-<div id="at-most-which-round-boris-dropped-out-in-80-of-all-tournaments" class="section level3">
-<h3>
-<span class="header-section-number">A.3.7</span> At most which round Boris dropped out in 80% of all tournaments?<a class="anchor" aria-label="anchor" href="#at-most-which-round-boris-dropped-out-in-80-of-all-tournaments"><i class="fas fa-link"></i></a>
-</h3>
+<div id="at-most-which-round-boris-dropped-out-in-80-of-all-tournaments" class="section level4">
+<h4><span class="header-section-number">A.3.1.7</span> At most which round Boris dropped out in 80% of all tournaments?</h4>
 <p>4th Round.</p>
 </div>
-<div id="which-round-boris-dropped-out-in-exact-40-of-all-tournaments" class="section level3">
-<h3>
-<span class="header-section-number">A.3.8</span> Which round Boris dropped out in exact 40% of all tournaments?<a class="anchor" aria-label="anchor" href="#which-round-boris-dropped-out-in-exact-40-of-all-tournaments"><i class="fas fa-link"></i></a>
-</h3>
+<div id="which-round-boris-dropped-out-in-exact-40-of-all-tournaments" class="section level4">
+<h4><span class="header-section-number">A.3.1.8</span> Which round Boris dropped out in exact 40% of all tournaments?</h4>
 <p>2nd Round.</p>
 </div>
-<div id="give-an-interpretation-of-fx-at-x-7." class="section level3">
-<h3>
-<span class="header-section-number">A.3.9</span> Give an interpretation of F(x) at x = 7.<a class="anchor" aria-label="anchor" href="#give-an-interpretation-of-fx-at-x-7."><i class="fas fa-link"></i></a>
-</h3>
+<div id="give-an-interpretation-of-fx-at-x-7." class="section level4">
+<h4><span class="header-section-number">A.3.1.9</span> Give an interpretation of F(x) at x = 7.</h4>
 <p><span class="math inline">\(F(7) = 1\)</span>, because <span class="math inline">\(F(x) = 1 \, \forall \, x &gt;= 6\)</span>. That means it is impossible to ever reach the 7th Round as it does not exist.</p>
 </div>
 </div>
+</div>
 <div id="exercise-a4" class="section level2">
-<h2>
-<span class="header-section-number">A.4</span> Exercise A4<a class="anchor" aria-label="anchor" href="#exercise-a4"><i class="fas fa-link"></i></a>
-</h2>
+<h2><span class="header-section-number">A.4</span> Exercise A4</h2>
+<div id="study-time" class="section level3">
+<h3><span class="header-section-number">A.4.1</span> Study time</h3>
 <p>100 students were asked how much time they spend for their studies per day. None of them spent more than 12 hours. 22 students spent more than six hours. 30% of all interviewed students were spending less than three hours, whereas 65% of students invest between three and eight hours per day.</p>
-<div id="what-is-the-statistical-feature-how-is-it-scaled-2" class="section level3">
-<h3>
-<span class="header-section-number">A.4.1</span> What is the statistical feature? How is it scaled?<a class="anchor" aria-label="anchor" href="#what-is-the-statistical-feature-how-is-it-scaled-2"><i class="fas fa-link"></i></a>
-</h3>
+<div id="what-is-the-statistical-feature-how-is-it-scaled-2" class="section level4">
+<h4><span class="header-section-number">A.4.1.1</span> What is the statistical feature? How is it scaled?</h4>
 <p>The feature is the time a student spends for her studies per day in hours. It is ratio-scaled.</p>
 </div>
-<div id="determine-absolute-relative-and-cumulative-frequencies.-group-the-data-in-four-groups." class="section level3">
-<h3>
-<span class="header-section-number">A.4.2</span> Determine absolute, relative and cumulative frequencies. Group the data in four groups.<a class="anchor" aria-label="anchor" href="#determine-absolute-relative-and-cumulative-frequencies.-group-the-data-in-four-groups."><i class="fas fa-link"></i></a>
-</h3>
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">n</span> <span class="op">&lt;-</span> <span class="fl">100</span>
-<span class="va">break_left</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">3</span>, <span class="fl">6</span>, <span class="fl">8</span><span class="op">)</span>
-<span class="va">break_right</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">6</span>, <span class="fl">8</span>, <span class="fl">12</span><span class="op">)</span>
-<span class="co"># 22 students spent more than six hours -&gt; 5 students spent more than 12 hours,</span>
-<span class="co"># 17 student spent between six and height hours</span>
-<span class="va">f</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.3</span>, <span class="fl">0.48</span>, <span class="fl">0.17</span>, <span class="fl">0.05</span><span class="op">)</span>
-
-<span class="va">tbl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>break_left <span class="op">=</span> <span class="va">break_left</span>, break_right <span class="op">=</span> <span class="va">break_right</span>, rel_frequency <span class="op">=</span> <span class="va">f</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>abs_frequency <span class="op">=</span> <span class="va">rel_frequency</span> <span class="op">*</span> <span class="va">n</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>cum_rel_frequency <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/cumsum.html">cumsum</a></span><span class="op">(</span><span class="va">rel_frequency</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>cum_abs_frequency <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/cumsum.html">cumsum</a></span><span class="op">(</span><span class="va">abs_frequency</span><span class="op">)</span><span class="op">)</span>
-
-<span class="va">tbl</span></code></pre></div>
+<div id="determine-absolute-relative-and-cumulative-frequencies.-group-the-data-in-four-groups." class="section level4">
+<h4><span class="header-section-number">A.4.1.2</span> Determine absolute, relative and cumulative frequencies. Group the data in four groups.</h4>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="frequencies.html#cb21-1"></a>n &lt;-<span class="st"> </span><span class="dv">100</span></span>
+<span id="cb21-2"><a href="frequencies.html#cb21-2"></a>break_left &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">8</span>)</span>
+<span id="cb21-3"><a href="frequencies.html#cb21-3"></a>break_right &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">12</span>)</span>
+<span id="cb21-4"><a href="frequencies.html#cb21-4"></a><span class="co"># 22 students spent more than six hours -&gt; 5 students spent more than 12 hours,</span></span>
+<span id="cb21-5"><a href="frequencies.html#cb21-5"></a><span class="co"># 17 student spent between six and height hours</span></span>
+<span id="cb21-6"><a href="frequencies.html#cb21-6"></a>f &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">0.3</span>, <span class="fl">0.48</span>, <span class="fl">0.17</span>, <span class="fl">0.05</span>)</span>
+<span id="cb21-7"><a href="frequencies.html#cb21-7"></a></span>
+<span id="cb21-8"><a href="frequencies.html#cb21-8"></a>tbl &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">break_left =</span> break_left, <span class="dt">break_right =</span> break_right, <span class="dt">rel_frequency =</span> f) <span class="op">%&gt;%</span></span>
+<span id="cb21-9"><a href="frequencies.html#cb21-9"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">abs_frequency =</span> rel_frequency <span class="op">*</span><span class="st"> </span>n) <span class="op">%&gt;%</span></span>
+<span id="cb21-10"><a href="frequencies.html#cb21-10"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">cum_rel_frequency =</span> <span class="kw">cumsum</span>(rel_frequency)) <span class="op">%&gt;%</span></span>
+<span id="cb21-11"><a href="frequencies.html#cb21-11"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">cum_abs_frequency =</span> <span class="kw">cumsum</span>(abs_frequency))</span>
+<span id="cb21-12"><a href="frequencies.html#cb21-12"></a></span>
+<span id="cb21-13"><a href="frequencies.html#cb21-13"></a>tbl</span></code></pre></div>
 <pre><code>## # A tibble: 4 x 6
 ##   break_left break_right rel_frequency abs_frequency cum_rel_frequen~
 ##        &lt;dbl&gt;       &lt;dbl&gt;         &lt;dbl&gt;         &lt;dbl&gt;            &lt;dbl&gt;
@@ -387,81 +678,65 @@
 ## 4          8          12          0.05             5             1   
 ## # ... with 1 more variable: cum_abs_frequency &lt;dbl&gt;</code></pre>
 </div>
-<div id="visualize-the-absolute-frequencies." class="section level3">
-<h3>
-<span class="header-section-number">A.4.3</span> Visualize the absolute frequencies.<a class="anchor" aria-label="anchor" href="#visualize-the-absolute-frequencies."><i class="fas fa-link"></i></a>
-</h3>
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">tbl</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_tile.html">geom_rect</a></span><span class="op">(</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>
-      xmin <span class="op">=</span> <span class="va">break_left</span>, 
-      xmax <span class="op">=</span> <span class="va">break_right</span>, 
-      ymin <span class="op">=</span> <span class="fl">0</span>, 
-      ymax <span class="op">=</span> <span class="va">abs_frequency</span> <span class="op">/</span> <span class="op">(</span><span class="va">break_right</span> <span class="op">-</span> <span class="va">break_left</span><span class="op">)</span>
-    <span class="op">)</span>,
-    fill <span class="op">=</span> <span class="st">"gray"</span>,
-    color <span class="op">=</span> <span class="st">"black"</span>
-  <span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"x"</span>, y <span class="op">=</span> <span class="st">"h(x)"</span><span class="op">)</span></code></pre></div>
-<div class="inline-figure"><img src="01_A_Frequencies_files/figure-html/unnamed-chunk-13-1.png" width="672"></div>
+<div id="visualize-the-absolute-frequencies." class="section level4">
+<h4><span class="header-section-number">A.4.1.3</span> Visualize the absolute frequencies.</h4>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="frequencies.html#cb23-1"></a><span class="kw">ggplot</span>(tbl) <span class="op">+</span></span>
+<span id="cb23-2"><a href="frequencies.html#cb23-2"></a><span class="st">  </span><span class="kw">geom_rect</span>(</span>
+<span id="cb23-3"><a href="frequencies.html#cb23-3"></a>    <span class="kw">aes</span>(</span>
+<span id="cb23-4"><a href="frequencies.html#cb23-4"></a>      <span class="dt">xmin =</span> break_left, </span>
+<span id="cb23-5"><a href="frequencies.html#cb23-5"></a>      <span class="dt">xmax =</span> break_right, </span>
+<span id="cb23-6"><a href="frequencies.html#cb23-6"></a>      <span class="dt">ymin =</span> <span class="dv">0</span>, </span>
+<span id="cb23-7"><a href="frequencies.html#cb23-7"></a>      <span class="dt">ymax =</span> abs_frequency <span class="op">/</span><span class="st"> </span>(break_right <span class="op">-</span><span class="st"> </span>break_left)</span>
+<span id="cb23-8"><a href="frequencies.html#cb23-8"></a>    ),</span>
+<span id="cb23-9"><a href="frequencies.html#cb23-9"></a>    <span class="dt">fill =</span> <span class="st">&quot;gray&quot;</span>,</span>
+<span id="cb23-10"><a href="frequencies.html#cb23-10"></a>    <span class="dt">color =</span> <span class="st">&quot;black&quot;</span></span>
+<span id="cb23-11"><a href="frequencies.html#cb23-11"></a>  ) <span class="op">+</span></span>
+<span id="cb23-12"><a href="frequencies.html#cb23-12"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;x&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;h(x)&quot;</span>)</span></code></pre></div>
+<p><img src="01_A_Frequencies_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 </div>
-<div id="why-did-you-choose-this-kind-of-visualization" class="section level3">
-<h3>
-<span class="header-section-number">A.4.4</span> Why did you choose this kind of visualization?<a class="anchor" aria-label="anchor" href="#why-did-you-choose-this-kind-of-visualization"><i class="fas fa-link"></i></a>
-</h3>
-<p>I choose a histogram as it is a meaningful visualization for ratio-scaled data. Donâ€™t forget to divide by the group width. The area of a group is proportionate to its absolute frequency and not its height.</p>
+<div id="why-did-you-choose-this-kind-of-visualization" class="section level4">
+<h4><span class="header-section-number">A.4.1.4</span> Why did you choose this kind of visualization?</h4>
+<p>I choose a histogram as it is a meaningful visualization for ratio-scaled data. Don’t forget to divide by the group width. The area of a group is proportionate to its absolute frequency and not its height.</p>
 </div>
-<div id="visualize-the-relative-cumulative-frequencies." class="section level3">
-<h3>
-<span class="header-section-number">A.4.5</span> Visualize the relative cumulative frequencies.<a class="anchor" aria-label="anchor" href="#visualize-the-relative-cumulative-frequencies."><i class="fas fa-link"></i></a>
-</h3>
-<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="va">tbl</span><span class="op">$</span><span class="va">break_right</span><span class="op">)</span>
-<span class="va">cum_rel_frequency</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="va">tbl</span><span class="op">$</span><span class="va">cum_rel_frequency</span><span class="op">)</span>
-<span class="va">tbl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, cum_rel_frequency <span class="op">=</span> <span class="va">cum_rel_frequency</span><span class="op">)</span>
-
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">tbl</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, y <span class="op">=</span> <span class="va">cum_rel_frequency</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"x"</span>, y <span class="op">=</span> <span class="st">"F(x)"</span><span class="op">)</span></code></pre></div>
-<div class="inline-figure"><img src="01_A_Frequencies_files/figure-html/unnamed-chunk-14-1.png" width="672"></div>
+<div id="visualize-the-relative-cumulative-frequencies." class="section level4">
+<h4><span class="header-section-number">A.4.1.5</span> Visualize the relative cumulative frequencies.</h4>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="frequencies.html#cb24-1"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">0</span>, tbl<span class="op">$</span>break_right)</span>
+<span id="cb24-2"><a href="frequencies.html#cb24-2"></a>cum_rel_frequency &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">0</span>, tbl<span class="op">$</span>cum_rel_frequency)</span>
+<span id="cb24-3"><a href="frequencies.html#cb24-3"></a>tbl &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">x =</span> x, <span class="dt">cum_rel_frequency =</span> cum_rel_frequency)</span>
+<span id="cb24-4"><a href="frequencies.html#cb24-4"></a></span>
+<span id="cb24-5"><a href="frequencies.html#cb24-5"></a><span class="kw">ggplot</span>(tbl, <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> cum_rel_frequency)) <span class="op">+</span></span>
+<span id="cb24-6"><a href="frequencies.html#cb24-6"></a><span class="st">  </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
+<span id="cb24-7"><a href="frequencies.html#cb24-7"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
+<span id="cb24-8"><a href="frequencies.html#cb24-8"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;x&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;F(x)&quot;</span>)</span></code></pre></div>
+<p><img src="01_A_Frequencies_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 </div>
-<div id="which-assumption-was-made-for-your-visualization" class="section level3">
-<h3>
-<span class="header-section-number">A.4.6</span> Which assumption was made for your visualization?<a class="anchor" aria-label="anchor" href="#which-assumption-was-made-for-your-visualization"><i class="fas fa-link"></i></a>
-</h3>
+<div id="which-assumption-was-made-for-your-visualization" class="section level4">
+<h4><span class="header-section-number">A.4.1.6</span> Which assumption was made for your visualization?</h4>
 <p>The distribution within a group is uniform.</p>
 </div>
-<div id="use-your-visualization-to-find-out-how-many-hours-at-most-spent-50-of-all-students" class="section level3">
-<h3>
-<span class="header-section-number">A.4.7</span> Use your visualization to find out how many hours at most spent 50% of all students?<a class="anchor" aria-label="anchor" href="#use-your-visualization-to-find-out-how-many-hours-at-most-spent-50-of-all-students"><i class="fas fa-link"></i></a>
-</h3>
-<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Interpolation</span>
-<span class="va">t_max</span> <span class="op">&lt;-</span> <span class="fl">3</span> <span class="op">+</span> <span class="op">(</span><span class="fl">0.5</span> <span class="op">-</span> <span class="fl">0.3</span><span class="op">)</span> <span class="op">/</span> <span class="op">(</span><span class="fl">0.78</span> <span class="op">-</span> <span class="fl">0.3</span><span class="op">)</span> <span class="op">*</span> <span class="op">(</span><span class="fl">6</span> <span class="op">-</span> <span class="fl">3</span><span class="op">)</span>
-<span class="va">t_max</span></code></pre></div>
+<div id="use-your-visualization-to-find-out-how-many-hours-at-most-spent-50-of-all-students" class="section level4">
+<h4><span class="header-section-number">A.4.1.7</span> Use your visualization to find out how many hours at most spent 50% of all students?</h4>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="frequencies.html#cb25-1"></a><span class="co"># Interpolation</span></span>
+<span id="cb25-2"><a href="frequencies.html#cb25-2"></a>t_max &lt;-<span class="st"> </span><span class="dv">3</span> <span class="op">+</span><span class="st"> </span>(<span class="fl">0.5</span> <span class="op">-</span><span class="st"> </span><span class="fl">0.3</span>) <span class="op">/</span><span class="st"> </span>(<span class="fl">0.78</span> <span class="op">-</span><span class="st"> </span><span class="fl">0.3</span>) <span class="op">*</span><span class="st"> </span>(<span class="dv">6</span> <span class="op">-</span><span class="st"> </span><span class="dv">3</span>)</span>
+<span id="cb25-3"><a href="frequencies.html#cb25-3"></a>t_max</span></code></pre></div>
 <pre><code>## [1] 4.25</code></pre>
 </div>
-<div id="how-many-students-work-more-than-five-hours-per-day-for-their-studies" class="section level3">
-<h3>
-<span class="header-section-number">A.4.8</span> How many students work more than five hours per day for their studies?<a class="anchor" aria-label="anchor" href="#how-many-students-work-more-than-five-hours-per-day-for-their-studies"><i class="fas fa-link"></i></a>
-</h3>
-<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># F(5)</span>
-<span class="va">F_5</span> <span class="op">&lt;-</span> <span class="fl">0.3</span> <span class="op">+</span> <span class="op">(</span><span class="fl">5</span> <span class="op">-</span> <span class="fl">3</span><span class="op">)</span> <span class="op">/</span> <span class="op">(</span><span class="fl">6</span> <span class="op">-</span> <span class="fl">3</span><span class="op">)</span> <span class="op">*</span> <span class="op">(</span><span class="fl">0.78</span> <span class="op">-</span> <span class="fl">0.3</span><span class="op">)</span>
-<span class="va">F_5</span></code></pre></div>
+<div id="how-many-students-work-more-than-five-hours-per-day-for-their-studies" class="section level4">
+<h4><span class="header-section-number">A.4.1.8</span> How many students work more than five hours per day for their studies?</h4>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="frequencies.html#cb27-1"></a><span class="co"># F(5)</span></span>
+<span id="cb27-2"><a href="frequencies.html#cb27-2"></a>F_<span class="dv">5</span> &lt;-<span class="st"> </span><span class="fl">0.3</span> <span class="op">+</span><span class="st"> </span>(<span class="dv">5</span> <span class="op">-</span><span class="st"> </span><span class="dv">3</span>) <span class="op">/</span><span class="st"> </span>(<span class="dv">6</span> <span class="op">-</span><span class="st"> </span><span class="dv">3</span>) <span class="op">*</span><span class="st"> </span>(<span class="fl">0.78</span> <span class="op">-</span><span class="st"> </span><span class="fl">0.3</span>)</span>
+<span id="cb27-3"><a href="frequencies.html#cb27-3"></a>F_<span class="dv">5</span></span></code></pre></div>
 <pre><code>## [1] 0.62</code></pre>
-<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Solution</span>
-<span class="op">(</span><span class="fl">1</span> <span class="op">-</span> <span class="va">F_5</span><span class="op">)</span> <span class="op">*</span> <span class="va">n</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="frequencies.html#cb29-1"></a><span class="co"># Solution</span></span>
+<span id="cb29-2"><a href="frequencies.html#cb29-2"></a>(<span class="dv">1</span> <span class="op">-</span><span class="st"> </span>F_<span class="dv">5</span>) <span class="op">*</span><span class="st"> </span>n</span></code></pre></div>
 <pre><code>## [1] 38</code></pre>
 </div>
 </div>
+</div>
 <div id="exercise-a5" class="section level2">
-<h2>
-<span class="header-section-number">A.5</span> Exercise A5<a class="anchor" aria-label="anchor" href="#exercise-a5"><i class="fas fa-link"></i></a>
-</h2>
+<h2><span class="header-section-number">A.5</span> Exercise A5</h2>
+<div id="ice-cream" class="section level3">
+<h3><span class="header-section-number">A.5.1</span> Ice cream</h3>
 <p>This exercise does not cover anything new and is therefore left as an exercise to the reader.</p>
 <p>Ice cream seller Benedict wants to sell fresh ice cream to his customers every day. So that he always has the right quantities in stock, he counts the consumption of ice cream scoops on one day for 200 customers. Here it turns out:</p>
 <ul>
@@ -470,128 +745,89 @@
 <li>Less than three scoops were ordered by 45% of all customers.</li>
 <li>Ten times more customers wanted four or six scoops than five scoops.</li>
 </ul>
-<div id="what-is-the-statistical-feature-how-is-it-scaled-3" class="section level3">
-<h3>
-<span class="header-section-number">A.5.1</span> What is the statistical feature? How is it scaled?<a class="anchor" aria-label="anchor" href="#what-is-the-statistical-feature-how-is-it-scaled-3"><i class="fas fa-link"></i></a>
-</h3>
+<div id="what-is-the-statistical-feature-how-is-it-scaled-3" class="section level4">
+<h4><span class="header-section-number">A.5.1.1</span> What is the statistical feature? How is it scaled?</h4>
 </div>
-<div id="determine-absolute-and-cumulative-absolute-frequencies." class="section level3">
-<h3>
-<span class="header-section-number">A.5.2</span> Determine absolute and cumulative absolute frequencies.<a class="anchor" aria-label="anchor" href="#determine-absolute-and-cumulative-absolute-frequencies."><i class="fas fa-link"></i></a>
-</h3>
+<div id="determine-absolute-and-cumulative-absolute-frequencies." class="section level4">
+<h4><span class="header-section-number">A.5.1.2</span> Determine absolute and cumulative absolute frequencies.</h4>
 </div>
-<div id="visualize-the-absolute-frequencies.-1" class="section level3">
-<h3>
-<span class="header-section-number">A.5.3</span> Visualize the absolute frequencies.<a class="anchor" aria-label="anchor" href="#visualize-the-absolute-frequencies.-1"><i class="fas fa-link"></i></a>
-</h3>
+<div id="visualize-the-absolute-frequencies.-1" class="section level4">
+<h4><span class="header-section-number">A.5.1.3</span> Visualize the absolute frequencies.</h4>
 </div>
-<div id="visualize-the-relative-cumulative-frequencies.-1" class="section level3">
-<h3>
-<span class="header-section-number">A.5.4</span> Visualize the relative cumulative frequencies.<a class="anchor" aria-label="anchor" href="#visualize-the-relative-cumulative-frequencies.-1"><i class="fas fa-link"></i></a>
-</h3>
+<div id="visualize-the-relative-cumulative-frequencies.-1" class="section level4">
+<h4><span class="header-section-number">A.5.1.4</span> Visualize the relative cumulative frequencies.</h4>
 </div>
-<div id="what-percentage-of-customers-ordered-five-or-less-scoops" class="section level3">
-<h3>
-<span class="header-section-number">A.5.5</span> What percentage of customers ordered five or less scoops?<a class="anchor" aria-label="anchor" href="#what-percentage-of-customers-ordered-five-or-less-scoops"><i class="fas fa-link"></i></a>
-</h3>
+<div id="what-percentage-of-customers-ordered-five-or-less-scoops" class="section level4">
+<h4><span class="header-section-number">A.5.1.5</span> What percentage of customers ordered five or less scoops?</h4>
 </div>
-<div id="how-many-scoops-were-bought-from-the-80-customers-with-the-most-scoops" class="section level3">
-<h3>
-<span class="header-section-number">A.5.6</span> How many scoops were bought from the 80% customers with the most scoops?<a class="anchor" aria-label="anchor" href="#how-many-scoops-were-bought-from-the-80-customers-with-the-most-scoops"><i class="fas fa-link"></i></a>
-</h3>
+<div id="how-many-scoops-were-bought-from-the-80-customers-with-the-most-scoops" class="section level4">
+<h4><span class="header-section-number">A.5.1.6</span> How many scoops were bought from the 80% customers with the most scoops?</h4>
 </div>
-<div id="how-many-scoops-were-bought-from-exact-35-of-customers" class="section level3">
-<h3>
-<span class="header-section-number">A.5.7</span> How many scoops were bought from exact 35% of customers?<a class="anchor" aria-label="anchor" href="#how-many-scoops-were-bought-from-exact-35-of-customers"><i class="fas fa-link"></i></a>
-</h3>
+<div id="how-many-scoops-were-bought-from-exact-35-of-customers" class="section level4">
+<h4><span class="header-section-number">A.5.1.7</span> How many scoops were bought from exact 35% of customers?</h4>
 
 </div>
 </div>
 </div>
-  <div class="chapter-nav">
-<div class="prev"><a href="index.html">Welcome</a></div>
-<div class="next"><a href="empirical-parameters.html"><span class="header-section-number">B</span> Empirical Parameters</a></div>
-</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
-    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#frequencies"><span class="header-section-number">A</span> Frequencies</a></li>
-<li><a class="nav-link" href="#prerequisites">Prerequisites</a></li>
-<li>
-<a class="nav-link" href="#exercise-a1"><span class="header-section-number">A.1</span> Exercise A1</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#part-a"><span class="header-section-number">A.1.1</span> Part A</a></li>
-<li><a class="nav-link" href="#part-b"><span class="header-section-number">A.1.2</span> Part B</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#exercise-a2"><span class="header-section-number">A.2</span> Exercise A2</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#draw-the-corresponding-histogram"><span class="header-section-number">A.2.1</span> Draw the corresponding histogram</a></li>
-<li><a class="nav-link" href="#which-was-the-maximum-time-of-the-80-fastest-athletes"><span class="header-section-number">A.2.2</span> Which was the maximum time of the 80%-fastest athletes?</a></li>
-<li><a class="nav-link" href="#what-is-the-assumption-about-the-distribution-of-measured-values-within-a-group-when-determining-the-cumulative-distribution-function"><span class="header-section-number">A.2.3</span> What is the assumption about the distribution of measured values within a group when determining the cumulative distribution function?</a></li>
-<li><a class="nav-link" href="#use-the-cumulative-distribution-function-to-determine-which-was-the-maximum-time-needed-by-the-five-fastest-athletes."><span class="header-section-number">A.2.4</span> Use the cumulative distribution function to determine which was the maximum time needed by the five fastest athletes.</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#exercise-a3"><span class="header-section-number">A.3</span> Exercise A3</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#what-is-the-statistical-feature-how-is-it-scaled-1"><span class="header-section-number">A.3.1</span> What is the statistical feature? How is it scaled?</a></li>
-<li><a class="nav-link" href="#determine-absolute-and-relative-frequencies-as-well-as-absolute-and-relative-cumulative-frequencies."><span class="header-section-number">A.3.2</span> Determine absolute and relative frequencies as well as absolute and relative cumulative frequencies.</a></li>
-<li><a class="nav-link" href="#draw-the-empirical-relative-distribution-function."><span class="header-section-number">A.3.3</span> Draw the empirical relative distribution function.</a></li>
-<li><a class="nav-link" href="#at-what-percentage-of-tournaments-boris-dropped-out-before-the-3rd-round"><span class="header-section-number">A.3.4</span> At what percentage of tournaments Boris dropped out before the 3rd Round?</a></li>
-<li><a class="nav-link" href="#at-what-percentage-of-tournaments-boris-reached-at-least-the-semi-finals"><span class="header-section-number">A.3.5</span> At what percentage of tournaments Boris reached at least the semi-finals?</a></li>
-<li><a class="nav-link" href="#at-how-many-tournaments-boris-played-at-least-in-the-2nd-round"><span class="header-section-number">A.3.6</span> At how many tournaments Boris played at least in the 2nd Round?</a></li>
-<li><a class="nav-link" href="#at-most-which-round-boris-dropped-out-in-80-of-all-tournaments"><span class="header-section-number">A.3.7</span> At most which round Boris dropped out in 80% of all tournaments?</a></li>
-<li><a class="nav-link" href="#which-round-boris-dropped-out-in-exact-40-of-all-tournaments"><span class="header-section-number">A.3.8</span> Which round Boris dropped out in exact 40% of all tournaments?</a></li>
-<li><a class="nav-link" href="#give-an-interpretation-of-fx-at-x-7."><span class="header-section-number">A.3.9</span> Give an interpretation of F(x) at x = 7.</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#exercise-a4"><span class="header-section-number">A.4</span> Exercise A4</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#what-is-the-statistical-feature-how-is-it-scaled-2"><span class="header-section-number">A.4.1</span> What is the statistical feature? How is it scaled?</a></li>
-<li><a class="nav-link" href="#determine-absolute-relative-and-cumulative-frequencies.-group-the-data-in-four-groups."><span class="header-section-number">A.4.2</span> Determine absolute, relative and cumulative frequencies. Group the data in four groups.</a></li>
-<li><a class="nav-link" href="#visualize-the-absolute-frequencies."><span class="header-section-number">A.4.3</span> Visualize the absolute frequencies.</a></li>
-<li><a class="nav-link" href="#why-did-you-choose-this-kind-of-visualization"><span class="header-section-number">A.4.4</span> Why did you choose this kind of visualization?</a></li>
-<li><a class="nav-link" href="#visualize-the-relative-cumulative-frequencies."><span class="header-section-number">A.4.5</span> Visualize the relative cumulative frequencies.</a></li>
-<li><a class="nav-link" href="#which-assumption-was-made-for-your-visualization"><span class="header-section-number">A.4.6</span> Which assumption was made for your visualization?</a></li>
-<li><a class="nav-link" href="#use-your-visualization-to-find-out-how-many-hours-at-most-spent-50-of-all-students"><span class="header-section-number">A.4.7</span> Use your visualization to find out how many hours at most spent 50% of all students?</a></li>
-<li><a class="nav-link" href="#how-many-students-work-more-than-five-hours-per-day-for-their-studies"><span class="header-section-number">A.4.8</span> How many students work more than five hours per day for their studies?</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#exercise-a5"><span class="header-section-number">A.5</span> Exercise A5</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#what-is-the-statistical-feature-how-is-it-scaled-3"><span class="header-section-number">A.5.1</span> What is the statistical feature? How is it scaled?</a></li>
-<li><a class="nav-link" href="#determine-absolute-and-cumulative-absolute-frequencies."><span class="header-section-number">A.5.2</span> Determine absolute and cumulative absolute frequencies.</a></li>
-<li><a class="nav-link" href="#visualize-the-absolute-frequencies.-1"><span class="header-section-number">A.5.3</span> Visualize the absolute frequencies.</a></li>
-<li><a class="nav-link" href="#visualize-the-relative-cumulative-frequencies.-1"><span class="header-section-number">A.5.4</span> Visualize the relative cumulative frequencies.</a></li>
-<li><a class="nav-link" href="#what-percentage-of-customers-ordered-five-or-less-scoops"><span class="header-section-number">A.5.5</span> What percentage of customers ordered five or less scoops?</a></li>
-<li><a class="nav-link" href="#how-many-scoops-were-bought-from-the-80-customers-with-the-most-scoops"><span class="header-section-number">A.5.6</span> How many scoops were bought from the 80% customers with the most scoops?</a></li>
-<li><a class="nav-link" href="#how-many-scoops-were-bought-from-exact-35-of-customers"><span class="header-section-number">A.5.7</span> How many scoops were bought from exact 35% of customers?</a></li>
-</ul>
-</li>
-</ul>
-
-      <div class="book-extra">
-        <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/DavidBarke/Stat1/blob/master/01_A_Frequencies.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/DavidBarke/Stat1/edit/master/01_A_Frequencies.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
-        </ul>
 </div>
-    </nav>
-</div>
+            </section>
 
-</div>
-</div> <!-- .container -->
-
-<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
-
-  <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Statistics 1 for Economics</strong>" was written by David Barkemeyer. </p>
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="empirical-parameters.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
   </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
 
-  <div class="col-12 col-md-6 mt-3">
-    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
-  </div>
-
-</div></div>
-</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -605,4 +841,5 @@
   })();
 </script>
 </body>
+
 </html>

@@ -174,11 +174,13 @@ No.
 
 ## Exercise A2
 
+### 100m race
+
 The 100m times of 20 athletes were measured. They obtained the following cumulative distribution function:
 
 <img src="01_A_Frequencies_files/figure-html/unnamed-chunk-7-1.png" width="672" />
 
-### Draw the corresponding histogram
+#### Draw the corresponding histogram
 
 
 ```r
@@ -194,15 +196,15 @@ ggplot(tbl, aes(xmin = break_left, xmax = break_right, ymax = f)) +
 
 <img src="01_A_Frequencies_files/figure-html/unnamed-chunk-8-1.png" width="672" />
 
-### Which was the maximum time of the 80%-fastest athletes?
+#### Which was the maximum time of the 80%-fastest athletes?
 
 10.8 seconds.
 
-### What is the assumption about the distribution of measured values within a group when determining the cumulative distribution function?
+#### What is the assumption about the distribution of measured values within a group when determining the cumulative distribution function?
 
 Uniform distribution within a group.
 
-### Use the cumulative distribution function to determine which was the maximum time needed by the five fastest athletes.
+#### Use the cumulative distribution function to determine which was the maximum time needed by the five fastest athletes.
 
 
 ```r
@@ -217,6 +219,8 @@ t_max
 
 ## Exercise A3
 
+### Tennis
+
 In a year tennis ace Boris B. participated in 40 tournaments all around the world. Every tournament consisted of six rounds:
 * 1st Round
 * 2nd Round
@@ -227,11 +231,11 @@ In a year tennis ace Boris B. participated in 40 tournaments all around the worl
 
 Boris is not satisfied with his overall performance. Even though he reached the final two times and was six times only defeated in the semi-final, he lost ten times in the 1st Round and 16 times in the 2nd Round. He never dropped out in the 3rd Round.
 
-### What is the statistical feature? How is it scaled?
+#### What is the statistical feature? How is it scaled?
 
 The feature is the number of the highest round Boris reached in a tournament. It is interval-scaled.
 
-### Determine absolute and relative frequencies as well as absolute and relative cumulative frequencies.
+#### Determine absolute and relative frequencies as well as absolute and relative cumulative frequencies.
 
 
 ```r
@@ -258,7 +262,7 @@ tbl
 ## 6     6             2          0.05                40              1
 ```
 
-### Draw the empirical relative distribution function.
+#### Draw the empirical relative distribution function.
 
 
 ```r
@@ -268,39 +272,41 @@ ggplot(tbl) +
 
 <img src="01_A_Frequencies_files/figure-html/unnamed-chunk-11-1.png" width="672" />
 
-### At what percentage of tournaments Boris dropped out before the 3rd Round?
+#### At what percentage of tournaments Boris dropped out before the 3rd Round?
 
 26 / 40.
 
-### At what percentage of tournaments Boris reached at least the semi-finals?
+#### At what percentage of tournaments Boris reached at least the semi-finals?
 
 8 / 40.
 
-### At how many tournaments Boris played at least in the 2nd Round?
+#### At how many tournaments Boris played at least in the 2nd Round?
 
 30.
 
-### At most which round Boris dropped out in 80% of all tournaments?
+#### At most which round Boris dropped out in 80% of all tournaments?
 
 4th Round.
 
-### Which round Boris dropped out in exact 40% of all tournaments?
+#### Which round Boris dropped out in exact 40% of all tournaments?
 
 2nd Round.
 
-### Give an interpretation of F(x) at x = 7.
+#### Give an interpretation of F(x) at x = 7.
 
 $F(7) = 1$, because $F(x) = 1 \, \forall \, x >= 6$. That means it is impossible to ever reach the 7th Round as it does not exist.
 
 ## Exercise A4
 
+### Study time
+
 100 students were asked how much time they spend for their studies per day. None of them spent more than 12 hours. 22 students spent more than six hours. 30% of all interviewed students were spending less than three hours, whereas 65% of students invest between three and eight hours per day.
 
-### What is the statistical feature? How is it scaled?
+#### What is the statistical feature? How is it scaled?
 
 The feature is the time a student spends for her studies per day in hours. It is ratio-scaled.
 
-### Determine absolute, relative and cumulative frequencies. Group the data in four groups.
+#### Determine absolute, relative and cumulative frequencies. Group the data in four groups.
 
 
 ```r
@@ -330,7 +336,7 @@ tbl
 ## # ... with 1 more variable: cum_abs_frequency <dbl>
 ```
 
-### Visualize the absolute frequencies.
+#### Visualize the absolute frequencies.
 
 
 ```r
@@ -350,11 +356,11 @@ ggplot(tbl) +
 
 <img src="01_A_Frequencies_files/figure-html/unnamed-chunk-13-1.png" width="672" />
 
-### Why did you choose this kind of visualization?
+#### Why did you choose this kind of visualization?
 
 I choose a histogram as it is a meaningful visualization for ratio-scaled data. Don't forget to divide by the group width. The area of a group is proportionate to its absolute frequency and not its height.
 
-### Visualize the relative cumulative frequencies.
+#### Visualize the relative cumulative frequencies.
 
 
 ```r
@@ -370,11 +376,11 @@ ggplot(tbl, aes(x = x, y = cum_rel_frequency)) +
 
 <img src="01_A_Frequencies_files/figure-html/unnamed-chunk-14-1.png" width="672" />
 
-### Which assumption was made for your visualization?
+#### Which assumption was made for your visualization?
 
 The distribution within a group is uniform.
 
-### Use your visualization to find out how many hours at most spent 50% of all students?
+#### Use your visualization to find out how many hours at most spent 50% of all students?
 
 
 ```r
@@ -387,7 +393,7 @@ t_max
 ## [1] 4.25
 ```
 
-### How many students work more than five hours per day for their studies?
+#### How many students work more than five hours per day for their studies?
 
 
 ```r
@@ -411,6 +417,8 @@ F_5
 
 ## Exercise A5
 
+### Ice cream
+
 This exercise does not cover anything new and is therefore left as an exercise to the reader.
 
 Ice cream seller Benedict wants to sell fresh ice cream to his customers every day. So that he always has the right quantities in stock, he counts the consumption of ice cream scoops on one day for 200 customers. Here it turns out:
@@ -420,17 +428,17 @@ Ice cream seller Benedict wants to sell fresh ice cream to his customers every d
 * Less than three scoops were ordered by 45% of all customers.
 * Ten times more customers wanted four or six scoops than five scoops.
 
-### What is the statistical feature? How is it scaled?
+#### What is the statistical feature? How is it scaled?
 
-### Determine absolute and cumulative absolute frequencies.
+#### Determine absolute and cumulative absolute frequencies.
 
-### Visualize the absolute frequencies.
+#### Visualize the absolute frequencies.
 
-### Visualize the relative cumulative frequencies.
+#### Visualize the relative cumulative frequencies.
 
-### What percentage of customers ordered five or less scoops?
+#### What percentage of customers ordered five or less scoops?
 
-### How many scoops were bought from the 80% customers with the most scoops?
+#### How many scoops were bought from the 80% customers with the most scoops?
 
-### How many scoops were bought from exact 35% of customers?
+#### How many scoops were bought from exact 35% of customers?
  

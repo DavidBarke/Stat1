@@ -16,6 +16,8 @@ theme_set(theme_bw())
 
 ## Exercise D1
 
+### Voting behavior
+
 In a survey, 200 father-son pairs were asked about their voting behavior in the last election. Create a contingency table using the following information:
 
 1. The sons chose parties $A$, $B$ and $C$ in the ratio $2:1:2$.
@@ -28,6 +30,8 @@ In a survey, 200 father-son pairs were asked about their voting behavior in the 
 
 ## Exercise D2
 
+### Packaging color
+
 In the context of developing a marketing strategy for their latest product, the marketing department of a company conducted a survey in the hope of obtaining information about the most promising packaging color. For this purpose, a total of 600 units of the product were offered on three different test markets. Several employees have so far collected the following information about the pieces sold in the test markets:
 
 1. The number of units sold on test market I was in line with the packaging color (black, red, white) in the ratio 1:3:1.
@@ -39,13 +43,15 @@ In the context of developing a marketing strategy for their latest product, the 
 7. On Test Market I, 50 fewer pieces were sold than on Test Market III.
 8. 35% of the red wrapped pieces sold were sold on Test Market III.
 
-### Present the data obtained from the examination in tabular form in a contingency table.
+#### Present the data obtained from the examination in tabular form in a contingency table.
 
-### Determine the sales shares of the individual packaging colors in the various test markets.
+#### Determine the sales shares of the individual packaging colors in the various test markets.
 
-### Based on the results obtained in 2), which packaging color is the marketing department likely to choose?
+#### Based on the results obtained in 2), which packaging color is the marketing department likely to choose?
 
 ## Exercise D3
+
+### Love for animals
 
 A survey was carried out in which the interviewed persons were asked to give information about their love for animals (yes/no). The respondents were divided into three categories (children, teenagers, adults).
 
@@ -55,17 +61,19 @@ The survey produced the following results:
 3. The number of animal-loving adults was 140 less than the number of animal-loving children.
 4. Altogether 80% (=800 persons) were animal-loving.
 
-### What is the number of non-animal-loving adults?
+#### What is the number of non-animal-loving adults?
 
-### What percentage of respondents are not adults?
+#### What percentage of respondents are not adults?
 
-### How large is the proportion of animal-loving teenagers among those surveyed?
+#### How large is the proportion of animal-loving teenagers among those surveyed?
 
-### How large is the proportion of teenagers among animal lovers?
+#### How large is the proportion of teenagers among animal lovers?
 
-### Do children love animals more than adults?
+#### Do children love animals more than adults?
 
 ## Exercise D4
+
+### Infections
 
 An investigation by the public health department in X-City revealed the following findings about infections with the virus Z in risk groups A, B and C:
 
@@ -78,13 +86,13 @@ An investigation by the public health department in X-City revealed the followin
 
 The realizations of the feature _Group_ are denoted by $a_i, i \in \{A, B, C\}$, whereas the realizations of the feature _Infected_ are denoted by $b_j \, , j \in \{1, 2\}$.
 
-###  Is the frequency f(a_i|b_j) more interesting for any member of one of these risk groups than the frequency f(b_j|a_i)? Explain.
+####  Is the frequency f(a_i|b_j) more interesting for any member of one of these risk groups than the frequency f(b_j|a_i)? Explain.
 
-### Is the infection level for group B the lowest in this investigation?
+#### Is the infection level for group B the lowest in this investigation?
 
-### Is the statement correct that in group B the fewest non-infected people were found?
+#### Is the statement correct that in group B the fewest non-infected people were found?
 
-### Is it correct to say that the proportion of non-infected people is smallest in group C?
+#### Is it correct to say that the proportion of non-infected people is smallest in group C?
 
 ## Exercise D5
 

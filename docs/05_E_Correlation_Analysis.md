@@ -68,6 +68,8 @@ Each exam is considered passed if the candidate has achieved at least 12 points.
 
 ## Exercise E2
 
+### Sex education
+
 15 apprentices, who participate in a series of sex education lessons as part of their vocational school education, were asked to mark on a five-point scale (1: unimportant, 5: very important) the importance they felt sex education in general should have. In addition, the interviewed apprentices were asked to mark on a three-point scale (1: not at all, 3: a lot) the extent to which the sex education book used in class could contribute to a reasonable sex education. The result is recorded in the following frequency table (rating of important from left to right, rating of book from top to bottom):
 
 
@@ -77,7 +79,7 @@ Each exam is considered passed if the candidate has achieved at least 12 points.
 |-  |-  |5  |1  |-  |
 |2  |-  |1  |-  |1  |
 
-### To indicate the extent to which the two ratings are correlated, calculate the rank correlation coefficient according to Kendall.
+#### To indicate the extent to which the two ratings are correlated, calculate the rank correlation coefficient according to Kendall.
 
 ## Exercise E3
 
@@ -144,6 +146,8 @@ Assign ranks to the (cardinal) data.
 
 ## Exercise E5
 
+### Work performance
+
 A psychologist investigates different work groups in a company to see if there is a connection between the attractiveness of a work group (cohesion and well-being of its members) and the variance of its work performance.
 
 Group attractiveness was measured using an ordinal scale from 1 = very high to 6 = very low. The variance in performance refers to the number of products completed by a work group on different days. The study produced the following result: 
@@ -159,10 +163,10 @@ Group attractiveness was measured using an ordinal scale from 1 = very high to 6
 |F          |              5|                      68|
 |G          |              6|                      60|
 
-### What is the statistical feature in this study?
+#### What are the statistical features in this study?
 
-### Calculate a suitable correlation coefficient.
+#### Calculate a suitable correlation coefficient.
 
-### Interpret the calculated sign of this coefficient.
+#### Interpret the calculated sign of this coefficient.
 
-### Does the calculated value of this coefficient provide information about a cause-and-effect relationship between the two characteristics examined?
+#### Does the calculated value of this coefficient provide information about a cause-and-effect relationship between the two characteristics examined?

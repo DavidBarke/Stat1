@@ -1,105 +1,1089 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="" xml:lang="">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>G Discrete Random Variables and Distributions | Statistics 1 for Economics</title>
-<meta name="author" content="David Barkemeyer">
-<!-- CSS --><link rel="stylesheet" href="style.css">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.2"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="libs/bootstrap-4.5.3/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.5.3/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.1.9000/tabs.js"></script><script src="libs/bs3compat-0.2.1.9000/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js"></script>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>G Discrete Random Variables and Distributions | Statistics 1 for Economics</title>
+  <meta name="description" content="G Discrete Random Variables and Distributions | Statistics 1 for Economics" />
+  <meta name="generator" content="bookdown 0.21.4 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="G Discrete Random Variables and Distributions | Statistics 1 for Economics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="G Discrete Random Variables and Distributions | Statistics 1 for Economics" />
+  
+  
+  
+
+<meta name="author" content="David Barkemeyer" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="combinatorics-and-algebra-of-events.html"/>
+<link rel="next" href="continuous-random-variables-and-distributions.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
 </head>
-<body data-spy="scroll" data-target="#toc">
 
-<div class="container-fluid">
-<div class="row">
-  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+<body>
 
-    <div class="d-flex align-items-start justify-content-between">
-      <h1>
-        <a href="index.html" title="">Statistics 1 for Economics</a>
-      </h1>
-      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="frequencies.html"><a href="frequencies.html"><i class="fa fa-check"></i><b>A</b> Frequencies</a><ul>
+<li class="chapter" data-level="" data-path="frequencies.html"><a href="frequencies.html#prerequisites"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="A.1" data-path="frequencies.html"><a href="frequencies.html#exercise-a1"><i class="fa fa-check"></i><b>A.1</b> Exercise A1</a><ul>
+<li class="chapter" data-level="A.1.1" data-path="frequencies.html"><a href="frequencies.html#part-a"><i class="fa fa-check"></i><b>A.1.1</b> Part A</a></li>
+<li class="chapter" data-level="A.1.2" data-path="frequencies.html"><a href="frequencies.html#part-b"><i class="fa fa-check"></i><b>A.1.2</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="A.2" data-path="frequencies.html"><a href="frequencies.html#exercise-a2"><i class="fa fa-check"></i><b>A.2</b> Exercise A2</a><ul>
+<li class="chapter" data-level="A.2.1" data-path="frequencies.html"><a href="frequencies.html#m-race"><i class="fa fa-check"></i><b>A.2.1</b> 100m race</a></li>
+</ul></li>
+<li class="chapter" data-level="A.3" data-path="frequencies.html"><a href="frequencies.html#exercise-a3"><i class="fa fa-check"></i><b>A.3</b> Exercise A3</a><ul>
+<li class="chapter" data-level="A.3.1" data-path="frequencies.html"><a href="frequencies.html#tennis"><i class="fa fa-check"></i><b>A.3.1</b> Tennis</a></li>
+</ul></li>
+<li class="chapter" data-level="A.4" data-path="frequencies.html"><a href="frequencies.html#exercise-a4"><i class="fa fa-check"></i><b>A.4</b> Exercise A4</a><ul>
+<li class="chapter" data-level="A.4.1" data-path="frequencies.html"><a href="frequencies.html#study-time"><i class="fa fa-check"></i><b>A.4.1</b> Study time</a></li>
+</ul></li>
+<li class="chapter" data-level="A.5" data-path="frequencies.html"><a href="frequencies.html#exercise-a5"><i class="fa fa-check"></i><b>A.5</b> Exercise A5</a><ul>
+<li class="chapter" data-level="A.5.1" data-path="frequencies.html"><a href="frequencies.html#ice-cream"><i class="fa fa-check"></i><b>A.5.1</b> Ice cream</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="empirical-parameters.html"><a href="empirical-parameters.html"><i class="fa fa-check"></i><b>B</b> Empirical Parameters</a><ul>
+<li class="chapter" data-level="" data-path="empirical-parameters.html"><a href="empirical-parameters.html#prerequisites-1"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="" data-path="empirical-parameters.html"><a href="empirical-parameters.html#model-exercise-b0---geometric-mean"><i class="fa fa-check"></i>Model Exercise B0 - Geometric mean</a><ul>
+<li class="chapter" data-level="B.0.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-1"><i class="fa fa-check"></i><b>B.0.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="B.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b1"><i class="fa fa-check"></i><b>B.1</b> Exercise B1</a><ul>
+<li class="chapter" data-level="B.1.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-2"><i class="fa fa-check"></i><b>B.1.1</b> Part A</a></li>
+<li class="chapter" data-level="B.1.2" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-b-1"><i class="fa fa-check"></i><b>B.1.2</b> Part B</a></li>
+<li class="chapter" data-level="B.1.3" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-c"><i class="fa fa-check"></i><b>B.1.3</b> Part C</a></li>
+</ul></li>
+<li class="chapter" data-level="B.2" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b2"><i class="fa fa-check"></i><b>B.2</b> Exercise B2</a><ul>
+<li class="chapter" data-level="B.2.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-3"><i class="fa fa-check"></i><b>B.2.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="B.3" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b3"><i class="fa fa-check"></i><b>B.3</b> Exercise B3</a><ul>
+<li class="chapter" data-level="B.3.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-4"><i class="fa fa-check"></i><b>B.3.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="B.4" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b4"><i class="fa fa-check"></i><b>B.4</b> Exercise B4</a><ul>
+<li class="chapter" data-level="B.4.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-5"><i class="fa fa-check"></i><b>B.4.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="B.5" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b5"><i class="fa fa-check"></i><b>B.5</b> Exercise B5</a><ul>
+<li class="chapter" data-level="B.5.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-6"><i class="fa fa-check"></i><b>B.5.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="B.6" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b6"><i class="fa fa-check"></i><b>B.6</b> Exercise B6</a><ul>
+<li class="chapter" data-level="B.6.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-7"><i class="fa fa-check"></i><b>B.6.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="B.7" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b7"><i class="fa fa-check"></i><b>B.7</b> Exercise B7</a><ul>
+<li class="chapter" data-level="B.7.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#multiple-choice-questions"><i class="fa fa-check"></i><b>B.7.1</b> Multiple Choice Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="B.8" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b8"><i class="fa fa-check"></i><b>B.8</b> Exercise B8</a><ul>
+<li class="chapter" data-level="B.8.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#wages"><i class="fa fa-check"></i><b>B.8.1</b> Wages</a></li>
+</ul></li>
+<li class="chapter" data-level="B.9" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b9"><i class="fa fa-check"></i><b>B.9</b> Exercise B9</a><ul>
+<li class="chapter" data-level="B.9.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#rents"><i class="fa fa-check"></i><b>B.9.1</b> Rents</a></li>
+</ul></li>
+<li class="chapter" data-level="B.10" data-path="empirical-parameters.html"><a href="empirical-parameters.html#exercise-b10"><i class="fa fa-check"></i><b>B.10</b> Exercise B10</a><ul>
+<li class="chapter" data-level="B.10.1" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-a-8"><i class="fa fa-check"></i><b>B.10.1</b> Part A</a></li>
+<li class="chapter" data-level="B.10.2" data-path="empirical-parameters.html"><a href="empirical-parameters.html#part-b-2"><i class="fa fa-check"></i><b>B.10.2</b> Part B</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="C" data-path="concentration-analysis.html"><a href="concentration-analysis.html"><i class="fa fa-check"></i><b>C</b> Concentration Analysis</a><ul>
+<li class="chapter" data-level="" data-path="concentration-analysis.html"><a href="concentration-analysis.html#prerequisites-3"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="C.1" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c1"><i class="fa fa-check"></i><b>C.1</b> Exercise C1</a></li>
+<li class="chapter" data-level="C.2" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c2"><i class="fa fa-check"></i><b>C.2</b> Exercise C2</a></li>
+<li class="chapter" data-level="C.3" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c3"><i class="fa fa-check"></i><b>C.3</b> Exercise C3</a></li>
+<li class="chapter" data-level="C.4" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c4"><i class="fa fa-check"></i><b>C.4</b> Exercise C4</a></li>
+<li class="chapter" data-level="C.5" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c5"><i class="fa fa-check"></i><b>C.5</b> Exercise C5</a></li>
+<li class="chapter" data-level="C.6" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c6"><i class="fa fa-check"></i><b>C.6</b> Exercise C6</a></li>
+<li class="chapter" data-level="C.7" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c7"><i class="fa fa-check"></i><b>C.7</b> Exercise C7</a></li>
+<li class="chapter" data-level="C.8" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c8"><i class="fa fa-check"></i><b>C.8</b> Exercise C8</a></li>
+<li class="chapter" data-level="C.9" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c9"><i class="fa fa-check"></i><b>C.9</b> Exercise C9</a></li>
+<li class="chapter" data-level="C.10" data-path="concentration-analysis.html"><a href="concentration-analysis.html#exercise-c10"><i class="fa fa-check"></i><b>C.10</b> Exercise C10</a></li>
+</ul></li>
+<li class="chapter" data-level="D" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html"><i class="fa fa-check"></i><b>D</b> Multivariate Analysis</a><ul>
+<li class="chapter" data-level="" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#prerequisites-4"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="D.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#exercise-d1"><i class="fa fa-check"></i><b>D.1</b> Exercise D1</a><ul>
+<li class="chapter" data-level="D.1.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#voting-behavior"><i class="fa fa-check"></i><b>D.1.1</b> Voting behavior</a></li>
+</ul></li>
+<li class="chapter" data-level="D.2" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#exercise-d2"><i class="fa fa-check"></i><b>D.2</b> Exercise D2</a><ul>
+<li class="chapter" data-level="D.2.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#packaging-color"><i class="fa fa-check"></i><b>D.2.1</b> Packaging color</a></li>
+</ul></li>
+<li class="chapter" data-level="D.3" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#exercise-d3"><i class="fa fa-check"></i><b>D.3</b> Exercise D3</a><ul>
+<li class="chapter" data-level="D.3.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#love-for-animals"><i class="fa fa-check"></i><b>D.3.1</b> Love for animals</a></li>
+</ul></li>
+<li class="chapter" data-level="D.4" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#exercise-d4"><i class="fa fa-check"></i><b>D.4</b> Exercise D4</a><ul>
+<li class="chapter" data-level="D.4.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#infections"><i class="fa fa-check"></i><b>D.4.1</b> Infections</a></li>
+</ul></li>
+<li class="chapter" data-level="D.5" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#exercise-d5"><i class="fa fa-check"></i><b>D.5</b> Exercise D5</a><ul>
+<li class="chapter" data-level="D.5.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#part-a-9"><i class="fa fa-check"></i><b>D.5.1</b> Part A</a></li>
+<li class="chapter" data-level="D.5.2" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#part-b-3"><i class="fa fa-check"></i><b>D.5.2</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="D.6" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#exercise-d6"><i class="fa fa-check"></i><b>D.6</b> Exercise D6</a><ul>
+<li class="chapter" data-level="D.6.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#part-a-10"><i class="fa fa-check"></i><b>D.6.1</b> Part A</a></li>
+<li class="chapter" data-level="D.6.2" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#part-b-4"><i class="fa fa-check"></i><b>D.6.2</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="D.7" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#exercise-d7"><i class="fa fa-check"></i><b>D.7</b> Exercise D7</a><ul>
+<li class="chapter" data-level="D.7.1" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#part-a-11"><i class="fa fa-check"></i><b>D.7.1</b> Part A</a></li>
+<li class="chapter" data-level="D.7.2" data-path="multivariate-analysis.html"><a href="multivariate-analysis.html#part-b-5"><i class="fa fa-check"></i><b>D.7.2</b> Part B</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="E" data-path="correlation-analysis.html"><a href="correlation-analysis.html"><i class="fa fa-check"></i><b>E</b> Correlation Analysis</a><ul>
+<li class="chapter" data-level="" data-path="correlation-analysis.html"><a href="correlation-analysis.html#prerequisites-5"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="E.1" data-path="correlation-analysis.html"><a href="correlation-analysis.html#exercise-e1"><i class="fa fa-check"></i><b>E.1</b> Exercise E1</a><ul>
+<li class="chapter" data-level="E.1.1" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-a-12"><i class="fa fa-check"></i><b>E.1.1</b> Part A</a></li>
+<li class="chapter" data-level="E.1.2" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-b-6"><i class="fa fa-check"></i><b>E.1.2</b> Part B</a></li>
+<li class="chapter" data-level="E.1.3" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-c-1"><i class="fa fa-check"></i><b>E.1.3</b> Part C</a></li>
+<li class="chapter" data-level="E.1.4" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-d"><i class="fa fa-check"></i><b>E.1.4</b> Part D</a></li>
+</ul></li>
+<li class="chapter" data-level="E.2" data-path="correlation-analysis.html"><a href="correlation-analysis.html#exercise-e2"><i class="fa fa-check"></i><b>E.2</b> Exercise E2</a><ul>
+<li class="chapter" data-level="E.2.1" data-path="correlation-analysis.html"><a href="correlation-analysis.html#sex-education"><i class="fa fa-check"></i><b>E.2.1</b> Sex education</a></li>
+</ul></li>
+<li class="chapter" data-level="E.3" data-path="correlation-analysis.html"><a href="correlation-analysis.html#exercise-e3"><i class="fa fa-check"></i><b>E.3</b> Exercise E3</a><ul>
+<li class="chapter" data-level="E.3.1" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-a-13"><i class="fa fa-check"></i><b>E.3.1</b> Part A</a></li>
+<li class="chapter" data-level="E.3.2" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-b-7"><i class="fa fa-check"></i><b>E.3.2</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="E.4" data-path="correlation-analysis.html"><a href="correlation-analysis.html#exercise-e4"><i class="fa fa-check"></i><b>E.4</b> Exercise E4</a><ul>
+<li class="chapter" data-level="E.4.1" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-a-14"><i class="fa fa-check"></i><b>E.4.1</b> Part A</a></li>
+<li class="chapter" data-level="E.4.2" data-path="correlation-analysis.html"><a href="correlation-analysis.html#part-b-8"><i class="fa fa-check"></i><b>E.4.2</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="E.5" data-path="correlation-analysis.html"><a href="correlation-analysis.html#exercise-e5"><i class="fa fa-check"></i><b>E.5</b> Exercise E5</a><ul>
+<li class="chapter" data-level="E.5.1" data-path="correlation-analysis.html"><a href="correlation-analysis.html#work-performance"><i class="fa fa-check"></i><b>E.5.1</b> Work performance</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="F" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html"><i class="fa fa-check"></i><b>F</b> Combinatorics and Algebra of Events</a><ul>
+<li class="chapter" data-level="" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#prerequisites-6"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="F.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f1"><i class="fa fa-check"></i><b>F.1</b> Exercise F1</a><ul>
+<li class="chapter" data-level="F.1.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-15"><i class="fa fa-check"></i><b>F.1.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.2" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f2"><i class="fa fa-check"></i><b>F.2</b> Exercise F2</a><ul>
+<li class="chapter" data-level="F.2.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-16"><i class="fa fa-check"></i><b>F.2.1</b> Part A</a></li>
+<li class="chapter" data-level="F.2.2" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-b-9"><i class="fa fa-check"></i><b>F.2.2</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="F.3" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#multiple-choice"><i class="fa fa-check"></i><b>F.3</b> Multiple Choice</a><ul>
+<li class="chapter" data-level="F.3.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-17"><i class="fa fa-check"></i><b>F.3.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.4" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f4"><i class="fa fa-check"></i><b>F.4</b> Exercise F4</a><ul>
+<li class="chapter" data-level="F.4.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-18"><i class="fa fa-check"></i><b>F.4.1</b> Part A</a></li>
+<li class="chapter" data-level="F.4.2" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-b-10"><i class="fa fa-check"></i><b>F.4.2</b> Part B</a></li>
+<li class="chapter" data-level="F.4.3" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-c-2"><i class="fa fa-check"></i><b>F.4.3</b> Part C</a></li>
+</ul></li>
+<li class="chapter" data-level="F.5" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f5"><i class="fa fa-check"></i><b>F.5</b> Exercise F5</a><ul>
+<li class="chapter" data-level="F.5.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-19"><i class="fa fa-check"></i><b>F.5.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.6" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f6"><i class="fa fa-check"></i><b>F.6</b> Exercise F6</a><ul>
+<li class="chapter" data-level="F.6.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-20"><i class="fa fa-check"></i><b>F.6.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.7" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f7"><i class="fa fa-check"></i><b>F.7</b> Exercise F7</a><ul>
+<li class="chapter" data-level="F.7.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-21"><i class="fa fa-check"></i><b>F.7.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.8" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f8"><i class="fa fa-check"></i><b>F.8</b> Exercise F8</a><ul>
+<li class="chapter" data-level="F.8.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-22"><i class="fa fa-check"></i><b>F.8.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.9" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f9"><i class="fa fa-check"></i><b>F.9</b> Exercise F9</a><ul>
+<li class="chapter" data-level="F.9.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-23"><i class="fa fa-check"></i><b>F.9.1</b> Part A</a></li>
+<li class="chapter" data-level="F.9.2" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#define-meaningful-events-based-on-the-text-and-formalize-the-specified-probabilities."><i class="fa fa-check"></i><b>F.9.2</b> Define meaningful events based on the text and formalize the specified probabilities.</a></li>
+<li class="chapter" data-level="F.9.3" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#what-is-the-probability-that-your-car-will-be-searched"><i class="fa fa-check"></i><b>F.9.3</b> What is the probability that your car will be searched?</a></li>
+<li class="chapter" data-level="F.9.4" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#what-is-the-probability-of-a-passport-check"><i class="fa fa-check"></i><b>F.9.4</b> What is the probability of a passport check?</a></li>
+<li class="chapter" data-level="F.9.5" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#what-is-the-probability-that-you-will-be-searched-and-your-car-will-be-checked"><i class="fa fa-check"></i><b>F.9.5</b> What is the probability that you will be searched and your car will be checked?</a></li>
+<li class="chapter" data-level="F.9.6" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#if-your-passport-has-already-been-checked-how-likely-are-you-to-have-your-car-searched"><i class="fa fa-check"></i><b>F.9.6</b> If your passport has already been checked, how likely are you to have your car searched?</a></li>
+<li class="chapter" data-level="F.9.7" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#if-your-car-has-already-been-searched-how-likely-are-you-to-face-an-additional-passport-check"><i class="fa fa-check"></i><b>F.9.7</b> If your car has already been searched, how likely are you to face an additional passport check?</a></li>
+<li class="chapter" data-level="F.9.8" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#what-is-the-probability-that-you-will-have-to-expect-exactly-one-of-both-measures"><i class="fa fa-check"></i><b>F.9.8</b> What is the probability that you will have to expect exactly one of both measures?</a></li>
+</ul></li>
+<li class="chapter" data-level="F.10" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f10"><i class="fa fa-check"></i><b>F.10</b> Exercise F10</a><ul>
+<li class="chapter" data-level="F.10.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-24"><i class="fa fa-check"></i><b>F.10.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.11" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f11"><i class="fa fa-check"></i><b>F.11</b> Exercise F11</a><ul>
+<li class="chapter" data-level="F.11.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-25"><i class="fa fa-check"></i><b>F.11.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.12" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f12"><i class="fa fa-check"></i><b>F.12</b> Exercise F12</a><ul>
+<li class="chapter" data-level="F.12.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-26"><i class="fa fa-check"></i><b>F.12.1</b> Part A</a></li>
+<li class="chapter" data-level="F.12.2" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-b-11"><i class="fa fa-check"></i><b>F.12.2</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="F.13" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f13"><i class="fa fa-check"></i><b>F.13</b> Exercise F13</a><ul>
+<li class="chapter" data-level="F.13.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-27"><i class="fa fa-check"></i><b>F.13.1</b> Part A</a></li>
+<li class="chapter" data-level="F.13.2" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-b-12"><i class="fa fa-check"></i><b>F.13.2</b> Part B</a></li>
+<li class="chapter" data-level="F.13.3" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-c-3"><i class="fa fa-check"></i><b>F.13.3</b> Part C</a></li>
+<li class="chapter" data-level="F.13.4" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#depending-on-p-specify-the-probability-that-player-a-will-win-the-match."><i class="fa fa-check"></i><b>F.13.4</b> Depending on p, specify the probability that player A will win the match.</a></li>
+</ul></li>
+<li class="chapter" data-level="F.14" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f14"><i class="fa fa-check"></i><b>F.14</b> Exercise F14</a><ul>
+<li class="chapter" data-level="F.14.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-28"><i class="fa fa-check"></i><b>F.14.1</b> Part A</a></li>
+</ul></li>
+<li class="chapter" data-level="F.15" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#exercise-f15"><i class="fa fa-check"></i><b>F.15</b> Exercise F15</a><ul>
+<li class="chapter" data-level="F.15.1" data-path="combinatorics-and-algebra-of-events.html"><a href="combinatorics-and-algebra-of-events.html#part-a-29"><i class="fa fa-check"></i><b>F.15.1</b> Part A</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="G" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html"><i class="fa fa-check"></i><b>G</b> Discrete Random Variables and Distributions</a><ul>
+<li class="chapter" data-level="" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#prerequisites-7"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="G.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g1"><i class="fa fa-check"></i><b>G.1</b> Exercise G1</a><ul>
+<li class="chapter" data-level="G.1.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#the-pigsty"><i class="fa fa-check"></i><b>G.1.1</b> The pigsty</a></li>
+</ul></li>
+<li class="chapter" data-level="G.2" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g2"><i class="fa fa-check"></i><b>G.2</b> Exercise G2</a><ul>
+<li class="chapter" data-level="G.2.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#lottery"><i class="fa fa-check"></i><b>G.2.1</b> Lottery</a></li>
+</ul></li>
+<li class="chapter" data-level="G.3" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g3"><i class="fa fa-check"></i><b>G.3</b> Exercise G3</a><ul>
+<li class="chapter" data-level="G.3.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#aircraft-engine"><i class="fa fa-check"></i><b>G.3.1</b> Aircraft engine</a></li>
+<li class="chapter" data-level="G.3.2" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#part-a-30"><i class="fa fa-check"></i><b>G.3.2</b> Part A</a></li>
+<li class="chapter" data-level="G.3.3" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#part-b-13"><i class="fa fa-check"></i><b>G.3.3</b> Part B</a></li>
+</ul></li>
+<li class="chapter" data-level="G.4" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g4"><i class="fa fa-check"></i><b>G.4</b> Exercise G4</a><ul>
+<li class="chapter" data-level="G.4.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#mini-roulette"><i class="fa fa-check"></i><b>G.4.1</b> Mini-Roulette</a></li>
+</ul></li>
+<li class="chapter" data-level="G.5" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g5"><i class="fa fa-check"></i><b>G.5</b> Exercise G5</a><ul>
+<li class="chapter" data-level="G.5.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#card-game"><i class="fa fa-check"></i><b>G.5.1</b> Card game</a></li>
+</ul></li>
+<li class="chapter" data-level="G.6" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g6"><i class="fa fa-check"></i><b>G.6</b> Exercise G6</a><ul>
+<li class="chapter" data-level="G.6.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#one-will-win"><i class="fa fa-check"></i><b>G.6.1</b> One will win</a></li>
+</ul></li>
+<li class="chapter" data-level="G.7" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g7"><i class="fa fa-check"></i><b>G.7</b> Exercise G7</a><ul>
+<li class="chapter" data-level="G.7.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#coin-toss"><i class="fa fa-check"></i><b>G.7.1</b> Coin toss</a></li>
+</ul></li>
+<li class="chapter" data-level="G.8" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g8"><i class="fa fa-check"></i><b>G.8</b> Exercise G8</a><ul>
+<li class="chapter" data-level="G.8.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#environmentalists"><i class="fa fa-check"></i><b>G.8.1</b> Environmentalists</a></li>
+</ul></li>
+<li class="chapter" data-level="G.9" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g9"><i class="fa fa-check"></i><b>G.9</b> Exercise G9</a><ul>
+<li class="chapter" data-level="G.9.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#two-dimensional-random-variable"><i class="fa fa-check"></i><b>G.9.1</b> Two-dimensional random variable</a></li>
+</ul></li>
+<li class="chapter" data-level="G.10" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g10"><i class="fa fa-check"></i><b>G.10</b> Exercise G10</a><ul>
+<li class="chapter" data-level="G.10.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#candles"><i class="fa fa-check"></i><b>G.10.1</b> Candles</a></li>
+</ul></li>
+<li class="chapter" data-level="G.11" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g11"><i class="fa fa-check"></i><b>G.11</b> Exercise G11</a><ul>
+<li class="chapter" data-level="G.11.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#self-employment"><i class="fa fa-check"></i><b>G.11.1</b> Self-employment</a></li>
+</ul></li>
+<li class="chapter" data-level="G.12" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g12"><i class="fa fa-check"></i><b>G.12</b> Exercise G12</a><ul>
+<li class="chapter" data-level="G.12.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#free-tokens"><i class="fa fa-check"></i><b>G.12.1</b> Free tokens</a></li>
+</ul></li>
+<li class="chapter" data-level="G.13" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g13"><i class="fa fa-check"></i><b>G.13</b> Exercise G13</a><ul>
+<li class="chapter" data-level="G.13.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#bridge"><i class="fa fa-check"></i><b>G.13.1</b> Bridge</a></li>
+</ul></li>
+<li class="chapter" data-level="G.14" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#g14"><i class="fa fa-check"></i><b>G.14</b> G14</a><ul>
+<li class="chapter" data-level="G.14.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#end-of-the-soccer-season"><i class="fa fa-check"></i><b>G.14.1</b> End of the soccer season</a></li>
+</ul></li>
+<li class="chapter" data-level="G.15" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g15"><i class="fa fa-check"></i><b>G.15</b> Exercise G15</a><ul>
+<li class="chapter" data-level="G.15.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#three-balls"><i class="fa fa-check"></i><b>G.15.1</b> Three balls</a></li>
+</ul></li>
+<li class="chapter" data-level="G.16" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g16"><i class="fa fa-check"></i><b>G.16</b> Exercise G16</a><ul>
+<li class="chapter" data-level="G.16.1" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#statistics-exam"><i class="fa fa-check"></i><b>G.16.1</b> Statistics exam</a></li>
+</ul></li>
+<li class="chapter" data-level="G.17" data-path="discrete-random-variables-and-distributions.html"><a href="discrete-random-variables-and-distributions.html#exercise-g17"><i class="fa fa-check"></i><b>G.17</b> Exercise G17</a></li>
+</ul></li>
+<li class="chapter" data-level="H" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html"><i class="fa fa-check"></i><b>H</b> Continuous Random Variables and Distributions</a><ul>
+<li class="chapter" data-level="H.1" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h1"><i class="fa fa-check"></i><b>H.1</b> Exercise H1</a><ul>
+<li class="chapter" data-level="H.1.1" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#part-a---pocket-calculator"><i class="fa fa-check"></i><b>H.1.1</b> Part A - Pocket calculator</a></li>
+<li class="chapter" data-level="H.1.2" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#part-b---electric-component"><i class="fa fa-check"></i><b>H.1.2</b> Part B - Electric Component</a></li>
+</ul></li>
+<li class="chapter" data-level="H.2" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h2"><i class="fa fa-check"></i><b>H.2</b> Exercise H2</a><ul>
+<li class="chapter" data-level="H.2.1" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#part-a-31"><i class="fa fa-check"></i><b>H.2.1</b> Part A</a></li>
+<li class="chapter" data-level="H.2.2" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#part-b-14"><i class="fa fa-check"></i><b>H.2.2</b> Part B</a></li>
+<li class="chapter" data-level="H.2.3" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#part-c-4"><i class="fa fa-check"></i><b>H.2.3</b> Part C</a></li>
+</ul></li>
+<li class="chapter" data-level="H.3" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h3"><i class="fa fa-check"></i><b>H.3</b> Exercise H3</a><ul>
+<li class="chapter" data-level="H.3.1" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#steel-pins"><i class="fa fa-check"></i><b>H.3.1</b> Steel pins</a></li>
+</ul></li>
+<li class="chapter" data-level="H.4" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h4"><i class="fa fa-check"></i><b>H.4</b> Exercise H4</a></li>
+<li class="chapter" data-level="H.5" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h5"><i class="fa fa-check"></i><b>H.5</b> Exercise H5</a></li>
+<li class="chapter" data-level="H.6" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h6"><i class="fa fa-check"></i><b>H.6</b> Exercise H6</a></li>
+<li class="chapter" data-level="H.7" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h7"><i class="fa fa-check"></i><b>H.7</b> Exercise H7</a></li>
+<li class="chapter" data-level="H.8" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h8"><i class="fa fa-check"></i><b>H.8</b> Exercise H8</a></li>
+<li class="chapter" data-level="H.9" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h9"><i class="fa fa-check"></i><b>H.9</b> Exercise H9</a></li>
+<li class="chapter" data-level="H.10" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h10"><i class="fa fa-check"></i><b>H.10</b> Exercise H10</a></li>
+<li class="chapter" data-level="H.11" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h11"><i class="fa fa-check"></i><b>H.11</b> Exercise H11</a></li>
+<li class="chapter" data-level="H.12" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h12"><i class="fa fa-check"></i><b>H.12</b> Exercise H12</a></li>
+<li class="chapter" data-level="H.13" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h13"><i class="fa fa-check"></i><b>H.13</b> Exercise H13</a></li>
+<li class="chapter" data-level="H.14" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h14"><i class="fa fa-check"></i><b>H.14</b> Exercise H14</a></li>
+<li class="chapter" data-level="H.15" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h15"><i class="fa fa-check"></i><b>H.15</b> Exercise H15</a></li>
+<li class="chapter" data-level="H.16" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h16"><i class="fa fa-check"></i><b>H.16</b> Exercise H16</a></li>
+<li class="chapter" data-level="H.17" data-path="continuous-random-variables-and-distributions.html"><a href="continuous-random-variables-and-distributions.html#exercise-h17"><i class="fa fa-check"></i><b>H.17</b> Exercise H17</a></li>
+</ul></li>
+</ul>
+
+      </nav>
     </div>
 
-    <div id="main-nav" class="collapse-lg">
-      <form role="search">
-        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
-</form>
-
-      <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html">Welcome</a></li>
-<li class="book-part">Appendix</li>
-<li><a class="" href="frequencies.html"><span class="header-section-number">A</span> Frequencies</a></li>
-<li><a class="" href="empirical-parameters.html"><span class="header-section-number">B</span> Empirical Parameters</a></li>
-<li><a class="" href="concentration-analysis.html"><span class="header-section-number">C</span> Concentration Analysis</a></li>
-<li><a class="" href="multivariate-analysis.html"><span class="header-section-number">D</span> Multivariate Analysis</a></li>
-<li><a class="" href="correlation-analysis.html"><span class="header-section-number">E</span> Correlation Analysis</a></li>
-<li><a class="" href="combinatorics-and-algebra-of-events.html"><span class="header-section-number">F</span> Combinatorics and Algebra of Events</a></li>
-<li><a class="active" href="discrete-random-variables-and-distributions.html"><span class="header-section-number">G</span> Discrete Random Variables and Distributions</a></li>
-<li><a class="" href="continuous-random-variables-and-distributions.html"><span class="header-section-number">H</span> Continuous Random Variables and Distributions</a></li>
-</ul>
-
-        <div class="book-extra">
-          <p><a id="book-repo" href="https://github.com/DavidBarke/Stat1">View book source <i class="fab fa-github"></i></a></p>
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics 1 for Economics</a>
+          </h1>
         </div>
-      </nav>
-</div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="discrete-random-variables-and-distributions" class="section level1">
-<h1>
-<span class="header-section-number">G</span> Discrete Random Variables and Distributions<a class="anchor" aria-label="anchor" href="#discrete-random-variables-and-distributions"><i class="fas fa-link"></i></a>
-</h1>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="discrete-random-variables-and-distributions" class="section level1">
+<h1><span class="header-section-number">G</span> Discrete Random Variables and Distributions</h1>
 <div id="prerequisites-7" class="section level2 unnumbered">
-<h2>Prerequisites<a class="anchor" aria-label="anchor" href="#prerequisites-7"><i class="fas fa-link"></i></a>
-</h2>
-<div class="sourceCode" id="cb81"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://yihui.org/knitr/">knitr</a></span><span class="op">)</span>
-
-<span class="co"># Set ggplot2 theme</span>
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme_get.html">theme_set</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-
+<h2>Prerequisites</h2>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="discrete-random-variables-and-distributions.html#cb81-1"></a><span class="kw">library</span>(ggplot2)</span>
+<span id="cb81-2"><a href="discrete-random-variables-and-distributions.html#cb81-2"></a><span class="kw">library</span>(dplyr)</span>
+<span id="cb81-3"><a href="discrete-random-variables-and-distributions.html#cb81-3"></a><span class="kw">library</span>(knitr)</span>
+<span id="cb81-4"><a href="discrete-random-variables-and-distributions.html#cb81-4"></a></span>
+<span id="cb81-5"><a href="discrete-random-variables-and-distributions.html#cb81-5"></a><span class="co"># Set ggplot2 theme</span></span>
+<span id="cb81-6"><a href="discrete-random-variables-and-distributions.html#cb81-6"></a><span class="kw">theme_set</span>(<span class="kw">theme_bw</span>())</span></code></pre></div>
+</div>
+<div id="exercise-g1" class="section level2">
+<h2><span class="header-section-number">G.1</span> Exercise G1</h2>
+<div id="the-pigsty" class="section level3">
+<h3><span class="header-section-number">G.1.1</span> The pigsty</h3>
+<p>A farmer owns a pigsty with 10 compartments, in each of which 2 pigs stand. There is a suspicion that some pigs are infected with a certain, but not communicable disease, which can be detected by a blood test.
+The veterinarian suggests that a blood test be performed on each pig for a fee of 10 EUR per pig. However, the total fee of 200 EUR resulting from this proposal seems far too high for the farmer. Therefore, the farmer in turn suggests that the doctor mixes the blood taken from the animals in one compartment and analyzes this mixture for 10 EUR. Only if the results are positive should the doctor perform a single test on each pig in the compartment concerned. Whether the farmer’s method is advantageous (i.e. costs less than 200 EUR) depends on the probability <span class="math inline">\(\pi\)</span> of a pig being infected with the disease.</p>
+<div id="first-of-all-think-intuitively-for-which-values-of-pi-rather-small-or-rather-large-the-method-proposed-by-the-farmer-is-more-cost-effective." class="section level4">
+<h4><span class="header-section-number">G.1.1.1</span> First of all, think intuitively for which values of <span class="math inline">\(\pi\)</span> (rather small or rather large) the method proposed by the farmer is more cost-effective.</h4>
+</div>
+<div id="now-decide-mathematically-for-which-values-of-pi-the-method-suggested-by-the-farmer-is-cheaper-than-the-method-suggested-by-the-doctor-by-comparing-the-expected-value-of-the-doctors-fee-if-suggested-by-the-farmer-with-the-fixed-amount-of-the-doctors-fee-if-suggested-by-the-doctor." class="section level4">
+<h4><span class="header-section-number">G.1.1.2</span> Now decide mathematically for which values of <span class="math inline">\(\pi\)</span> the method suggested by the farmer is cheaper than the method suggested by the doctor by comparing the expected value of the doctor’s fee (if suggested by the farmer) with the fixed amount of the doctor’s fee (if suggested by the doctor).</h4>
+<p>Suppose you were not an economist or business economist, but a farmer and had this problem to solve. Surely you would then have made a proposal to the veterinarian that was a bit more favourable and also more advantageous to you for a higher probability of illness <span class="math inline">\(\pi\)</span> than the method suggested by the veterinarian. Modify the farmer’s method described above accordingly.</p>
+</div>
+<div id="for-what-values-of-pi-is-your-modified-method-now-cheaper-than-the-method-suggested-by-the-veterinarian-justify-your-proposal-with-the-help-of-a-formal-calculation." class="section level4">
+<h4><span class="header-section-number">G.1.1.3</span> For what values of <span class="math inline">\(\pi\)</span> is your modified method now cheaper than the method suggested by the veterinarian? Justify your proposal with the help of a formal calculation.</h4>
 </div>
 </div>
-  <div class="chapter-nav">
-<div class="prev"><a href="combinatorics-and-algebra-of-events.html"><span class="header-section-number">F</span> Combinatorics and Algebra of Events</a></div>
-<div class="next"><a href="continuous-random-variables-and-distributions.html"><span class="header-section-number">H</span> Continuous Random Variables and Distributions</a></div>
-</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
-    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#discrete-random-variables-and-distributions"><span class="header-section-number">G</span> Discrete Random Variables and Distributions</a></li>
-<li><a class="nav-link" href="#prerequisites-7">Prerequisites</a></li>
+</div>
+<div id="exercise-g2" class="section level2">
+<h2><span class="header-section-number">G.2</span> Exercise G2</h2>
+<div id="lottery" class="section level3">
+<h3><span class="header-section-number">G.2.1</span> Lottery</h3>
+<p>A lottery ticket seller sells ( infinitely many ) lots with the equally distributed numbers 0 to 9.</p>
+<p>The following payment plan applies:</p>
+<ul>
+<li>If the digits 0, 6 or 9 appear, nothing is paid out.</li>
+<li>If an even number (except 0 or 6) appears, 4.50 EUR is paid out.</li>
+<li>If an odd number appears (except 9), 3 EUR will be paid.</li>
 </ul>
-
-      <div class="book-extra">
-        <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/DavidBarke/Stat1/blob/master/07_G_Discrete_Random_Variables_and_Distributions.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/DavidBarke/Stat1/edit/master/07_G_Discrete_Random_Variables_and_Distributions.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
-        </ul>
+<div id="calculate-the-expected-value-of-the-payout-amount-per-draw." class="section level4">
+<h4><span class="header-section-number">G.2.1.1</span> Calculate the expected value of the payout amount per draw.</h4>
 </div>
-    </nav>
+<div id="with-what-probability-does-a-lot-buyer-receive-a-payout-of-exactly-3-eur-when-buying-3-lots" class="section level4">
+<h4><span class="header-section-number">G.2.1.2</span> With what probability does a lot buyer receive a payout of exactly 3 EUR when buying 3 lots?</h4>
 </div>
+<div id="with-what-probability-does-a-lot-buyer-receive-a-payout-of-at-least-4-eur-when-buying-3-lots" class="section level4">
+<h4><span class="header-section-number">G.2.1.3</span> With what probability does a lot buyer receive a payout of at least 4 EUR when buying 3 lots?</h4>
+<p>The lot seller has set the lot price so that his daily profit has an expected value of 450 EUR for 1,000 lots sold.</p>
+</div>
+<div id="how-high-is-this-lot-price" class="section level4">
+<h4><span class="header-section-number">G.2.1.4</span> How high is this lot price?</h4>
+</div>
+</div>
+</div>
+<div id="exercise-g3" class="section level2">
+<h2><span class="header-section-number">G.3</span> Exercise G3</h2>
+<div id="aircraft-engine" class="section level3">
+<h3><span class="header-section-number">G.3.1</span> Aircraft engine</h3>
+<p>Each aircraft engine fails during a flight independently from the other engines with a probability of <span class="math inline">\(\pi\)</span>.</p>
+<p>Be
+* <span class="math inline">\(X\)</span> : “Number of functioning engines of a twin-engined aircraft.
+* <span class="math inline">\(Y\)</span> :”Number of functioning engines of a three-engined aircraft.
+* <span class="math inline">\(Z\)</span> : “Number of functioning engines of a four-engined aircraft.”</p>
+<div id="determine-the-probability-function-of-x-in-a-table." class="section level4">
+<h4><span class="header-section-number">G.3.1.1</span> Determine the probability function of X in a table.</h4>
+</div>
+<div id="determine-the-probability-function-of-y-in-a-table." class="section level4">
+<h4><span class="header-section-number">G.3.1.2</span> Determine the probability function of Y in a table.</h4>
+</div>
+<div id="determine-the-probability-function-of-z-in-a-table." class="section level4">
+<h4><span class="header-section-number">G.3.1.3</span> Determine the probability function of Z in a table.</h4>
+</div>
+</div>
+<div id="part-a-30" class="section level3">
+<h3><span class="header-section-number">G.3.2</span> Part A</h3>
+<p>An aircraft can stay in the air (and land safely) if at least <strong>two-thirds</strong> of the engines are working. Are aircraft with two, three or four engines more reliable, i.e. for which type of aircraft, the probability of a crash is lowest if for the probability of failure of an engine applies:</p>
+<div id="pi-0.7" class="section level4">
+<h4><span class="header-section-number">G.3.2.1</span> <span class="math inline">\(\pi = 0.7\)</span></h4>
+</div>
+<div id="pi-0.2" class="section level4">
+<h4><span class="header-section-number">G.3.2.2</span> <span class="math inline">\(\pi = 0.2\)</span></h4>
+</div>
+<div id="pi-0.01" class="section level4">
+<h4><span class="header-section-number">G.3.2.3</span> <span class="math inline">\(\pi = 0.01\)</span></h4>
+</div>
+</div>
+<div id="part-b-13" class="section level3">
+<h3><span class="header-section-number">G.3.3</span> Part B</h3>
+<p>An aircraft can stay in the air (and land safely) if at least <strong>half</strong> of the engines are working. Are aircraft with two, three or four engines more reliable, i.e. for which type of aircraft, the probability of a crash is lowest if for the probability of failure of an engine applies:</p>
+<div id="pi-0.7-1" class="section level4">
+<h4><span class="header-section-number">G.3.3.1</span> <span class="math inline">\(\pi = 0.7\)</span></h4>
+</div>
+<div id="pi-0.2-1" class="section level4">
+<h4><span class="header-section-number">G.3.3.2</span> <span class="math inline">\(\pi = 0.2\)</span></h4>
+</div>
+<div id="pi-0.01-1" class="section level4">
+<h4><span class="header-section-number">G.3.3.3</span> <span class="math inline">\(\pi = 0.01\)</span></h4>
+</div>
+</div>
+</div>
+<div id="exercise-g4" class="section level2">
+<h2><span class="header-section-number">G.4</span> Exercise G4</h2>
+<div id="mini-roulette" class="section level3">
+<h3><span class="header-section-number">G.4.1</span> Mini-Roulette</h3>
+<p>Mini roulette is played in a casino in a small spa town. This roulette is divided into four equal sectors. The ball can only fall into one of these sectors during one pass. In each sector one of the numbers “-2”, “-1”, “+1” and “+2” is printed. The following rules apply:</p>
+<ul>
+<li>If the ball falls into the sector “+1” or “+2”, the result is fixed, you will be paid the corresponding amount in EUR by the bank and the game is over.</li>
+<li>If the ball falls in the sector “-2” or “-1”, the roulette is started again. The results of both passes are added together and form the result:
+<ul>
+<li>If the result is positive, the bank will pay you this amount in EUR and the game is finished.</li>
+<li>If the result is negative, you must pay this amount to the bank in EUR and the game is finished.</li>
+<li>If the result is zero, you have neither profit nor loss and the game ends in a draw.</li>
+</ul></li>
+</ul>
+<div id="determine-the-probability-function-of-the-random-variable-x-earnings-per-game-in-eur-in-table-form" class="section level4">
+<h4><span class="header-section-number">G.4.1.1</span> Determine the probability function of the random variable <span class="math inline">\(X\)</span>: “Earnings per game in EUR” in table form:</h4>
+</div>
+<div id="is-this-game-fair" class="section level4">
+<h4><span class="header-section-number">G.4.1.2</span> Is this game “fair”?</h4>
+</div>
+<div id="calculate-varx." class="section level4">
+<h4><span class="header-section-number">G.4.1.3</span> Calculate <span class="math inline">\(Var(X)\)</span>.</h4>
+</div>
+</div>
+</div>
+<div id="exercise-g5" class="section level2">
+<h2><span class="header-section-number">G.5</span> Exercise G5</h2>
+<div id="card-game" class="section level3">
+<h3><span class="header-section-number">G.5.1</span> Card game</h3>
+<p>A deck of 4 cards (Ace of Spades, Ace of Hearts, Queen of Clubs and Jack of Diamonds) is shuffled and dealt face down to two players, so that each player receives two cards.</p>
+<div id="note-the-6-card-dealings-that-a-player-can-receive." class="section level4">
+<h4><span class="header-section-number">G.5.1.1</span> Note the 6 card dealings that a player can receive.</h4>
+<p>Suppose one of the two players announces: “I have an ace”.</p>
+</div>
+<div id="what-is-the-probability-that-this-player-also-holds-the-second-ace-in-his-hand" class="section level4">
+<h4><span class="header-section-number">G.5.1.2</span> What is the probability that this player also holds the second ace in his hand?</h4>
+<p>Suppose one of the two players announces: "I have an Ace of Spades.</p>
+</div>
+<div id="what-is-the-probability-that-this-player-will-also-hold-the-second-ace-in-his-hand" class="section level4">
+<h4><span class="header-section-number">G.5.1.3</span> What is the probability that this player will also hold the second ace in his hand?</h4>
+</div>
+<div id="determine-the-expected-number-of-aces-that-a-player-will-receive-when-the-cards-are-dealt." class="section level4">
+<h4><span class="header-section-number">G.5.1.4</span> Determine the expected number of aces that a player will receive when the cards are dealt.</h4>
+</div>
+</div>
+</div>
+<div id="exercise-g6" class="section level2">
+<h2><span class="header-section-number">G.6</span> Exercise G6</h2>
+<div id="one-will-win" class="section level3">
+<h3><span class="header-section-number">G.6.1</span> One will win</h3>
+<p>If two candidates are equal on points in the “One will win” show, the winner is determined by throwing the dice, i.e. there is a dice round in which each candidate rolls an ideal dice once. The one of them who rolls the higher number is declared the winner. If both roll the same number, another dice round takes place until the winner is determined.</p>
+<p>Determine the probability that until the decision is made</p>
+<ol style="list-style-type: decimal">
+<li>exactly 4</li>
+<li>at least 4</li>
+<li>at most 4</li>
+</ol>
+<p>dice rounds are necessary.</p>
+</div>
+</div>
+<div id="exercise-g7" class="section level2">
+<h2><span class="header-section-number">G.7</span> Exercise G7</h2>
+<div id="coin-toss" class="section level3">
+<h3><span class="header-section-number">G.7.1</span> Coin toss</h3>
+<p>The two statistics students Otto and Paul came up with the following random experiment:</p>
+<p>An ideal coin (“heads” or “tails”) is tossed three times in a row.</p>
+<ul>
+<li>Game A : You win as much EUR as the number thrown in this experiment.</li>
+<li>Game B : Only the result of the first toss is taken into account.
+<ul>
+<li>If the 1st roll shows “heads”, you win 3 EUR.</li>
+<li>If the 1st roll of the dice shows “tails”, you have neither a win nor a loss.</li>
+</ul></li>
+</ul>
+<p>Be <span class="math inline">\(X\)</span>: “Winnings of game A” and <span class="math inline">\(Y\)</span>: “Winnings of game B”.</p>
+<div id="enter-the-probability-function-of-the-random-variable-x." class="section level4">
+<h4><span class="header-section-number">G.7.1.1</span> Enter the probability function of the random variable X.</h4>
+</div>
+<div id="enter-the-probability-function-of-the-random-variable-y." class="section level4">
+<h4><span class="header-section-number">G.7.1.2</span> Enter the probability function of the random variable Y.</h4>
+</div>
+<div id="paul-chooses-game-a-and-otto-chooses-game-b." class="section level4">
+<h4><span class="header-section-number">G.7.1.3</span> Paul chooses game A and Otto chooses game B.</h4>
+</div>
+<div id="calculate-the-expected-value-and-the-variance-of-pauls-win." class="section level4">
+<h4><span class="header-section-number">G.7.1.4</span> Calculate the expected value and the variance of Paul’s win.</h4>
+</div>
+<div id="calculate-the-expected-value-and-the-variance-of-ottos-win." class="section level4">
+<h4><span class="header-section-number">G.7.1.5</span> Calculate the expected value and the variance of Otto’s win.</h4>
+</div>
+<div id="which-game-would-you-choose" class="section level4">
+<h4><span class="header-section-number">G.7.1.6</span> Which game would you choose?</h4>
+</div>
+<div id="determine-the-probability-function-of-the-random-variable-x-cdot-y-and-calculate-ex-cdot-y." class="section level4">
+<h4><span class="header-section-number">G.7.1.7</span> Determine the probability function of the random variable <span class="math inline">\(X \cdot Y\)</span> and calculate <span class="math inline">\(E(X \cdot Y)\)</span>.</h4>
+</div>
+<div id="calculate-covx-y" class="section level4">
+<h4><span class="header-section-number">G.7.1.8</span> Calculate <span class="math inline">\(Cov(X, Y)\)</span></h4>
+<p>.
+#### Determine the probability function of the random variable <span class="math inline">\(Z\)</span> : “Joint profit of Otto and Paul”</p>
+</div>
+<div id="calculate-the-expected-value-and-the-variance-of-the-joint-profit-of-otto-and-paul." class="section level4">
+<h4><span class="header-section-number">G.7.1.9</span> Calculate the expected value and the variance of the joint profit of Otto and Paul.</h4>
+</div>
+<div id="are-x-and-y-stochastically-independent" class="section level4">
+<h4><span class="header-section-number">G.7.1.10</span> Are <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> stochastically independent?</h4>
+</div>
+</div>
+</div>
+<div id="exercise-g8" class="section level2">
+<h2><span class="header-section-number">G.8</span> Exercise G8</h2>
+<div id="environmentalists" class="section level3">
+<h3><span class="header-section-number">G.8.1</span> Environmentalists</h3>
+<p>A group of environmentalists goes out to sea and collects floating barrels of poison.</p>
+<p>Let <span class="math inline">\(X\)</span> be : “Number of barrels found on the first day in a region” with</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">x</th>
+<th align="right">P(X = x)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">0.25</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">0.50</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="right">0.25</td>
+</tr>
+</tbody>
+</table>
+<div id="what-is-the-probability-that-environmentalists-will-find-at-least-four-barrels-in-a-new-region-on-the-first-day" class="section level4">
+<h4><span class="header-section-number">G.8.1.1</span> What is the probability that environmentalists will find at least four barrels in a new region on the first day?</h4>
+</div>
+<div id="on-average-how-many-barrels-will-be-found-in-a-new-region-on-the-first-day" class="section level4">
+<h4><span class="header-section-number">G.8.1.2</span> On average, how many barrels will be found in a new region on the first day?</h4>
+</div>
+<div id="calculate-the-variance-of-x." class="section level4">
+<h4><span class="header-section-number">G.8.1.3</span> Calculate the variance of <span class="math inline">\(X\)</span>.</h4>
+<p>If the environmentalists go to the same region a second day, the chances of finding barrels change. Let <span class="math inline">\(Y\)</span> be : “Number of barrels found on the second day in the same region” with the following conditional probabilities:</p>
+<p><span class="math display">\[P(Y = 0 | X = 3) = \frac{1}{2} \, , \quad P(Y = 0 | X = 4) = \frac{1}{2} \, , \quad P(Y = 0 | X = 5) = \frac{3}{4}\]</span>
+<span class="math display">\[P(Y = 1 | X = 3) = \frac{1}{4} \, , \quad P(Y = 1 | X = 4) = \frac{1}{2} \, , \quad P(Y = 1 | X = 5) = \frac{1}{4}\]</span>
+<span class="math display">\[P(Y = 2 | X = 3) = \frac{1}{4} \, , \quad P(Y = 2 | X = 4) = 0 \, , \quad P(Y = 2 | X = 5) = 0\]</span></p>
+</div>
+<div id="determine-the-common-probability-function-of-x-and-y-in-a-table." class="section level4">
+<h4><span class="header-section-number">G.8.1.4</span> Determine the common probability function of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> in a table.</h4>
+</div>
+<div id="calculate-the-covariance-of-x-and-y." class="section level4">
+<h4><span class="header-section-number">G.8.1.5</span> Calculate the covariance of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>.</h4>
+</div>
+<div id="are-x-and-y-stochastically-independent-1" class="section level4">
+<h4><span class="header-section-number">G.8.1.6</span> Are <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> stochastically independent?</h4>
+<p>The environmentalists receive a kind of “find reward” for the barrels found. An unknown donor pays them 5 EUR for each barrel found. In addition, each trip is rewarded with 10 EUR.</p>
+</div>
+<div id="which-proceeds-in-eur-can-the-environmentalists-expect-if-they-go-to-sea-in-a-new-region-once-on-the-first-day-and-once-on-the-second-day" class="section level4">
+<h4><span class="header-section-number">G.8.1.7</span> Which proceeds in EUR can the environmentalists expect if they go to sea in a new region once on the first day and once on the second day?</h4>
+</div>
+</div>
+</div>
+<div id="exercise-g9" class="section level2">
+<h2><span class="header-section-number">G.9</span> Exercise G9</h2>
+<div id="two-dimensional-random-variable" class="section level3">
+<h3><span class="header-section-number">G.9.1</span> Two-dimensional random variable</h3>
+<p>The two-dimensional random variable (<span class="math inline">\(X, Y\)</span>) has the following distribution (probability function):</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">x</th>
+<th align="right">y</th>
+<th align="right">P(X = x, Y = y)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0.1</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">1</td>
+<td align="right">0.1</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="right">0.3</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="right">0.1</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">3</td>
+<td align="right">0.2</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">0.2</td>
+</tr>
+</tbody>
+</table>
+<div id="determine-the-expected-value-and-the-variance-of-x-and-y-." class="section level4">
+<h4><span class="header-section-number">G.9.1.1</span> Determine the expected value and the variance of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> .</h4>
+</div>
+<div id="determine-the-expected-value-and-the-variance-and-the-distribution-of-the-sum-x-y-." class="section level4">
+<h4><span class="header-section-number">G.9.1.2</span> Determine the expected value and the variance and the distribution of the sum <span class="math inline">\(X + Y\)</span> .</h4>
+</div>
+<div id="determine-the-expected-value-and-the-variance-and-the-distribution-of-the-product-x-cdot-y-." class="section level4">
+<h4><span class="header-section-number">G.9.1.3</span> Determine the expected value and the variance and the distribution of the product <span class="math inline">\(X \cdot Y\)</span> .</h4>
+</div>
+<div id="determine-covx-y" class="section level4">
+<h4><span class="header-section-number">G.9.1.4</span> Determine <span class="math inline">\(Cov(X, Y)\)</span></h4>
+</div>
+<div id="interpret-covx-y" class="section level4">
+<h4><span class="header-section-number">G.9.1.5</span> Interpret <span class="math inline">\(Cov(X, Y)\)</span></h4>
+</div>
+</div>
+</div>
+<div id="exercise-g10" class="section level2">
+<h2><span class="header-section-number">G.10</span> Exercise G10</h2>
+<div id="candles" class="section level3">
+<h3><span class="header-section-number">G.10.1</span> Candles</h3>
+<p>Candles of a certain type are offered in a store as single and double packs. The number of single packs sold per day (<span class="math inline">\(X\)</span>) and the number of double packs sold per day (<span class="math inline">\(Y\)</span>) are independent random variables with the following probability distributions:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">x</th>
+<th align="right">P(X = x)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">0</td>
+<td align="right">0.1</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">0.4</td>
+</tr>
+<tr class="odd">
+<td align="right">2</td>
+<td align="right">0.3</td>
+</tr>
+<tr class="even">
+<td align="right">3</td>
+<td align="right">0.2</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th align="right">y</th>
+<th align="right">P(Y = y)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">0</td>
+<td align="right">0.4</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">0.3</td>
+</tr>
+<tr class="odd">
+<td align="right">2</td>
+<td align="right">0.3</td>
+</tr>
+</tbody>
+</table>
+<div id="determine-the-expected-value-and-the-variance-of-x-and-y." class="section level4">
+<h4><span class="header-section-number">G.10.1.1</span> Determine the expected value and the variance of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>.</h4>
+<p>Define <span class="math inline">\(Z\)</span>: “Number of candles sold per day”.</p>
+</div>
+<div id="determine-the-expected-value-and-the-variance-of-z." class="section level4">
+<h4><span class="header-section-number">G.10.1.2</span> Determine the expected value and the variance of <span class="math inline">\(Z\)</span>.</h4>
+</div>
+<div id="determine-the-probability-distribution-of-z." class="section level4">
+<h4><span class="header-section-number">G.10.1.3</span> Determine the probability distribution of <span class="math inline">\(Z\)</span>.</h4>
+</div>
+</div>
+</div>
+<div id="exercise-g11" class="section level2">
+<h2><span class="header-section-number">G.11</span> Exercise G11</h2>
+<div id="self-employment" class="section level3">
+<h3><span class="header-section-number">G.11.1</span> Self-employment</h3>
+<p>After the unsuccessful attempt to obtain the intermediate diploma in statistics, student Emil becomes self-employed. He wants to build a secure existence as a gambler. He is offered the following two games:</p>
+<ul>
+<li>Game 1 : Two ideal dice are thrown. The product of the above numbers is paid in EUR.</li>
+<li>Game 2 : Two ideal dice are thrown. The eightfold sum of the above numbers is paid in EUR.</li>
+</ul>
+<p>Be</p>
+<ul>
+<li><span class="math inline">\(Z_1\)</span>: “Payout at game 1”</li>
+<li><span class="math inline">\(Z_2\)</span>: "Payout for game 2</li>
+<li><span class="math inline">\(G_1\)</span>: “Win at game 1”</li>
+<li><span class="math inline">\(G_2\)</span>: "Win at game 2</li>
+</ul>
+<div id="what-stake-in-eur-does-emil-have-to-pay-in-game-1-to-make-this-game-fair" class="section level4">
+<h4><span class="header-section-number">G.11.1.1</span> What stake in EUR does Emil have to pay in Game 1 to make this game “fair”?</h4>
+</div>
+<div id="what-stake-in-eur-does-emil-have-to-pay-in-game-2-to-make-this-game-fair" class="section level4">
+<h4><span class="header-section-number">G.11.1.2</span> What stake in EUR does Emil have to pay in game 2 to make this game “fair”?</h4>
+<p>Emil finds out that <span class="math inline">\(E(Z_1^2) = 230\)</span> and <span class="math inline">\(E(Z_2^2) = 3.509\)</span>.</p>
+</div>
+<div id="what-is-the-standard-deviation-of-the-win-in-game-1" class="section level4">
+<h4><span class="header-section-number">G.11.1.3</span> What is the standard deviation of the win in game 1?</h4>
+</div>
+<div id="what-is-the-standard-deviation-of-the-win-in-game-2" class="section level4">
+<h4><span class="header-section-number">G.11.1.4</span> What is the standard deviation of the win in game 2?</h4>
+</div>
+</div>
+</div>
+<div id="exercise-g12" class="section level2">
+<h2><span class="header-section-number">G.12</span> Exercise G12</h2>
+<div id="free-tokens" class="section level3">
+<h3><span class="header-section-number">G.12.1</span> Free tokens</h3>
+<p>The following game of chance is considered: An ideal dice is thrown once. The player can place <strong>free</strong> tokens on the events:</p>
+<p><span class="math display">\[A = \{1, 3, 5 \} \, , \quad B = \{5, 6\} \, , \quad C = \{ 6 \} \, .\]</span></p>
+<p>The following payouts apply:</p>
+<p>If you bet on the wrong token you will receive a payout of 0 EUR.</p>
+<p>Let <span class="math inline">\(X_A\)</span>, <span class="math inline">\(X_B\)</span> and <span class="math inline">\(X_C\)</span> be the payouts a player receives when he has bet on the corresponding marker.</p>
+<div id="specify-the-probability-functions-of-x_a-x_b-and-x_c-in-table-form-and-calculate-the-expected-value-and-the-variance-respectively." class="section level4">
+<h4><span class="header-section-number">G.12.1.1</span> Specify the probability functions of <span class="math inline">\(X_A\)</span>, <span class="math inline">\(X_B\)</span> and <span class="math inline">\(X_C\)</span> in table form and calculate the expected value and the variance respectively.</h4>
+</div>
+<div id="determine-the-common-probability-function-of-x_a-x_b-x_a-x_c-and-x_b-x_c." class="section level4">
+<h4><span class="header-section-number">G.12.1.2</span> Determine the common probability function of <span class="math inline">\((X_A, X_B)\)</span>, <span class="math inline">\((X_A, X_C)\)</span> and <span class="math inline">\((X_B, X_C)\)</span>.</h4>
+</div>
+<div id="which-of-these-pairs-of-variables-are-stochastically-independent" class="section level4">
+<h4><span class="header-section-number">G.12.1.3</span> Which of these pairs of variables are stochastically independent?</h4>
+</div>
+<div id="which-of-these-pairs-of-variables-are-correlated" class="section level4">
+<h4><span class="header-section-number">G.12.1.4</span> Which of these pairs of variables are correlated?</h4>
+</div>
+<div id="explain-the-signs-of-the-respective-covariance-by-content." class="section level4">
+<h4><span class="header-section-number">G.12.1.5</span> Explain the signs of the respective covariance by content.</h4>
+</div>
+<div id="player-1-sets-3-marks-each-on-a-b-and-c.-how-large-are-the-expected-value-and-variance-of-the-payout" class="section level4">
+<h4><span class="header-section-number">G.12.1.6</span> Player 1 sets 3 marks each on A, B and C. How large are the expected value and variance of the payout?</h4>
+</div>
+<div id="player-2-sets-1-marker-on-a-6-markers-on-b-and-2-markers-on-c.-what-is-the-expected-value-and-variance-of-the-payout" class="section level4">
+<h4><span class="header-section-number">G.12.1.7</span> Player 2 sets 1 marker on A, 6 markers on B and 2 markers on C. What is the expected value and variance of the payout?</h4>
+</div>
+<div id="player-3-wants-to-place-his-9-tokens-so-that-the-expected-payout-is-6.50-eur-and-the-variance-is-minimal.-how-should-he-place-the-tokens" class="section level4">
+<h4><span class="header-section-number">G.12.1.8</span> Player 3 wants to place his 9 tokens so that the expected payout is 6.50 EUR and the variance is minimal. How should he place the tokens?</h4>
+</div>
+</div>
+</div>
+<div id="exercise-g13" class="section level2">
+<h2><span class="header-section-number">G.13</span> Exercise G13</h2>
+<div id="bridge" class="section level3">
+<h3><span class="header-section-number">G.13.1</span> Bridge</h3>
+<p>At a round table there are four chairs for a bridge game in which four people participate. Two women wearing skirts and two men wearing tuxedos take part in the bridge game.</p>
+<ul>
+<li>Be <span class="math inline">\(X\)</span>: “Number of male neighbors of a considered bridge player”</li>
+<li>Be <span class="math inline">\(Y\)</span> : "Number of skirts worn by a considered bridge player</li>
+</ul>
+<div id="determine-the-probability-function-of-x-in-a-table.-1" class="section level4">
+<h4><span class="header-section-number">G.13.1.1</span> Determine the probability function of <span class="math inline">\(X\)</span> in a table.</h4>
+</div>
+<div id="determine-the-probability-function-of-y-in-a-table.-1" class="section level4">
+<h4><span class="header-section-number">G.13.1.2</span> Determine the probability function of <span class="math inline">\(Y\)</span> in a table.</h4>
+</div>
+<div id="determine-the-common-probability-function-of-x-and-y-in-the-table." class="section level4">
+<h4><span class="header-section-number">G.13.1.3</span> Determine the common probability function of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> in the table.</h4>
+</div>
+<div id="calculate-covx-y." class="section level4">
+<h4><span class="header-section-number">G.13.1.4</span> Calculate <span class="math inline">\(Cov(X, Y)\)</span>.</h4>
+</div>
+</div>
+</div>
+<div id="g14" class="section level2">
+<h2><span class="header-section-number">G.14</span> G14</h2>
+<div id="end-of-the-soccer-season" class="section level3">
+<h3><span class="header-section-number">G.14.1</span> End of the soccer season</h3>
+<p>The soccer season is coming to an end. 1. FC Berlin still has two games to play, first a home game and finally an away game. In each game there are two points for a win, one point for a draw and no point for a defeat.</p>
+<p>The coach oracles:</p>
+<ul>
+<li>In the home game we will get both points with a probability of 50% and one point with a probability of 30%.</li>
+<li>In the away game victory, defeat and draw are equally probable.</li>
+<li>It’s actually impossible that we don’t get any points at all in the two games or that both games end in a draw.</li>
+<li>If we get both points in the home game, the probability that we get at least one point in the last game is 60%.</li>
+<li>But if we lose the home game, there is a 40% chance that the team will pull itself together and win the away game.</li>
+</ul>
+<p>Be:</p>
+<ul>
+<li><span class="math inline">\(X\)</span> : “Number of points won in the home game”</li>
+<li><span class="math inline">\(Y\)</span> : “Number of points won in the away game”</li>
+</ul>
+<div id="determine-the-common-probability-function-of-x-and-y-in-table-form." class="section level4">
+<h4><span class="header-section-number">G.14.1.1</span> Determine the common probability function of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> in table form.</h4>
+</div>
+<div id="calculate-ex-y-and-interpret-this-value-in-terms-of-content." class="section level4">
+<h4><span class="header-section-number">G.14.1.2</span> Calculate <span class="math inline">\(E(X + Y)\)</span> and interpret this value in terms of content.</h4>
+</div>
+</div>
+</div>
+<div id="exercise-g15" class="section level2">
+<h2><span class="header-section-number">G.15</span> Exercise G15</h2>
+<div id="three-balls" class="section level3">
+<h3><span class="header-section-number">G.15.1</span> Three balls</h3>
+<p>In an urn there are three balls numbered 1 to 3. The following random experiment is performed: In the first draw, a ball is randomly selected and its number is determined. Before the second draw, all balls with a larger number are removed from the urn. Then the ball drawn in the first draw is put back into the urn, and a ball is again selected.</p>
+<p>Be:</p>
+<ul>
+<li>$X $: “Number of the first ball drawn”</li>
+<li><span class="math inline">\(Y\)</span>: “Number of the second ball drawn”.</li>
+</ul>
+<div id="determine-the-common-probability-function-of-x-and-y-in-table-form.-1" class="section level4">
+<h4><span class="header-section-number">G.15.1.1</span> Determine the common probability function of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> in table form.</h4>
+</div>
+<div id="calculate-covx-y.-1" class="section level4">
+<h4><span class="header-section-number">G.15.1.2</span> Calculate <span class="math inline">\(Cov(X, Y)\)</span>.</h4>
+</div>
+<div id="are-x-and-y-stochastically-independent-2" class="section level4">
+<h4><span class="header-section-number">G.15.1.3</span> Are <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> stochastically independent?</h4>
+<p>Assume that the random experiment described above forms the basis for a game of chance in which the sum of the numbers on the drawn balls is paid out in EUR.</p>
+</div>
+<div id="what-stake-in-eur-would-be-required-for-such-a-game-to-be-considered-fair" class="section level4">
+<h4><span class="header-section-number">G.15.1.4</span> What stake in EUR would be required for such a game to be considered “fair”?</h4>
+</div>
+</div>
+</div>
+<div id="exercise-g16" class="section level2">
+<h2><span class="header-section-number">G.16</span> Exercise G16</h2>
+<div id="statistics-exam" class="section level3">
+<h3><span class="header-section-number">G.16.1</span> Statistics exam</h3>
+<p>Three students want to be examined by a professor in statistics one after the other. The passing or failing of the examination can be considered as independent for the three students. The probability of passing the exam is 80% for the first examinee and 70% for the second examinee and 60% for the third examinee.</p>
+<p>Be:</p>
+<ul>
+<li><span class="math inline">\(X\)</span>: “Number of successful students among the first two examinees”</li>
+<li><span class="math inline">\(Y\)</span>: “Number of successful students among the last two examinees”</li>
+</ul>
+<div id="determine-in-table-form-the-common-probability-function-of-the-random-variables-x-and-y." class="section level4">
+<h4><span class="header-section-number">G.16.1.1</span> Determine in table form the common probability function of the random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>.</h4>
+</div>
+<div id="are-the-random-variables-x-and-y-stochastically-independent" class="section level4">
+<h4><span class="header-section-number">G.16.1.2</span> Are the random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> stochastically independent?</h4>
+</div>
+<div id="determine-the-probability-function-of-the-random-variable-z-number-of-total-successful-students-among-all-three-candidates." class="section level4">
+<h4><span class="header-section-number">G.16.1.3</span> Determine the probability function of the random variable <span class="math inline">\(Z\)</span>: “Number of total successful students among all three candidates”.</h4>
+</div>
+</div>
+</div>
+<div id="exercise-g17" class="section level2">
+<h2><span class="header-section-number">G.17</span> Exercise G17</h2>
+<p>The owner of a fruit store has the following problems that you should solve for him: The random variable <span class="math inline">\(X\)</span> is the amount of strawberry baskets demanded daily and has the following probability distribution:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">x</th>
+<th align="right">P(X = x)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">0.3</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">0.4</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">0.3</td>
+</tr>
+</tbody>
+</table>
+<p>The owner of the fruit store receives the strawberry baskets from the fruit yard daily according to the following random principle:</p>
+<p>There are 2 white and 3 green balls in an urn. He draws 3 balls at random (and without putting them back) from this urn. If 2 of the drawn balls are green, he orders 2 strawberry baskets, in all other cases he orders 3 strawberry baskets.</p>
+<p>The quantity of strawberry baskets requested is independent of the quantity offered (=order quantity).</p>
+<div id="determine-the-probability-function-for-the-quantity-y-and-calculate-ey-and-vary." class="section level4">
+<h4><span class="header-section-number">G.17.0.1</span> Determine the probability function for the quantity <span class="math inline">\(Y\)</span> and calculate <span class="math inline">\(E(Y)\)</span> and <span class="math inline">\(Var(Y)\)</span>.</h4>
+</div>
+<div id="determine-the-probability-function-of-the-random-variable-z-y---x-and-interpret-the-possible-realizations-of-z" class="section level4">
+<h4><span class="header-section-number">G.17.0.2</span> Determine the probability function of the random variable <span class="math inline">\(Z = Y - X\)</span> and interpret the possible realizations of <span class="math inline">\(Z\)</span></h4>
+</div>
+<div id="calculate-ez-and-interpret-this-value." class="section level4">
+<h4><span class="header-section-number">G.17.0.3</span> Calculate <span class="math inline">\(E(Z)\)</span> and interpret this value.</h4>
+</div>
+<div id="calculate-varz." class="section level4">
+<h4><span class="header-section-number">G.17.0.4</span> Calculate <span class="math inline">\(Var(Z)\)</span>.</h4>
+</div>
+<div id="table-the-common-probability-function-of-x-and-y." class="section level4">
+<h4><span class="header-section-number">G.17.0.5</span> Table the common probability function of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>.</h4>
+</div>
+<div id="determine-the-covariance-covx-y." class="section level4">
+<h4><span class="header-section-number">G.17.0.6</span> Determine the covariance <span class="math inline">\(Cov(X, Y)\)</span>.</h4>
+</div>
+<div id="determine-the-conditional-probability-function-of-x-if-y-3." class="section level4">
+<h4><span class="header-section-number">G.17.0.7</span> Determine the conditional probability function of <span class="math inline">\(X\)</span>, if <span class="math inline">\(y = 3\)</span>.</h4>
+<p>If the demand cannot be satisfied, it may cost the owner 1 EUR per basket (image loss). However, if strawberry baskets cannot be sold, it may cost the owner 2 EUR per basket.</p>
+</div>
+<div id="what-are-the-expected-costs" class="section level4">
+<h4><span class="header-section-number">G.17.0.8</span> What are the expected costs?</h4>
 
 </div>
-</div> <!-- .container -->
+</div>
+</div>
+            </section>
 
-<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
-
-  <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Statistics 1 for Economics</strong>" was written by David Barkemeyer. </p>
+          </div>
+        </div>
+      </div>
+<a href="combinatorics-and-algebra-of-events.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="continuous-random-variables-and-distributions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
   </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
 
-  <div class="col-12 col-md-6 mt-3">
-    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
-  </div>
-
-</div></div>
-</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -113,4 +1097,5 @@
   })();
 </script>
 </body>
+
 </html>
