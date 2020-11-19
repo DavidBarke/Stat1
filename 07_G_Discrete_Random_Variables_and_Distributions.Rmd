@@ -448,3 +448,87 @@ The quantity of strawberry baskets requested is independent of the quantity offe
 If the demand cannot be satisfied, it may cost the owner 1 EUR per basket (image loss). However, if strawberry baskets cannot be sold, it may cost the owner 2 EUR per basket.
 
 #### What are the expected costs?
+
+## Exercise G18
+
+### Poster coupons
+
+The Kallocks company launches a new variety of cornflakes. As an incentive to buy, a collection coupon is enclosed with the packages for half a year. For 4 such coupons each, a poster can be sent to you after half a year. Now unfortunately the machine, which is intended for the distribution of the coupons to the individual packages, is afflicted with an error. This error causes 25% of the packages to be delivered without a coupon. Fritzchen is keen on these posters and therefore buys every week from his pocket money a pack of cornflakes of this new variety. 
+
+Be $X$: "Number of packs with coupon bought by Fritzchen within half a year (= 26 weeks)".
+
+#### How is the random variable $X$ distributed (distribution and parameters)?
+
+#### What is the probability that Fritzchen collects coupons for exactly 3 / maximum 4 / exactly 6 / maximum 1 poster in half a year.
+
+#### How many packs of coupons can Fritzchen count on in the half year?
+
+## Exercise G19
+
+### Seat reservation
+
+Of all passengers who reserve seats, 10% do not show up. The airline knows this and sells 29 tickets for 26 available seats.
+
+#### What is the probability that all passengers will get a seat?
+
+## Exercise G20
+
+Between 2 and 4 o'clock in the afternoon, the average number of telephone calls received per minute by a company's operator is equal to 2.5.
+
+Be $X$: "Number of telephone calls per minute received during this time".
+
+#### How is the random variable $X$ distributed (distribution and parameters)?
+
+#### What is the probability that no / less than three / four or more phone calls are received during a certain minute during this time?
+
+## Exercise G21
+
+### Part A
+
+A complete catalog with 10 sheets of paper is presented to an examinee A, each of which contains an examination question. The examinee knows that the responsible examiner has made 6 of these 10 questions so difficult that no examinee could answer them. 
+
+Of the 10 questions, the examinee may now randomly select 3 questions for his exam.
+
+#### What is the probability that the examinee answers all 3 questions correctly?
+
+#### What is the probability that the examinee will draw 3 answerable questions?
+
+#### What is the probability that the examinee draws at least one answerable question?
+
+### Part B
+
+One examinee B is presented with 12 questions for answering. The probability that the examinee gives a correct answer to such a question is 75%. The exam is considered passed if the examinee can answer at least two thirds of the questions correctly.
+
+#### What is the probability that the examinee answers exactly 4 / at least 7 /at most 9 / more than 2, but at most 8 questions correctly?
+
+#### What is the probability that the examinee will pass the exam?
+
+### Part C
+
+An examinee C is presented with 60 questions for answering. The probability, that the examinee gives a wrong answer to such a question is 5%. The exam is considered passed if the examinee can answer at least 80% of the questions correctly.
+
+The examination performance is evaluated as "excellent" if the examinee does not answer 3 questions correctly at the most.
+
+#### What is the approximate probability that the examinee passes the exam / passes the exam and receives an "excellent" as exam performance / passes the exam but does not receive an "excellent" as exam performance?
+
+## Exercise G22
+
+## Exercise G23
+
+## Exercise G24
+
+## Exercise G25
+
+## Exercise G26
+
+## Exercise G27
+
+## Exercise G28
+
+## Exercise G29
+
+## Exercise G30
+
+## Exercise G31
+
+## Exercise G32
