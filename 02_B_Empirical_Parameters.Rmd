@@ -262,17 +262,64 @@ ggplot(tbl) +
 
 #### What is the statistical feature? How is it scaled?
 
+The statistical feature is the order quantity. It is ratio-scaled.
+
 #### Determine absolute and relative frequencies.
+
+```{r}
+x <- c(15, 25, 30, 35, 45)
+h_x <- c(4, 1, 2, 1, 4)
+
+freq_tbl <- tibble(x = x, h_x = h_x) %>%
+  mutate(f_x = h_x / sum(h_x), H_x = cumsum(h_x), F_x = cumsum(f_x))
+
+freq_tbl
+```
 
 #### Determine (without calculating) the value of the arithmetic mean and the median. Justify your answer briefly.
 
+$\bar{x} = \tilde{x}$. The data is symmetric to the value of 30 in terms of distance between x values and frequencies of corresponding x values. Therefore mean and median match. 
+
 #### Determine the empirical variance.
+
+$$Var(x) = \frac{1}{n} \sum_{j=1}^n h(a_j) (a_j - \bar{x})^2$$
+
+```{r}
+1 / sum(freq_tbl$H_x) * sum(freq_tbl$H_x * (freq_tbl$x - 30)^2)
+```
 
 #### Group order quantities in the following groups: 0 - 20 | 20 - 40 | 40 - 60
 
+```{r}
+# cut divides the range of x into intervals and codes the values in x according
+# to which interval they fall
+freq_tbl$interval <- cut(freq_tbl$x, c(0, 20, 40, 60))
+freq_tbl
+
+grouped_tbl <- freq_tbl %>%
+  group_by(interval) %>%
+  summarise(h_x = sum(h_x), f_x = sum(f_x), H_x = max(H_x), F_x = max(F_x)) %>%
+  mutate(interval_mean = c(10, 30, 50))
+
+grouped_tbl
+```
+
 #### Determine the value of the arithmetic mean and the empirical variance from the grouped data.
 
+```{r}
+# Grouped mean
+grouped_mean <- 1 / sum(grouped_tbl$h_x) * sum(grouped_tbl$h_x * grouped_tbl$interval_mean)
+grouped_mean
+
+# Grouped variance
+1 / sum(grouped_tbl$h_x) * sum(grouped_tbl$h_x * (grouped_tbl$interval_mean - grouped_mean)^2)
+```
+
 #### Explain possible differences of the parameter values between original and grouped data
+
+Grouping loses the information of the values of concrete realisations. The group mean is likely to differ from the original data. This influences the empirical variance as well. In this case it gets bigger, as the group mean is lower in the first interval and higher in the last interval compared to the ungrouped data.
+
+***
 
 The production manager wants to distribute the production of the ordered tools to the three machines A, B and C.
 
@@ -282,9 +329,36 @@ The production manager wants to distribute the production of the ordered tools t
 
 #### How many tools are produced by machine A?
 
+```{r}
+# Total volume
+order_volume <- sum(freq_tbl$h_x) * 1000
+
+# Volume of A
+v_a <- 0.4 * order_volume
+v_a
+```
+
 #### What percentage of the total order volume is produced by machine B?
 
+```{r}
+# Percentage of A
+p_a <- 0.4 
+
+# Percentage of B
+p_b <- p_a * 0.25
+p_b
+```
+
 #### How many tools are produced by machine C?
+
+```{r}
+# Percentage of C
+p_c <- 1 - (p_a + p_b)
+
+# Volume of C
+v_c <- p_c * order_volume
+v_c
+```
 
 ## Exercise B3
 
@@ -307,19 +381,78 @@ ggplot(tbl, aes(x = x, y = y)) +
   labs(x = "x", y = "F(x)")
 ```
 
-#### What do you call this graphic representation? What was assumed about the distribution of the data?
+#### What do you call this representation? What was assumed about the distribution of the data?
+
+This is the graphical representation of the cumulative distribution function for grouped data. It was assumed that within a group the underlying distribution is uniform. 
 
 #### Draw the absolute frequency distribution. Which principle should be observed?
 
+The graphical representation of the absolute frequency distribution is known as a histogram. It must obey the principle of equal area.
+
+```{r}
+# Sample size
+n <- 200
+
+# Read data from CDF
+x <- c(0, 5, 10, 20, 40)
+F_x <- c(0, 0.05, 0.25, 0.7, 1)
+
+# Width of group
+b <- diff(x)
+b
+# Center of group
+m <- x[-length(x)] + b / 2
+m
+# Relative frequency of group
+f_x <- diff(F_x)
+f_x
+# Absolute frequency of group
+h_x <- f_x * n
+h_x
+
+# Height of bar
+h <- h_x / b
+h
+
+tbl <- tibble(xmin = x[-length(x)], xmax = x[-1], ymin = 0, ymax = h)
+ggplot(tbl, aes(xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax)) +
+  geom_rect(fill = "#eeeeee", color = "#111111") +
+  labs(
+    title = "Absolute frequency distribution", 
+    x = "Number of cups of coffee per week",
+    y = "h_j / b_j"
+  )
+```
+
 #### Determine the arithmetic mean and median from the data.
+
+```{r}
+# Mean
+1 / n * sum(h_x * m)
+
+# Median
+# Linear interpolation
+x_0.25 <- 10
+x_0.7 <- 20
+x_0.5 <- x_0.25 + (0.5 - 0.25) / (0.7 - 0.25) * (x_0.7 - x_0.25)
+x_0.5
+```
 
 #### Interpret both values in terms of how the data is distributed.
 
+There are many people that drink a few cups of coffee per week. Few people consume a large amount of cups of coffee per week. The mean is more sensitive to outliers and therefore larger than the median.
+
 #### Indicate the percentage of people who drink at least 20 cups of coffee per week.
+
+From the cumulative distribution function we know that 70% of all people drink 20 or less cups of coffee per week. Therefore the remaining 30% drink more than 20 cups of coffee per week.
+
+***
 
 Let's assume that when you look through the data again, you find that the frequencies of the 3rd group and the 4th group have been swapped.
 
 #### Does this change the value of the median?
+
+Yes, because of the different frequencies in the 3rd group and the 4th group. The median increases, because the slope of the CDF decreases in the 3rd group.
 
 ## Exercise B4
 
@@ -354,6 +487,28 @@ kable(tbl)
 
 #### Calculate for the new tariff how much the telephone connection costs on average in EUR per hour. So can Bert still afford his hobby in the future?
 
+```{r}
+# "Width" (number of seconds)
+w <- c(5, 6, 7, 6) * 60 * 60
+
+# Seconds per cost unit
+spcu <- c(120, 40, 30, 60)
+
+# Seconds per cent
+spc <- spcu / 8
+
+# Cents per second
+cps <- 1 / spc
+
+# Cost per day
+cpd <- sum(w * cps)
+
+# Cost per hours
+cpd / 24
+```
+
+Bert can't afford his hobby anymore, as it would cost 630 ct = 6.30 EUR.
+
 ## Exercise B6
 
 ### Part A
@@ -378,21 +533,108 @@ ggplot(tbl, aes(x = x, y = y)) +
 
 #### What is the name of the statistical feature examined here and how is it scaled?
 
-#### Determine the absolute and the relative frequency distribution of this characteristic
+The statistical feature is the monthly gross income [in 1000 EUR] of an employee. It is ratio-scaled.
+
+#### Determine the absolute and the relative frequency distribution of this characteristic in tabular form
+
+```{r}
+# Sample size
+n <- 2000
+
+# Data from graphic
+x <- c(1, 3, 4, 5, 6, 8, 10)
+F_x <- c(0, 0.15, 0.4, 0.7, 0.85, 0.95, 1)
+
+# Cumulative relative frequency (drop 0)
+F_x <- F_x
+
+# Cumulative absolute frequency
+H_x <- F_x * n
+H_x
+
+# Absolute frequency
+h_x <- diff(H_x)
+
+# Relative frequency
+f_x <- diff(F_x)
+f_x
+
+# Table
+tbl <- tibble(xmin = x[-length(x)], xmax = x[-1], h_x = h_x, f_x = f_x, H_x = H_x[-1], F_x = F_x[-1])
+tbl
+```
 
 #### Visualize the absolute frequency distribution.
 
+```{r}
+ggplot(tbl, aes(xmin = xmin, xmax = xmax, ymin = 0, ymax = f_x / (xmax - xmin))) +
+  geom_rect(fill = "#eeeeee", color = "#111111") +
+  scale_x_continuous(breaks = 1:10)
+  
+```
+
 #### According to your visualization, how big is the percentage of employees who earn exactly 6400 EUR per month?
+
+A continuous feature is considered. The percentage associated with a point value is therefore 0.
 
 #### Calculate how many percent of the employees earn more than 5800 EUR per month.
 
+Wanted: $1 - q_{5800}$
+
+```{r}
+q_5000 <- 0.7
+q_6000 <- 0.85
+# Linear interpolation
+q_5800 <- q_5000 + (5800 - 5000) / (6000 - 5000) * (q_6000 - q_5000)
+# Result
+1 - q_5800
+```
+
 #### What is the (estimated) monthly gross income of all employees of this company?
+
+```{r}
+# Average per group
+m <- (tbl$xmin + tbl$xmax) / 2
+
+# Total monthly gross income
+sum(tbl$h_x * m) * 1000
+```
 
 #### What is the average monthly gross income in this company by the arithmetic mean / the median?
 
-#### Calculate the empirical quartile coefficient of skewness.
+```{r}
+# Mean
+1 / n * sum(tbl$h_x * m) * 1000
+
+# Median
+x_0.4 <- 4
+x_0.7 <- 5
+# Linear interpolation
+x_0.5 <- x_0.4 + (0.5 - 0.4) / (0.7 - 0.4) * (x_0.7 - x_0.4) 
+x_0.5 * 1000
+```
+
+#### Calculate the empirical quartile coefficient of skewness $g_{0.25}$.
+
+$$g_{0.25} = \frac{(x_{0.75} - \tilde{x}) - (\tilde{x} - x_{0.25})}{x_{0.75} - x_{0.25}}$$
+
+```{r}
+# Linear interpolation for x_0.25 and x_0.75
+x_0.15 <- 3
+x_0.4 <- 4
+x_0.25 <- x_0.15 + (0.25 - 0.15) / (0.4 - 0.15) * (x_0.4 - x_0.15)
+x_0.7 <- 5
+x_0.85 <- 6
+x_0.75 <- x_0.7 + (0.75 - 0.7) / (0.85 - 0.7) * (x_0.85 - x_0.7)
+
+# Result
+g_0.25 <- ((x_0.75 - x_0.5) - (x_0.5 - x_0.25)) / (x_0.75 - x_0.25)
+g_0.25
+```
 
 #### Assess the skewness of the present frequency distribution according to the position rule / the empirical quartile coefficient of skewness.
+
+The median is smaller than the mean. According to the position the rule the distribution is right-skewed. The empirical quartile coefficient of skewness is greater than zero. According to the empirical quartile coefficient of skewness the distribution is therefore left-skewed.
 
 ## Exercise B7
 
@@ -450,9 +692,31 @@ x <- c(2400, 3300, 2400, 2300, 2500, 1700, 2100, 3100, 2900, 1800, 3900, 2100, 2
 
 #### Determine the average monthly gross earnings.
 
+```{r}
+x_bar <- mean(x)
+x_bar
+```
+
 #### Calculate the empirical variance and standard deviation of the 20 gross wages.
 
+```{r}
+n <- length(x)
+
+# Variance
+var_x <- 1 / n * sum((x - x_bar)^2)
+var_x
+
+# Standard deviation
+sd_x <- sqrt(1 / n * sum((x - x_bar)^2))
+sd_x
+```
+
 #### Determine the variation coefficient. What is this coefficient for?
+
+```{r}
+var_coeff <- sd_x / x_bar
+var_coeff
+```
 
 ## Exercise B9
 
@@ -475,9 +739,51 @@ ggplot(tbl) +
   labs(x = "x", y = "f_j / b_j")
 ```
 
-#### Calculate the values of the empirical distribution function at the locations $x \in \{ 1000, 1350, 1950 \}$.
+#### Calculate the values of the empirical cumulative distribution function at the locations $x \in \{ 1000, 1350, 1950 \}$.
+
+```{r}
+# Sample size
+n <- 4000
+
+# Group width
+b <- c(200, 400, 100, 500)
+
+# Bar height from histogram
+f_b <- c(0.0015, 0.0010, 0.0020, 0.0002)
+
+# Relative frequencies
+f_x <- f_b * b
+
+# Cumulative relative frequencies
+F_x <- cumsum(f_x)
+
+# Positions
+x <- c(1000, 1400, 1500, 2000)
+names(F_x) <- x
+
+F_x
+
+# q_1000
+q_1000 <- F_x["1000"]
+unname(q_1000)
+
+# q_1300 (linear interpolation)
+q_1400 <- F_x["1400"]
+q_1300 <- q_1000 + (1300 - 1000) / (1400 - 1000) * (q_1400 - q_1000)
+unname(q_1300)
+
+# q_1950 (linear interpolation)
+q_1500 <- F_x["1500"]
+q_2000 <- F_x["2000"]
+q_1950 <- q_1500 + (1950 - 1500) / (2000 - 1500) * (q_2000 - q_1500)
+unname(q_1950)
+```
 
 #### Draw the empirical distribution function.
+
+```{r}
+tbl <- tibble(x = c(800, x), F_x = c(0, F_x))
+```
 
 #### Calculate the arithmetic mean.
 

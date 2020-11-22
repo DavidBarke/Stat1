@@ -289,9 +289,91 @@ The publishing house wants to provide the editor-in-chief of the new magazine wi
 
 ## Exercise H11
 
+The dear relatives have announced their annual visit to the Fearsome family. The visit will last 12 days.
+
+### Part A
+
+Mother Fearsome looks forward to the visit with concern. The relatives break dishes independently from day to day with a probability of 30%.
+
+#### What is the probability of breaking dishes during the visit on exactly 3 days?
+
+If cousin Kurt also travels, the daily "breakage probability" is even increased to 60%.
+
+#### What is the probability that dishes will be broken more often than 3 days?
+
+### Part B
+
+Daughter Ursel has another problem. Her dear uncle, who is visiting her, wakes her up on average four times during the eight-hour night's rest by short and loud, but completely irregularly emitted screams.
+
+#### How likely is it that Ursel is disturbed by her uncle's screams in her sleep on a Saturday morning between returning home from the disco at 5 a.m. and the alarm clock ringing at 8 a.m.?
+
+#### How likely is it that the uncle screams more than 24 times in 9 nights (8 hours each)?
+
+### Part C
+
+During the visit, oligopoly is traditionally played every evening. The probability of a quarrel between the ambitious family fathers is 20% every evening, with independent quarrels from evening to evening.
+
+#### On how many evenings can one expect to have a fight for the first time?
+
+#### How likely is it that there will be a fight on the 4th or 5th evening if there was no fight on the first three evenings?
+
+### Part D
+
+For the Kaffeekränzchen, mother fearfully must give out 2 valuable old-Chinese cups beside the 6 normal also.
+
+#### With which probability the two China cups will remain intact, if with the Kaffeekränzchen three cups should break?
+
 ## Exercise H12
 
+### Part A
+
+In a car factory, body parts are welded by an industrial robot. The path of the weld seam is controlled by electronic sensors, which work independently of each other with a probability of 90%. 4 such sensors are mounted on the arm of this robot.
+
+#### How is the random variable $X$: "Number of faulty sensors on the robot arm" distributed (distribution and parameters)?
+
+#### On average, how many sensors are not working correctly?
+
+#### What is the probability that the weld seam is correctly controlled if it is necessary to have all 4/at least 2/exactly 2 specific sensors working correctly?
+
+### Part B
+
+For painting the car body, 2 machines are used, which independently of each other have a defect on average every 10 hours. A worker starts his shift and finds that both machines are working perfectly.
+
+Be 
+
+* $T_1$: "Waiting time for the next defect of machine 1".
+* $T_2$: "Waiting time for the next defect of machine 2".
+
+#### How are the random variables $T_1$ and $T_2$ distributed (distribution and parameters)?
+
+#### What is the probability that the worker will not experience an interruption of the painting process during his 8-hour shift, if the process can only continue if both machines are working / as long as at least one machine is working? (Assume that you will wait until the end of the shift to fix a defect)
+
+6 hours of the shift have already passed without a defect occurring on either machine.
+
+#### What is the probability that machine 1 will not be defective by the end of the shift?
+
 ## Exercise H13
+
+### Alfred and Berti
+
+Alfred lives in C and wants to visit Berti in D. For this he has to take the bus to the harbor. The bus stop is right in front of his front door. Alfred knows that the bus runs according to schedule, but not at what time. However, he is sure that the probability of waiting less than 5 minutes is $\frac{1}{3}$. The bus ride to the port takes 30 minutes. There he has to wait for the ferry, which unfortunately does not run according to any timetable. Alfred knows from experience that the waiting time for the ferry is normally distributed with $\mu = 0.5$ hours and $\sigma^2 = 0.25 \, \text{hours}^2$ . The crossing takes 5 hours. Arriving at the port of D, Alfred has to take a cab to get to Berti's house. The cab system in D is known to be completely unstructured; cab ranks are unknown and a coordinated behavior of cab drivers among each other is not to be expected. So you have to stop a randomly passing cab in the narrow, single-lane port alleys by waving strongly. According to Berti one can expect an average of 24 cabs within 4 hours. When Alfred arrives at Berti's, he will be annoyed that the fare is so high (1 € per minute) that he has to pay 50 €.
+The following random variables are defined :
+
+* $X$: "waiting time for the bus"
+* $Y$: "Waiting for the ferry"
+* $W$: "Number of passing cabs per hour".
+* $Z$: "Waiting time for a cab in hours "
+* $R$: "Travel time from house to house"
+
+#### For the random variables $X$, $Y$, $W$ and $Z$, specify the distribution type and the distribution parameters respectively!
+
+#### What is the expected door-to-door travel time?
+
+#### Alfred has been standing at the bus stop for 10 minutes. What is the probability that he will have to wait less than 2 minutes for the bus?
+
+#### Alfred has already been standing at the port of D for 10 minutes waiting for a cab. What is the probability that he has to wait less than 2 minutes for a cab?
+
+#### Suppose Alfred would like to be picked up by Berti at the port of D. Alfred would arrive at the port of C at 08:00 and call Berti. What time would he have to call Berti to the port of D so that Berti would not have to wait for him with a probability of 93.9429%?
 
 ## Exercise H14
 

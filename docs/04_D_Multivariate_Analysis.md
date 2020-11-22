@@ -192,4 +192,53 @@ After the results of this study were announced, all the managers of those hostel
 
 ### Part A
 
+In a forthcoming election, the established parties "White" [W] and "Purple" [L] as well as the two new parties "Blue" [B] and "Turquoise" [T] will compete for the favor of the voters. From the political side, the main interest is whether the social conditions of voters have an impact on their voting behavior. For this reason, 300 first-time voters were asked whether they felt more like belonging to the "lower class" U, the "middle class" M or the "upper class" O and which party they would choose.
+
+The result of this survey was:
+
+* 20% of all respondents will vote [W].
+* Party [B] will receive a total of 70 votes.
+* 135 of all respondents felt they belonged to M.
+* Within M, party [T] received twice as many votes as all three other parties combined.
+* Of all voters from M who do not vote [T], exactly one third will vote for [L].
+* There were as many [T] voters from M as there were voters from O altogether.
+* 40% of all voters from U will vote for party [T].
+* The party [L] will get exactly as many votes from U and M together as from O.
+* 12.5% of all [L] voters are from U.
+* The party [W] got as many votes from U as the party [T] got from O.
+* There were four times as many [W] voters from O as there were [W] voters from U.
+
+#### What are the names of the statistical features studied here and how are they scaled?
+
+#### Table the common frequency distribution of these two characteristics.
+
+#### Are the two characteristics independent of each other in terms of the data available?
+
+#### Which of the three social classes has the largest proportion of voters who voted for the new parties?
+
 ### Part B
+
+In a further study, those young voters who will vote for the new parties were asked about their monthly income in EUR. The following result was obtained for four the groups listed:
+
+
+| Group|Income from ... up to less than ... |
+|-----:|:-----------------------------------|
+|     1|500 - 1000                          |
+|     2|1000 - 1600                         |
+|     3|1600 - 2400                         |
+|     4|2400 - 3000                         |
+
+And it resulted:
+
+* 70% from the lower class and 30% from the middle class belong to the 1st group.
+* 5% from the lower class, 10% from the middle class and 90% from the upper class
+belong to the 4th group.
+* Exactly 50 respondents belong to the 2nd group.
+
+#### What is the name of the statistical feature under investigation here and how is it scaled?
+
+#### Determine in tabular form the absolute frequencies, the relative and the relative cumulated frequencies of the statistical feature.
+
+#### Graphically represent the (relative) distribution function.
+
+#### Calculate the lower quartile $x_{0.25}$, the median $x_{0.5}$ and the upper quartile $x_{0.75}$.
