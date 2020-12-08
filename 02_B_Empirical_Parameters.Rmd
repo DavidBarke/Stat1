@@ -803,7 +803,7 @@ tbl <- tibble(x = c(800, x), F_x = c(0, F_x))
 
 ## Exercise B10
 
-Tony is editor-in-chief of the automotive magazine _Brummy!_. In the anniversary edition he would like to present to his readers a statistical analysis of the cubic capacity [in cm3] of the cars tested so far.
+Tony is editor-in-chief of the automotive magazine _Brummy!_. In the anniversary edition he would like to present to his readers a statistical analysis of the cubic capacity [in $\text{cm}^3$] of the cars tested so far.
 For this purpose he had the following absolute distribution function prepared by his trainee:
 
 ```{r, echo=FALSE}
@@ -828,28 +828,120 @@ ggplot(tbl) +
 
 #### What is the statistical characteristic and how is it scaled?
 
+Cubic capactiy of a car in $\text{cm}^3$.
+
 #### Determine the absolute frequencies from the distribution function in tabular form.
+
+```{r}
+x <- c(1400, 1600, 1800, 2000, 2500, 3000, 5000)
+H_x <- c(3, 7, 10, 16, 18, 19, 20)
+
+tbl <- tibble(x = x, H_x = H_x) %>%
+  mutate(h_x = diff(c(0, H_x)))
+
+tbl
+```
 
 #### Calculate the arithmetic mean and the empirical standard deviation.
 
-#### Transform the parameter values calculated in 3) into liters. The following applies: 1 liter = 1dm^3
+```{r}
+n <- sum(tbl$h_x)
+
+params <- tbl %>%
+  summarise(x_bar = (1 / n) * sum(h_x * x), x_sd = sqrt((1 / n) * sum(h_x * (x - x_bar)^2)))
+
+params
+```
+
+#### Transform the parameter values calculated in 3) into liters. The following applies: $1 \text{l} = 1 \text{dm}^3$
+
+$$1 \, \text{l}  = 1 \, \text{dm}^3 = (10 \, \text{cm})^3 = 1000 \, \text{cm}^3$$
+
+Therefore each parameter must be divided by 1000 to obtain its representation with regards to the measure liter.
 
 ### Part B
 
 Tony wants to divide the data into three groups:
 
-* Middle Class: $\text{from} \, 1400 \, \mathrm{cm}^3 \, \text{to under} \, 2000 \, \mathrm{cm}^3$
+* Lower Class: $\text{from} \, 1400 \, \mathrm{cm}^3 \, \text{to under} \, 2000 \, \mathrm{cm}^3$
 * Middle Class: $\text{from} \, 2000 \, \mathrm{cm}^3 \, \text{to under} \, 3000 \, \mathrm{cm}^3$
-* Middle Class: $\text{from} \, 3000 \, \mathrm{cm}^3 \, \text{to under} \, 6000 \, \mathrm{cm}^3$
+* Upper Class: $\text{from} \, 3000 \, \mathrm{cm}^3 \, \text{to under} \, 6000 \, \mathrm{cm}^3$
 
 #### Determine the absolute and relative frequencies of the grouped data in tabular form.
 
+```{r}
+to_group <- function(x) ifelse(x < 2000, "lower", ifelse(x < 3000, "middle", "upper"))
+
+grouped_tbl <- tbl %>%
+  mutate(group = to_group(x)) %>%
+  select(-x, -H_x) %>%
+  group_by(group) %>%
+  summarise(h_x = sum(h_x)) %>%
+  mutate(f_x = h_x / n)
+
+grouped_tbl
+```
+
 #### Calculate the arithmetic mean of the grouped data.
+
+```{r}
+# Prepare grouped_tbl with additional group information
+grouped_tbl <- grouped_tbl %>%
+  mutate(left = c(1400, 2000, 3000), right = c(2000, 3000, 6000), m = (left + right) / 2)
+grouped_tbl
+
+grouped_params <- grouped_tbl %>%
+  summarise(x_bar = (1 / n) * sum(h_x * m), x_sd = sqrt((1 / n) * sum(h_x * (m - x_bar)^2)))
+grouped_params
+```
 
 #### Display the absolute frequency distribution of the grouped data.
 
+```{r}
+# Prepare data for histogram
+hist_tbl <- grouped_tbl %>%
+  mutate(width = right - left)
+  
+
+# Histogram
+ggplot(hist_tbl) +
+  geom_rect(aes(xmin = left, xmax = right, ymin = 0, ymax = h_x / width), fill = "#eeeeee", color = "#111111") +
+  labs(x = "x", y = expression(h[x] / width))
+```
+
 #### Determine the absolute cumulative and relative cumulative frequencies of the grouped data in a table and display the relative distribution function graphically. What assumptions are made about the distribution of data within the individual groups?
+
+```{r}
+grouped_tbl <- grouped_tbl %>% 
+  mutate(H_x = cumsum(h_x), F_x = cumsum(f_x))
+grouped_tbl
+
+plot_tbl <- with(grouped_tbl, tibble(x = c(left, max(right)), y = c(0, F_x)))
+ggplot(plot_tbl, aes(x = x, y = y)) +
+  geom_point() +
+  geom_line() +
+  labs(x = "x", y = expression(f[x]))
+```
+
+Assumption: Uniform distribution within each group.
 
 #### Calculate the lower and upper quartiles and the median from the grouped data.
 
+```{r}
+# Median
+q_50 <- 2000
+
+q_0 <- 1400
+q_25 <- q_0 + (0.25 - 0) / (0.5 - 0) * (q_50 - q_0) 
+q_25
+
+q_90 <- 3000
+q_75 <- q_50 + (0.75 - 0.5) / (0.9 - 0.5) * (q_90 - q_50)
+q_75
+```
+
 #### Create a modified box plot for the grouped data.
+
+```{r}
+
+```
